@@ -1,0 +1,30 @@
+feature_name,data_type,source,description,available_at_init_time_t,target_window_leakage_status,null_count,null_percentage,min_value,max_value,notes
+forecast_init_time_utc,datetime,ASOS/ERA5 Grid,Forecast initialization time t,True,CLEAN,0,0.0,2024-01-01 00:00:00+00:00,2024-12-31 18:00:00+00:00,Temporal anchor
+station_id,string,ASOS Inventory,Station identifier,True,CLEAN,0,0.0,1J0,ZPH,Target evaluation site
+grid_cell_id,integer,ERA5 Grid,ERA5 grid index containing station,True,CLEAN,0,0.0,FL_25.5_-80.5,FL_30.75_-87.0,Spatial anchor
+latitude,float,ERA5 Grid,ERA5 grid center latitude,True,CLEAN,0,0.0,25.5,30.75,Spatial coordinate
+longitude,float,ERA5 Grid,ERA5 grid center longitude,True,CLEAN,0,0.0,-87.25,-80.25,Spatial coordinate
+month,integer,Calendar,Month of year (1-12) at t,True,CLEAN,0,0.0,1.0,12.0,Seasonality predictor
+hour_utc,integer,Calendar,"UTC cycle hour (0, 6, 12, 18) at t",True,CLEAN,0,0.0,0.0,18.0,Diurnal cycle predictor
+temperature_2m_degC,float,ERA5 Single Levels,Instantaneous 2m temperature at t,True,CLEAN,0,0.0,-6.81,37.09,Sensible heat / boundary layer state
+dewpoint_2m_degC,float,ERA5 Single Levels,Instantaneous 2m dewpoint at t,True,CLEAN,0,0.0,-12.29,27.7,Surface moisture
+dewpoint_depression_degC,float,ERA5 Derived,T2m - D2m at t,True,CLEAN,0,0.0,-0.01,26.06,Sub-cloud dryness / LCL proxy
+surface_pressure_hPa,float,ERA5 Single Levels,Instantaneous surface pressure at t,True,CLEAN,0,0.0,979.53,1033.66,Synoptic mass field
+mslp_hPa,float,ERA5 Single Levels,Instantaneous mean sea level pressure at t,True,CLEAN,0,0.0,980.43,1034.94,Synoptic pressure pattern
+wind_speed_10m_ms,float,ERA5 Single Levels,Instantaneous 10m wind speed at t,True,CLEAN,0,0.0,0.02,23.7,Surface wind force
+wind_direction_10m_deg,float,ERA5 Single Levels,Instantaneous 10m wind direction at t,True,CLEAN,0,0.0,0.0,360.0,Surface wind direction
+total_precipitation_mm,float,ERA5 Single Levels,"Accumulated prior precipitation [t-6h, t]",True,CLEAN,0,0.0,0.0,34.743,Prior antecedent rainfall
+convective_precipitation_mm,float,ERA5 Single Levels,"Accumulated prior convective precip [t-6h, t]",True,CLEAN,0,0.0,0.0,13.218,Prior convective activity
+cape_J_kg,float,ERA5 Single Levels,Convective Available Potential Energy at t,True,CLEAN,0,0.0,0.0,7240.0,Potential convective energy
+cin_J_kg,float,ERA5 Single Levels,Convective Inhibition at t,True,CLEAN,0,0.0,0.0,997.4,Convective cap barrier
+cloud_cover_fraction,float,ERA5 Single Levels,"Instantaneous total cloud cover [0, 1] at t",True,CLEAN,0,0.0,0.0,1.0,Insolation / cloud cover
+tcwv_kg_m2,float,ERA5 Single Levels,Total Column Water Vapour at t,True,CLEAN,0,0.0,2.27,77.7,Precipitable water depth
+temperature_850hPa_degC,float,ERA5 Pressure Levels,Instantaneous 850 hPa temperature at t,True,CLEAN,0,0.0,-2.13,23.5,Low-level thermal advection
+relative_humidity_850hPa_pct,float,ERA5 Pressure Levels,Instantaneous 850 hPa RH at t,True,CLEAN,0,0.0,0.0,100.0,Low-level moisture saturation
+wind_speed_850hPa_ms,float,ERA5 Pressure Levels,Instantaneous 850 hPa wind speed at t,True,CLEAN,0,0.0,0.02,44.98,Low-level jet speed
+temperature_500hPa_degC,float,ERA5 Pressure Levels,Instantaneous 500 hPa temperature at t,True,CLEAN,0,0.0,-24.05,3.73,Mid-tropospheric cold pool
+relative_humidity_500hPa_pct,float,ERA5 Pressure Levels,Instantaneous 500 hPa RH at t,True,CLEAN,0,0.0,0.0,100.0,Mid-level dry air entrainment
+bulk_shear_850_300_ms,float,ERA5 Pressure Levels,Deep layer bulk shear 850-300 hPa at t,True,CLEAN,0,0.0,0.05,79.35,Storm organization potential
+temp_diff_850_500_degC,float,ERA5 Derived,T850 - T500 lapse rate proxy at t,True,CLEAN,0,0.0,10.66,33.44,Mid-level lapse rate instability
+era5_thunderstorm_favorability,float,Physics Composite,Favorability index computed at t,True,CLEAN,0,0.0,0.013,0.953,Physics-based composite
+true_prior_event_6h,binary,NOAA Storm Events,"Severe event in prior cycle [t-6h, t]",True,CLEAN,0,0.0,0.0,1.0,Prior synoptic storm lag

@@ -1,0 +1,7 @@
+term_index,feature,feature_label,n_splines,edge_knot_min,edge_knot_max,first_internal_knot,median_knot,last_internal_knot,pct_chandipur_raw_exceeding_edge,pct_chandipur_b4_exceeding_edge,extrapolation_status_raw,extrapolation_status_b4
+0,cape_J_kg,Surface CAPE (J/kg),15,0.0,7240.0,517.1429,3620.0,6722.8571,0.35,0.0,SEVERE COLLAPSE,BOUNDED (No Extrapolation)
+1,cin_J_kg,Convective Inhibition (J/kg),15,0.0,997.4,71.2429,498.7,926.1571,0.02,0.0,SEVERE COLLAPSE,BOUNDED (No Extrapolation)
+2,bulk_shear_850_300_ms,Bulk Shear 850-300 hPa (m/s),15,0.05,77.78,5.6021,38.915,72.2279,0.0,0.0,SAFE,BOUNDED (No Extrapolation)
+3,cloud_cover_fraction,Total Cloud Cover Fraction,15,0.0,1.0,0.0714,0.5,0.9286,0.0,0.0,SAFE,BOUNDED (No Extrapolation)
+4,wind_speed_10m_ms,10 m Wind Speed (m/s),15,0.02,15.07,1.095,7.545,13.995,0.02,0.02,SEVERE COLLAPSE,EXCEEDS
+5,wind_speed_850hPa_ms,850 hPa Wind Speed (m/s),15,0.02,42.33,3.0421,21.175,39.3079,0.0,0.0,SAFE,BOUNDED (No Extrapolation)

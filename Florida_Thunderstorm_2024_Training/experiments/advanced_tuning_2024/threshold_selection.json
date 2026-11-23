@@ -1,0 +1,30 @@
+{
+  "validation_samples": 56186,
+  "validation_positives": 17824,
+  "operational_objectives": {
+    "balanced_f1_optimal": {
+      "threshold": 0.61,
+      "validation_precision": 0.6696,
+      "validation_recall": 0.765,
+      "validation_f1": 0.7141
+    },
+    "high_sensitivity_safety": {
+      "threshold": 0.63,
+      "validation_precision": 0.6776,
+      "validation_recall": 0.7512,
+      "validation_f1": 0.7125
+    },
+    "high_precision_economic": {
+      "threshold": 0.44,
+      "validation_precision": 0.6008,
+      "validation_recall": 0.8561,
+      "validation_f1": 0.7061
+    },
+    "standard_operational_default": {
+      "threshold": 0.5,
+      "validation_precision": 0.6215,
+      "validation_recall": 0.8266,
+      "validation_f1": 0.7096
+    }
+  }
+}

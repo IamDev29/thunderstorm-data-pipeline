@@ -1,0 +1,3 @@
+model,test_sample_count,target_domain_positives,roc_auc,pr_auc,accuracy,precision,recall,f1,tp,fp,tn,fn,interpretation
+Logistic Regression (Linear),69439,11920,0.759289,0.528151,0.859027,0.770913,0.254362,0.382514,3032,901,56618,8888,Quantifies multivariate separability of Florida vs Chandipur feature distributions (P(Domain=Chandipur|X))
+LightGBM (Non-linear),69439,11920,0.862947,0.686273,0.886188,0.811154,0.439262,0.569905,5236,1219,56300,6684,Quantifies multivariate separability of Florida vs Chandipur feature distributions (P(Domain=Chandipur|X))

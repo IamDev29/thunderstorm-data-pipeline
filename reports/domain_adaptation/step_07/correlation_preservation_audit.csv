@@ -1,0 +1,6 @@
+experiment_id,experiment_name,frobenius_diff_pearson,max_abs_diff_pearson,frobenius_diff_spearman,max_abs_diff_spearman,spearman_rank_preserved,correlation_audit_verdict
+B1_Identity_Raw,B1: Identity (Raw Control),0.0,0.0,0.0,0.0,EXACT (Identical),PASS
+B2_Robust_Quantile_Scaling,B2: Robust Quantile Scaling (RQS),0.138254,0.052732,0.331422,0.122687,APPROXIMATE,FAIL
+B3_Bounded_Monotonic,B3: Bounded Monotonic Transformation (BMT),0.267603,0.108099,0.000362,0.000181,APPROXIMATE,PASS
+B4_Selective_CAPE_CIN,B4: Selective Transformation (CAPE & CIN only),0.267398,0.108099,0.0,0.0,EXACT (Identical),PASS
+B5_CAPE_Clipping_7240,"B5: CAPE Boundary Clipping (7,240 J/kg Reference)",0.002807,0.001724,3e-06,2e-06,EXACT (Identical),PASS

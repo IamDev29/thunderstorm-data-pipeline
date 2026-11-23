@@ -1,0 +1,6 @@
+test_statistic,null_hypothesis,bootstrap_replications_B,observed_exceedances_b,naive_uncorrected_p,finite_sample_corrected_p_one_sided,finite_sample_corrected_p_two_sided,minimum_resolvable_p_value,reported_in_step_07_2,audit_verdict
+PR-AUC Difference (Sym B4 - Raw GAM),H0: Delta = 0.0,1000,0,0.0,0.001,0.002,0.001,p < 10^-4,CORRECTED (Finite-sample correction applied; minimum resolvable p=0.0010 for B=1000)
+ROC-AUC Difference (Sym B4 - Raw GAM),H0: Delta = 0.0,1000,1,0.001,0.002,0.004,0.001,p = 0.0010,CONSISTENT
+Brier Score Difference (Sym B4 - Raw GAM),H0: Delta = 0.0,1000,0,0.0,0.001,0.002,0.001,p < 10^-4,CORRECTED (Finite-sample correction applied; minimum resolvable p=0.0010 for B=1000)
+F1 Difference at Frozen Threshold (0.33),H0: Delta = 0.0,1000,7,0.007,0.008,0.016,0.001,p = 0.0070,CONSISTENT
+F1 Difference at Tuned Threshold (0.33 vs 0.33),H0: Delta = 0.0,1000,7,0.007,0.008,0.016,0.001,p = 0.0070,CONSISTENT

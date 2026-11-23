@@ -1,0 +1,58 @@
+[
+  {
+    "region_key": "chandipur",
+    "region_name": "Chandipur, Odisha, India",
+    "year": 2024,
+    "month": "05",
+    "sampling_times": "00:00;06:00;12:00;18:00",
+    "variables": "cape;cin;tcwv;t2m;d2m;tp;u10;v10",
+    "local_path": "data/raw/era5_2024/chandipur/era5_chandipur_2024_05.nc",
+    "file_size_bytes": 100046,
+    "sha256": "e1e595c0df19638b5359b684eace08b87d2128bf20169c69e97b20a305e8ae40",
+    "status": "DOWNLOADED",
+    "request_id": "15d8ad89-2164-485a-8eae-d3ba0beaac1c",
+    "timestamp": "2026-10-24T14:55:44.618078+00:00"
+  },
+  {
+    "region_key": "texas",
+    "region_name": "Texas Gulf Coast",
+    "year": 2024,
+    "month": "05",
+    "sampling_times": "00:00;06:00;12:00;18:00",
+    "variables": "cape;cin;tcwv;t2m;d2m;tp;u10;v10",
+    "local_path": "data/raw/era5_2024/texas/era5_texas_2024_05.nc",
+    "file_size_bytes": 112496,
+    "sha256": "70bade6a91ddef8838439f5866b9b0119e625fe78e257de5584a8df1cfb54416",
+    "status": "DOWNLOADED",
+    "request_id": "35dc393c-db53-4fdd-8457-f0693ea7304c",
+    "timestamp": "2026-10-24T14:55:44.634827+00:00"
+  },
+  {
+    "region_key": "louisiana_mississippi",
+    "region_name": "Louisiana & Mississippi Gulf Coast",
+    "year": 2024,
+    "month": "05",
+    "sampling_times": "00:00;06:00;12:00;18:00",
+    "variables": "cape;cin;tcwv;t2m;d2m;tp;u10;v10",
+    "local_path": "data/raw/era5_2024/louisiana_mississippi/era5_louisiana_mississippi_2024_05.nc",
+    "file_size_bytes": 107303,
+    "sha256": "0c7c9a34b39f05c6c437c030131ae7acf881629799fbf8315995ec3fe6e0cd34",
+    "status": "DOWNLOADED",
+    "request_id": "43596d23-e689-4ba0-8171-98a85632981e",
+    "timestamp": "2026-10-24T14:55:44.653694+00:00"
+  },
+  {
+    "region_key": "florida",
+    "region_name": "Florida Gulf Coast",
+    "year": 2024,
+    "month": "05",
+    "sampling_times": "00:00;06:00;12:00;18:00",
+    "variables": "cape;cin;tcwv;t2m;d2m;tp;u10;v10",
+    "local_path": "data/raw/era5_2024/florida/era5_florida_2024_05.nc",
+    "file_size_bytes": 128841,
+    "sha256": "684a54eee90d4e49b9a858fb41aacaa06b0a982b6e4f83a89ca71085a95da832",
+    "status": "DOWNLOADED",
+    "request_id": "5bd64936-1b08-475a-b7f6-c123813e2fcf",
+    "timestamp": "2026-10-24T14:55:44.661121+00:00"
+  }
+]

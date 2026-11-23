@@ -1,0 +1,6 @@
+experiment_id,experiment_name,negative_cape_count,negative_cin_count,negative_bulk_shear_count,cloud_cover_out_of_bounds,negative_wind_10m_count,negative_wind_850hPa_count,nan_or_inf_count,total_physical_violations,physical_validity_verdict
+B1_Identity_Raw,B1: Identity (Raw Control),0,0,0,0,0,0,0,0,PASS (Zero Violations)
+B2_Robust_Quantile_Scaling,B2: Robust Quantile Scaling (RQS),0,0,0,0,0,0,0,0,PASS (Zero Violations)
+B3_Bounded_Monotonic,B3: Bounded Monotonic Transformation (BMT),0,0,0,0,0,0,0,0,PASS (Zero Violations)
+B4_Selective_CAPE_CIN,B4: Selective Transformation (CAPE & CIN only),0,0,0,0,0,0,0,0,PASS (Zero Violations)
+B5_CAPE_Clipping_7240,"B5: CAPE Boundary Clipping (7,240 J/kg Reference)",0,0,0,0,0,0,0,0,PASS (Zero Violations)

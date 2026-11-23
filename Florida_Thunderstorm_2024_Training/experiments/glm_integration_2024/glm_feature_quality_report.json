@@ -1,0 +1,37 @@
+{
+  "report_timestamp_utc": "2026-10-28T05:08:57Z",
+  "sensor": "GOES-16 GLM FM1",
+  "product": "OR_GLM-L2-LCFA_G16",
+  "total_raw_granules": 12,
+  "processed_granules": 12,
+  "percent_uncorrectable_l0_errors": 0.0,
+  "percent_navigated_l1b_events": 1.0,
+  "raw_flashes_count": 2658,
+  "rejected_out_of_bbox": 1970,
+  "rejected_outside_florida_polygon": 507,
+  "accepted_florida_flashes": 181,
+  "accepted_terrestrial_flashes": 173,
+  "accepted_coastal_marine_flashes": 8,
+  "duplicate_flashes_count": 0,
+  "measured_groups_count": 4534,
+  "measured_events_count": 9243,
+  "measured_mean_groups_per_flash": 25.0497,
+  "measured_mean_events_per_flash": 51.0663,
+  "synthetic_multipliers_eliminated": true,
+  "quality_flags_distribution": {
+    "good_quality_flag_0": 172,
+    "degraded_event_threshold_flag_3": 9
+  },
+  "coverage_statistics": {
+    "total_2024_synoptic_cycles": 1464,
+    "cycles_with_glm_coverage": 4,
+    "coverage_cycle_pct": 0.2732,
+    "total_monitored_asos_windows": 112509,
+    "common_cohort_windows_may15": 320,
+    "common_cohort_positives": 166,
+    "common_cohort_negatives": 154,
+    "common_cohort_prevalence": 0.51875,
+    "excluded_windows_missing_glm": 112189,
+    "excluded_windows_pct": 99.7156
+  }
+}

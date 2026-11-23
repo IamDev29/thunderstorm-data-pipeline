@@ -1,0 +1,68 @@
+{
+  "audit_timestamp": "2026-10-23T13:00:45.655310+00:00",
+  "input_directory": "c:\\Users\\KIIT0001\\Desktop\\Data Collection\\NASA LIS DATA",
+  "total_granules_analyzed": 4407,
+  "flash_verification": {
+    "status": "PASS",
+    "total_chandipur_flashes": 8,
+    "granules_contributing": [
+      "ISS_LIS_SC_V3.0_20230321_100444_FIN",
+      "ISS_LIS_SC_V3.0_20230929_145717_FIN"
+    ],
+    "dates_detected": [
+      "2023-03-21",
+      "2023-09-29"
+    ],
+    "all_coordinates_verified_inside_box": true,
+    "all_records_within_granule_intervals": true
+  },
+  "timestamp_audit": {
+    "status": "PASS",
+    "time_scale": "TAI93 (International Atomic Time seconds since 1993-01-01 00:00:00 TAI)",
+    "leap_second_offset": 10.0,
+    "leap_seconds_stability_in_2023": "Constant (no leap seconds occurred in 2023)",
+    "utc_conversion_accuracy": "Microsecond precision verified against orbit metadata",
+    "timezone_offset_ist": "+05:30 (Asia/Kolkata)"
+  },
+  "coverage_audit": {
+    "status": "PASS",
+    "original_reported_overpasses": 310,
+    "exact_chandipur_cell_observed_overpasses": 295,
+    "buffer_only_overpasses_excluded": 15,
+    "average_effective_duration_exact_cell_s": 76.19,
+    "median_effective_duration_exact_cell_s": 94.56
+  },
+  "label_audit": {
+    "status": "PASS",
+    "total_evaluated_overpasses": 310,
+    "positive_labels_count": 2,
+    "robust_negative_labels_count": 247,
+    "unknown_labels_count": 61,
+    "label_categories": {
+      "ROBUST_NEGATIVE": 247,
+      "UNCERTAIN_SHORT_DURATION": 46,
+      "EXCLUDED_UNOBSERVED": 15,
+      "HIGH_CONFIDENCE_POSITIVE": 2
+    },
+    "labeling_criteria": {
+      "positive": "Confirmed lightning detection in Chandipur bounding box during overpass window",
+      "negative": "Exact Chandipur cell observed, effective duration >= 30.0s, alert_flag clean, 0 lightning",
+      "unknown": "Effective duration < 30.0s, buffer-only overpass, or fatal alert flag"
+    }
+  },
+  "spatial_sensitivity": {
+    "status": "PASS",
+    "primary_chandipur_flashes": 8,
+    "wider_local_flashes": 467,
+    "regional_odisha_flashes": 8854,
+    "wider_local_dates_count": 25,
+    "diurnal_peak_ist": "16:00 IST (afternoon convection, 214 flashes in wider local box)"
+  },
+  "dataset_readiness_for_era5": {
+    "ready": true,
+    "verified_events_file": "c:\\Users\\KIIT0001\\Desktop\\Data Collection\\output\\audit\\corrected\\chandipur_lightning_events.csv",
+    "verified_windows_file": "c:\\Users\\KIIT0001\\Desktop\\Data Collection\\output\\audit\\corrected\\chandipur_observation_windows.csv",
+    "recommended_training_labels_count": 249,
+    "excluded_ambiguous_windows_count": 61
+  }
+}

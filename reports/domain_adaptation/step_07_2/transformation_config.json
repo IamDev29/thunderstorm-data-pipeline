@@ -1,0 +1,29 @@
+{
+  "paradigm": "Unsupervised Transductive Adaptation",
+  "method_name": "Symmetric B4 Selective Transformation",
+  "parameters": {
+    "cape": {
+      "source_p95_J_kg": 2668.5,
+      "target_p95_J_kg": 4611.5625,
+      "scale_denominator": 1000.0,
+      "alpha_cape": 1547.1097068972401,
+      "formula": "alpha_cape * ln(1 + x / 1000.0)"
+    },
+    "cin": {
+      "source_p95_J_kg": 460.6299999999996,
+      "target_p95_J_kg": 711.0859375,
+      "scale_denominator": 100.0,
+      "alpha_cin": 220.05979254222723,
+      "formula": "alpha_cin * ln(1 + x / 100.0)"
+    },
+    "untouched_features": [
+      "bulk_shear_850_300_ms",
+      "cloud_cover_fraction",
+      "wind_speed_10m_ms",
+      "wind_speed_850hPa_ms"
+    ]
+  },
+  "target_label_access": false,
+  "florida_test_label_access": false,
+  "timestamp_utc": "2026-11-18T05:53:41Z"
+}

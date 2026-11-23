@@ -1,0 +1,169 @@
+# Variable Mapping and Schema Definition
+# Maps raw source columns/parameters into standardized output features and training predictors.
+
+noaa_mapping:
+  event_id: "noaa_event_id"
+  state: "state"
+  event_type: "noaa_event_type"
+  begin_date_time_parsed: "noaa_begin_time_utc"
+  end_date_time_parsed: "noaa_end_time_utc"
+  latitude: "noaa_latitude"
+  longitude: "noaa_longitude"
+  magnitude: "noaa_magnitude"
+  magnitude_type: "noaa_magnitude_type"
+  damage_property_num: "noaa_damage_property_usd"
+  damage_crops_num: "noaa_damage_crops_usd"
+
+era5_single_level_mapping:
+  2m_temperature:
+    short_name: "t2m"
+    standard_name: "temperature_2m_degC"
+    units: "°C"
+    conversion: "kelvin_to_celsius"
+  2m_dewpoint_temperature:
+    short_name: "d2m"
+    standard_name: "dewpoint_2m_degC"
+    units: "°C"
+    conversion: "kelvin_to_celsius"
+  surface_pressure:
+    short_name: "sp"
+    standard_name: "surface_pressure_hPa"
+    units: "hPa"
+    conversion: "pascal_to_hectopascal"
+  mean_sea_level_pressure:
+    short_name: "msl"
+    standard_name: "mslp_hPa"
+    units: "hPa"
+    conversion: "pascal_to_hectopascal"
+  total_precipitation:
+    short_name: "tp"
+    standard_name: "total_precipitation_mm"
+    units: "mm"
+    conversion: "meters_to_mm"
+  convective_precipitation:
+    short_name: "cp"
+    standard_name: "convective_precipitation_mm"
+    units: "mm"
+    conversion: "meters_to_mm"
+  convective_available_potential_energy:
+    short_name: "cape"
+    standard_name: "cape_J_kg"
+    units: "J/kg"
+    conversion: "none"
+  convective_inhibition:
+    short_name: "cin"
+    standard_name: "cin_J_kg"
+    units: "J/kg"
+    conversion: "none"
+  total_cloud_cover:
+    short_name: "tcc"
+    standard_name: "cloud_cover_fraction"
+    units: "0-1"
+    conversion: "none"
+  10m_u_component_of_wind:
+    short_name: "u10"
+    standard_name: "u_wind_10m_ms"
+    units: "m/s"
+    conversion: "none"
+  10m_v_component_of_wind:
+    short_name: "v10"
+    standard_name: "v_wind_10m_ms"
+    units: "m/s"
+    conversion: "none"
+  total_column_water_vapour:
+    short_name: "tcwv"
+    standard_name: "tcwv_kg_m2"
+    units: "kg/m²"
+    conversion: "none"
+
+era5_pressure_level_mapping:
+  temperature:
+    levels: ["850", "500", "300"]
+    units: "°C"
+  relative_humidity:
+    levels: ["850", "500", "300"]
+    units: "%"
+  specific_humidity:
+    levels: ["850", "500", "300"]
+    units: "g/kg"
+  u_component_of_wind:
+    levels: ["850", "500", "300"]
+    units: "m/s"
+  v_component_of_wind:
+    levels: ["850", "500", "300"]
+    units: "m/s"
+  geopotential:
+    levels: ["850", "500", "300"]
+    units: "m²/s²"
+  vertical_velocity:
+    levels: ["850", "500", "300"]
+    units: "Pa/s"
+
+lis_mapping:
+  lightning_count: "lis_flash_count"
+  viewtime: "lis_viewtime_seconds"
+  coverage_flag: "lis_coverage_flag"
+  quality_flag: "lis_quality_flag"
+
+training_feature_groups:
+  spatiotemporal_keys:
+    - "timestamp_utc"
+    - "latitude"
+    - "longitude"
+    - "grid_cell_id"
+  predictors:
+    - "temperature_2m_degC"
+    - "dewpoint_2m_degC"
+    - "surface_pressure_hPa"
+    - "mslp_hPa"
+    - "total_precipitation_mm"
+    - "convective_precipitation_mm"
+    - "cape_J_kg"
+    - "cin_J_kg"
+    - "cloud_cover_fraction"
+    - "u_wind_10m_ms"
+    - "v_wind_10m_ms"
+    - "wind_speed_10m_ms"
+    - "wind_direction_10m_deg"
+    - "relative_humidity_2m_pct"
+    - "tcwv_kg_m2"
+    # Pressure level features (850, 500, 300 hPa)
+    - "temperature_850hPa_degC"
+    - "temperature_500hPa_degC"
+    - "temperature_300hPa_degC"
+    - "relative_humidity_850hPa_pct"
+    - "relative_humidity_500hPa_pct"
+    - "relative_humidity_300hPa_pct"
+    - "specific_humidity_850hPa_g_kg"
+    - "specific_humidity_500hPa_g_kg"
+    - "specific_humidity_300hPa_g_kg"
+    - "u_wind_850hPa_ms"
+    - "u_wind_500hPa_ms"
+    - "u_wind_300hPa_ms"
+    - "v_wind_850hPa_ms"
+    - "v_wind_500hPa_ms"
+    - "v_wind_300hPa_ms"
+    - "geopotential_850hPa_m2_s2"
+    - "geopotential_500hPa_m2_s2"
+    - "geopotential_300hPa_m2_s2"
+    - "vertical_velocity_850hPa_Pa_s"
+    - "vertical_velocity_500hPa_Pa_s"
+    - "vertical_velocity_300hPa_Pa_s"
+  targets:
+    - "storm_label"
+    - "label_source"
+    - "label_confidence"
+    - "uncertainty_reason"
+  auxiliary_metadata:
+    - "noaa_event_match"
+    - "noaa_event_id"
+    - "noaa_event_type"
+    - "glm_observation_coverage"
+    - "glm_lightning_detected"
+    - "glm_flash_count"
+    - "glm_group_count"
+    - "glm_event_count"
+    - "glm_granule_count"
+    - "glm_monitored_duration_sec"
+    - "coverage_status"
+

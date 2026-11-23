@@ -1,0 +1,5 @@
+cohort,total_observations,old_strict_ts_count,new_strict_ts_count,strict_ts_change,old_explicit_ts_count,new_explicit_ts_count,explicit_ts_change,new_vcts_count,new_lightning_remark_count,new_cb_count,new_cb_alone_count
+Station DTS (Destin),112473,112473,4655,-107818,112473,183,-112290,212,4640,0,0
+Station TTS (Shuttle Landing),12110,12110,1003,-11107,12110,300,-11810,191,734,0,0
+Other 102 Stations,5603849,371631,371408,-223,20540,19563,-977,21852,364870,37299,14422
+All 104 Reporting Stations,5728432,496214,377066,-119148,145123,20046,-125077,22255,370244,37299,14422

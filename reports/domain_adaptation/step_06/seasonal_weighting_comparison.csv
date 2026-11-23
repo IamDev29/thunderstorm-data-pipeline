@@ -1,0 +1,5 @@
+season,source_samples,target_samples,domain_classifier_auc,ess,ess_ratio,min_weight,max_weight,std_weight,fallback_used
+DJF (Winter),18688,5776,0.9207,4422.95,0.2367,0.0904,10.1225,1.7959,False
+MAM (Pre-monsoon),28407,5888,0.9616,6089.93,0.2144,0.1889,13.1297,1.9143,False
+JJAS (Monsoon),19160,7808,0.9265,3994.55,0.2085,0.1212,13.6792,1.9485,False
+ON (Post-monsoon),0,3904,,,,,,,True

@@ -1,0 +1,21 @@
+experiment_id,experiment_name,season,sample_count,positives,prevalence,gam_f1,gam_precision,gam_recall,gam_roc_auc,gam_pr_auc,ebm_f1,ebm_precision,ebm_recall,ebm_roc_auc,ebm_pr_auc
+Exp_A,Original Zero-Shot Baseline,DJF (Winter),5776,63,0.0109,0.1429,0.2857,0.0952,0.9193,0.1546,0.3717,0.42,0.3333,0.927,0.2955
+Exp_A,Original Zero-Shot Baseline,MAM (Pre-monsoon),5888,1216,0.2065,0.4612,0.3603,0.6406,0.7254,0.382,0.3832,0.3356,0.4465,0.697,0.3616
+Exp_A,Original Zero-Shot Baseline,JJAS (Monsoon),7808,3761,0.4817,0.6819,0.5489,0.9,0.6716,0.6065,0.6803,0.5484,0.8955,0.7056,0.6742
+Exp_A,Original Zero-Shot Baseline,ON (Post-monsoon),3904,422,0.1081,0.5403,0.3782,0.9455,0.9329,0.5733,0.5513,0.3887,0.9479,0.9533,0.6977
+Exp_B,"CAPE Boundary Clipping (7,240 J/kg)",DJF (Winter),5776,63,0.0109,0.1429,0.2857,0.0952,0.9193,0.1546,0.3717,0.42,0.3333,0.927,0.2955
+Exp_B,"CAPE Boundary Clipping (7,240 J/kg)",MAM (Pre-monsoon),5888,1216,0.2065,0.4612,0.3603,0.6406,0.7295,0.3832,0.3832,0.3356,0.4465,0.697,0.3616
+Exp_B,"CAPE Boundary Clipping (7,240 J/kg)",JJAS (Monsoon),7808,3761,0.4817,0.6819,0.5489,0.9,0.6715,0.6064,0.6803,0.5484,0.8955,0.7056,0.6742
+Exp_B,"CAPE Boundary Clipping (7,240 J/kg)",ON (Post-monsoon),3904,422,0.1081,0.5403,0.3782,0.9455,0.9329,0.5733,0.5513,0.3887,0.9479,0.9533,0.6977
+Exp_C,Empirical Quantile Mapping (Global),DJF (Winter),5776,63,0.0109,0.0,0.0,0.0,0.8497,0.0638,0.0,0.0,0.0,0.8909,0.1498
+Exp_C,Empirical Quantile Mapping (Global),MAM (Pre-monsoon),5888,1216,0.2065,0.3384,0.3713,0.3109,0.7268,0.3791,0.2933,0.3768,0.2401,0.6942,0.3486
+Exp_C,Empirical Quantile Mapping (Global),JJAS (Monsoon),7808,3761,0.4817,0.4436,0.5118,0.3914,0.572,0.5342,0.5831,0.5931,0.5735,0.6543,0.6184
+Exp_C,Empirical Quantile Mapping (Global),ON (Post-monsoon),3904,422,0.1081,0.4523,0.3954,0.5284,0.8977,0.4476,0.5819,0.4658,0.7749,0.9337,0.6069
+Exp_D,Monotonic CAPE Saturation (Tanh),DJF (Winter),5776,63,0.0109,0.1633,0.1429,0.1905,0.9194,0.128,0.2945,0.24,0.381,0.9256,0.214
+Exp_D,Monotonic CAPE Saturation (Tanh),MAM (Pre-monsoon),5888,1216,0.2065,0.4316,0.3072,0.7253,0.7095,0.3584,0.4304,0.3224,0.6472,0.6877,0.3557
+Exp_D,Monotonic CAPE Saturation (Tanh),JJAS (Monsoon),7808,3761,0.4817,0.6757,0.5245,0.9495,0.6578,0.5911,0.6756,0.5268,0.9418,0.695,0.6579
+Exp_D,Monotonic CAPE Saturation (Tanh),ON (Post-monsoon),3904,422,0.1081,0.5028,0.3391,0.9716,0.9217,0.5249,0.5056,0.3439,0.955,0.9431,0.6446
+Exp_E,Seasonal Quantile Mapping (with ON fallback),DJF (Winter),5776,63,0.0109,0.058,0.3333,0.0317,0.9016,0.1334,0.3765,0.7273,0.254,0.9216,0.3325
+Exp_E,Seasonal Quantile Mapping (with ON fallback),MAM (Pre-monsoon),5888,1216,0.2065,0.1804,0.5551,0.1077,0.7235,0.3817,0.1074,0.4568,0.0609,0.7031,0.3562
+Exp_E,Seasonal Quantile Mapping (with ON fallback),JJAS (Monsoon),7808,3761,0.4817,0.6669,0.549,0.8492,0.6715,0.6311,0.6789,0.5552,0.8737,0.7088,0.6898
+Exp_E,Seasonal Quantile Mapping (with ON fallback),ON (Post-monsoon),3904,422,0.1081,0.5137,0.3649,0.8673,0.915,0.5035,0.5513,0.3907,0.936,0.9439,0.6413

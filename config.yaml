@@ -1,0 +1,237 @@
+# NOAA Storm Events Data Collection and Preprocessing Pipeline Configuration
+archive:
+  base_url: "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/"
+  timeout: 30
+  max_retries: 3
+  backoff_factor: 2.0
+  user_agent: "NOAA-StormEvents-Pipeline/1.0 (Research/Academic Data Collection)"
+
+# Historical Period: Default 10 most recent complete calendar years
+historical_period:
+  start_year: 2016
+  end_year: 2025
+  auto_detect_complete_years: true
+
+# Datasets to fetch from the bulk CSV archive
+dataset_types:
+  - details
+  - locations
+  - fatalities
+
+# Output and workspace directories
+directories:
+  data_root: "data"
+  raw:
+    details: "data/raw/details"
+    locations: "data/raw/locations"
+    fatalities: "data/raw/fatalities"
+  processed:
+    root: "data/processed"
+    florida: "data/processed/florida"
+    texas: "data/processed/texas"
+    louisiana: "data/processed/louisiana"
+    mississippi: "data/processed/mississippi"
+    combined: "data/processed/combined"
+  reports: "data/reports"
+  logs: "data/logs"
+
+# Storage formats: csv is always saved, parquet is optional
+formats:
+  save_csv: true
+  save_parquet: true
+
+# Event types to retain for thunderstorm & severe convective hazard analysis
+event_types:
+  - "Thunderstorm Wind"
+  - "Hail"
+  - "Lightning"
+  - "Heavy Rain"
+  - "Flash Flood"
+  - "Tornado"
+  - "Tropical Storm"
+  - "Hurricane (Typhoon)"
+
+# Reference meteorological/study site (for climatological comparison)
+reference_location:
+  name: "Chandipur, Odisha, India"
+  latitude: 21.46
+  longitude: 87.02
+  note: "Regional reference point, not a single verified meteorological station."
+
+# Geographic target regions and bounding boxes
+geographic_filters:
+  # Stage 1: State name filtering (matching NOAA's uppercase state names)
+  target_states:
+    florida: "FLORIDA"
+    texas: "TEXAS"
+    louisiana: "LOUISIANA"
+    mississippi: "MISSISSIPPI"
+
+  # Stage 2: Geographic bounding boxes [lat_min, lat_max, lon_min, lon_max]
+  regions:
+    florida:
+      state_name: "FLORIDA"
+      bounding_box:
+        lat_min: 24.5
+        lat_max: 31.1
+        lon_min: -87.7
+        lon_max: -79.9
+      coastal_focus:
+        lat_min: 24.5
+        lat_max: 31.0
+        lon_min: -88.0
+        lon_max: -80.0
+
+    texas:
+      state_name: "TEXAS"
+      bounding_box:
+        lat_min: 25.8
+        lat_max: 36.5
+        lon_min: -106.6
+        lon_max: -93.5
+      coastal_focus:
+        # Focus on Gulf Coast and nearby coastal plain / inland areas
+        lat_min: 25.8
+        lat_max: 31.5
+        lon_min: -98.5
+        lon_max: -93.5
+
+    louisiana:
+      state_name: "LOUISIANA"
+      bounding_box:
+        lat_min: 28.8
+        lat_max: 33.1
+        lon_min: -94.1
+        lon_max: -88.8
+      coastal_focus:
+        lat_min: 28.8
+        lat_max: 31.0
+        lon_min: -94.1
+        lon_max: -89.0
+
+    mississippi:
+      state_name: "MISSISSIPPI"
+      bounding_box:
+        lat_min: 30.1
+        lat_max: 35.0
+        lon_min: -91.7
+        lon_max: -88.0
+      coastal_focus:
+        lat_min: 30.1
+        lat_max: 31.5
+        lon_min: -90.0
+        lon_max: -88.0
+
+  # Combined Gulf Coast candidate region bounding box
+  combined_gulf_coast:
+    states:
+      - "FLORIDA"
+      - "TEXAS"
+      - "LOUISIANA"
+      - "MISSISSIPPI"
+    bounding_box:
+      lat_min: 24.5
+      lat_max: 32.0
+      lon_min: -98.5
+      lon_max: -80.0
+
+# Logging configuration
+logging:
+  level: "INFO"
+  log_file: "data/logs/noaa_pipeline.log"
+
+# ERA5 2024 Climate Similarity Pilot Study Configuration
+era5_pilot:
+  year: 2024
+  dataset: "reanalysis-era5-single-levels"
+  data_format: "netcdf"
+  download_format: "unarchived"
+  sampling_times:
+    - "00:00"
+    - "06:00"
+    - "12:00"
+    - "18:00"
+
+  # Core pilot comparison variables
+  variables:
+    - "cape"
+    - "cin"
+    - "tcwv"
+    - "t2m"
+    - "d2m"
+    - "tp"
+    - "u10"
+    - "v10"
+
+  # Geographic comparison domains
+  domains:
+    chandipur:
+      name: "Chandipur, Odisha, India"
+      lat_min: 20.0
+      lat_max: 23.0
+      lon_min: 85.5
+      lon_max: 88.5
+      ref_point:
+        latitude: 21.46
+        longitude: 87.02
+
+    texas:
+      name: "Texas Gulf Coast"
+      lat_min: 25.5
+      lat_max: 30.5
+      lon_min: -98.0
+      lon_max: -93.5
+
+    louisiana_mississippi:
+      name: "Louisiana and Mississippi Gulf Coast"
+      lat_min: 28.5
+      lat_max: 31.5
+      lon_min: -93.5
+      lon_max: -88.0
+
+    florida:
+      name: "Florida Gulf Coast"
+      lat_min: 24.5
+      lat_max: 30.5
+      lon_min: -86.0
+      lon_max: -80.5
+
+  # Seasonal definitions
+  seasons:
+    pre_monsoon: [3, 4, 5]
+    monsoon: [6, 7, 8, 9]
+    post_monsoon: [10, 11]
+    annual: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+  # Weights for composite climate similarity distance scores
+  weights:
+    equal:
+      cape: 0.143
+      cin: 0.143
+      tcwv: 0.143
+      t2m_degC: 0.143
+      d2m_degC: 0.143
+      tp_mm: 0.143
+      wind_speed_10m: 0.143
+    convective:
+      cape: 0.30
+      cin: 0.20
+      tcwv: 0.20
+      t2m_degC: 0.10
+      d2m_degC: 0.10
+      tp_mm: 0.05
+      wind_speed_10m: 0.05
+    moisture_thermal:
+      tcwv: 0.25
+      d2m_degC: 0.25
+      t2m_degC: 0.20
+      tp_mm: 0.15
+      cape: 0.05
+      cin: 0.05
+      wind_speed_10m: 0.05
+
+  directories:
+    raw: "data/raw/era5_2024"
+    processed: "data/processed/era5_2024"
+    reports: "data/reports/climate_similarity_2024"
+

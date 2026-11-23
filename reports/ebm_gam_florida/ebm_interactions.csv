@@ -1,0 +1,7 @@
+feature,importance_gain,importance_gain_pct
+cin_J_kg,147644.2000732422,44.55
+cape_J_kg,115212.50945138931,34.77
+cloud_cover_fraction,35789.26864814758,10.8
+bulk_shear_850_300_ms,19729.44404554367,5.95
+wind_speed_850hPa_ms,12800.767744064331,3.86
+wind_speed_10m_ms,216.4478611946106,0.07

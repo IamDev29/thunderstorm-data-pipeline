@@ -1,0 +1,38 @@
+======================================================================
+   NASA ISS-LIS SCIENTIFIC AUDIT: INDEPENDENT VALIDATION SUMMARY
+======================================================================
+
+1. CHANDIPUR DETECTIONS VERIFICATION:
+   - Total verified flashes: 8
+   - Contributing granules: 2 (2023-03-21 and 2023-09-29)
+   - Coordinates inside Chandipur box (21.25-21.50N, 87.00-87.25E): 100% PASS
+   - Timestamps within granule orbit bounds: 100% PASS
+
+2. TIMESTAMP SCALE AND LEAP SECOND AUDIT:
+   - Time scale: TAI93
+   - Leap second offset: 10.0s constant throughout 2023
+   - Microsecond precision: Preserved in UTC and IST (Asia/Kolkata)
+   - Status: PASS
+
+3. COVERAGE AND OBSERVATION WINDOWS AUDIT:
+   - Initial reported overpasses: 310
+   - Exact Chandipur cell observed (21.25N, 87.25E): 295 overpasses
+   - Buffer-only overpasses excluded: 15 overpasses
+   - Effective duration >= 30s: 247 overpasses
+   - Effective duration < 30s: 46 overpasses
+
+4. CORRECTED LABEL DISTRIBUTION:
+   - Positive labels (1):       2
+   - Robust Negative labels (0): 247
+   - Unknown/Ambiguous labels (-1): 61
+   - Usable for ML training:    249 windows
+
+5. SPATIAL SENSITIVITY AND REGIONAL COMPARISON:
+   - Primary Box (729 km2):   8 flashes, 2 dates
+   - Wider Local (17,050 km2): 467 flashes, 25 dates (diurnal peak at 16:00 IST)
+   - Regional Odisha:          8,854 flashes, 140 dates
+
+6. ERA5 INTEGRATION STATUS:
+   - Status: READY FOR INTEGRATION
+   - Output files written to output/audit/corrected/
+======================================================================

@@ -1,0 +1,53 @@
+{
+  "audit_timestamp_utc": "2026-10-27T17:30:38Z",
+  "dataset_path": "C:\\Users\\KIIT0001\\Desktop\\Data Collection\\data\\processed\\asos_parser_fixed\\florida_asos_modeling_ready_fixed_2024.parquet",
+  "dataset_sha256": "ebaa442727daf506af3889a4a96f1a411dc68f03d11b2efeb7abbc6851d147e4",
+  "total_terrestrial_rows": 119663,
+  "monitored_rows": 112509,
+  "pre_test_rows": 84436,
+  "pre_test_positives": 20559,
+  "test_rows": 28073,
+  "test_positives": 1918,
+  "random_seed": 42,
+  "software_versions": {
+    "python": "3.10.0",
+    "lightgbm": "4.6.0",
+    "xgboost": "3.2.0",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6"
+  },
+  "target_definition": "target_asos_strict_crit_c (strict TS / VCTS / LTG in (t, t+6h] under Criterion C)",
+  "features": {
+    "model_a_era5_count": 21,
+    "model_b_spatial_diurnal_count": 25,
+    "model_c_full_count": 26,
+    "full_feature_list": [
+      "cape_J_kg",
+      "cin_J_kg",
+      "dewpoint_depression_degC",
+      "tcwv_kg_m2",
+      "total_precipitation_mm",
+      "convective_precipitation_mm",
+      "cloud_cover_fraction",
+      "temperature_2m_degC",
+      "dewpoint_2m_degC",
+      "surface_pressure_hPa",
+      "mslp_hPa",
+      "wind_speed_10m_ms",
+      "wind_direction_10m_deg",
+      "temperature_850hPa_degC",
+      "relative_humidity_850hPa_pct",
+      "wind_speed_850hPa_ms",
+      "temperature_500hPa_degC",
+      "relative_humidity_500hPa_pct",
+      "bulk_shear_850_300_ms",
+      "temp_diff_850_500_degC",
+      "era5_thunderstorm_favorability",
+      "latitude",
+      "longitude",
+      "sin_hour",
+      "cos_hour",
+      "prior_strict_ts_6h"
+    ]
+  }
+}

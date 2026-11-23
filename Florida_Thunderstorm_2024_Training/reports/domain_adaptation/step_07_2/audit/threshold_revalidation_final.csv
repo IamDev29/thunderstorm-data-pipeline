@@ -1,0 +1,19 @@
+model,architecture,domain,threshold_type,threshold_value,f1,precision,recall,pr_auc,roc_auc,brier_score,sample_count,positive_count
+pyGAM,Original Raw,Florida Test Holdout,Florida Val Optimal (0.33),0.33,0.4086,0.3798,0.4421,0.3362,0.8288,0.0556,28073,1918
+pyGAM,Original Raw,Florida Test Holdout,Standard (0.50),0.5,0.3345,0.4823,0.256,0.3362,0.8288,0.0556,28073,1918
+pyGAM,Symmetric B4 Retrained,Florida Test Holdout,Florida Val Optimal (0.33),0.33,0.4013,0.3572,0.4578,0.3337,0.8291,0.0566,28073,1918
+pyGAM,Symmetric B4 Retrained,Florida Test Holdout,Standard (0.50),0.5,0.3426,0.4608,0.2727,0.3337,0.8291,0.0566,28073,1918
+InterpretML EBM,Original Raw,Florida Test Holdout,Florida Val Optimal (0.34),0.34,0.4003,0.3578,0.4541,0.3513,0.8304,0.0564,28073,1918
+InterpretML EBM,Original Raw,Florida Test Holdout,Standard (0.50),0.5,0.3515,0.4768,0.2784,0.3513,0.8304,0.0564,28073,1918
+InterpretML EBM,Symmetric B4 Retrained,Florida Test Holdout,Florida Val Optimal (0.34),0.34,0.4003,0.3578,0.4541,0.3513,0.8304,0.0564,28073,1918
+InterpretML EBM,Symmetric B4 Retrained,Florida Test Holdout,Standard (0.50),0.5,0.3515,0.4768,0.2784,0.3513,0.8304,0.0564,28073,1918
+pyGAM,Original Raw,Chandipur Target Benchmark,Frozen Source Optimal (0.33),0.33,0.6146,0.4858,0.8365,0.5523,0.8494,0.1301,23376,5462
+pyGAM,Original Raw,Chandipur Target Benchmark,Standard (0.50),0.5,0.517,0.5709,0.4724,0.5523,0.8494,0.1301,23376,5462
+pyGAM,Symmetric B4 Retrained,Chandipur Target Benchmark,Frozen Source Optimal (0.33),0.33,0.6086,0.4837,0.8204,0.5999,0.854,0.1279,23376,5462
+pyGAM,Symmetric B4 Retrained,Chandipur Target Benchmark,Tuned Source Optimal (0.33),0.33,0.6086,0.4837,0.8204,0.5999,0.854,0.1279,23376,5462
+pyGAM,Symmetric B4 Retrained,Chandipur Target Benchmark,Standard (0.50),0.5,0.5321,0.5967,0.48,0.5999,0.854,0.1279,23376,5462
+InterpretML EBM,Original Raw,Chandipur Target Benchmark,Frozen Source Optimal (0.34),0.34,0.6059,0.4902,0.7931,0.6134,0.8572,0.127,23376,5462
+InterpretML EBM,Original Raw,Chandipur Target Benchmark,Standard (0.50),0.5,0.5482,0.6131,0.4958,0.6134,0.8572,0.127,23376,5462
+InterpretML EBM,Symmetric B4 Retrained,Chandipur Target Benchmark,Frozen Source Optimal (0.34),0.34,0.6059,0.4902,0.7931,0.6134,0.8572,0.127,23376,5462
+InterpretML EBM,Symmetric B4 Retrained,Chandipur Target Benchmark,Tuned Source Optimal (0.34),0.34,0.6059,0.4902,0.7931,0.6134,0.8572,0.127,23376,5462
+InterpretML EBM,Symmetric B4 Retrained,Chandipur Target Benchmark,Standard (0.50),0.5,0.5482,0.6131,0.4958,0.6134,0.8572,0.127,23376,5462

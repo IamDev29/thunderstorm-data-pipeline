@@ -1,0 +1,7 @@
+feature,feature_label,fl_train_min,fl_train_p01,fl_train_p25,fl_train_p50_median,fl_train_p75,fl_train_p99,fl_train_max,fl_train_mean,fl_train_std,ch_min,ch_p01,ch_p25,ch_p50_median,ch_p75,ch_p99,ch_max,ch_mean,ch_std,pct_chandipur_outside_fl_range,pct_chandipur_outside_fl_p1_p99
+cape_J_kg,Surface CAPE (J/kg),0.0,0.0,0.0,35.2,980.0,3744.28,7240.0,603.23,945.63,0.0,0.0,14.47,763.38,2102.84,6386.81,9906.0,1324.85,1561.0,0.35,9.12
+cin_J_kg,Convective Inhibition (J/kg),0.0,0.0,0.0,0.0,108.7,793.95,997.4,87.29,166.8,0.0,0.0,0.0,56.29,208.82,895.84,999.17,155.41,227.24,0.02,3.06
+bulk_shear_850_300_ms,Bulk Shear 850-300 hPa (m/s),0.05,1.62,12.26,23.66,36.15,61.1,77.78,24.89,15.01,0.11,1.61,9.36,16.02,24.56,45.35,56.45,17.67,10.47,0.0,1.03
+cloud_cover_fraction,Total Cloud Cover (fraction),0.0,0.0,0.16,0.62,0.97,1.0,1.0,0.56,0.39,0.0,0.0,0.05,0.45,0.97,1.0,1.0,0.5,0.41,0.0,0.0
+wind_speed_10m_ms,10 m Wind Speed (m/s),0.02,0.43,1.87,2.76,3.94,8.12,15.07,3.05,1.63,0.05,0.53,2.61,4.06,5.64,9.77,16.6,4.26,2.15,0.02,5.97
+wind_speed_850hPa_ms,850 hPa Wind Speed (m/s),0.02,0.63,3.37,5.74,9.64,22.64,42.33,7.05,4.98,0.05,0.69,3.51,5.25,7.28,15.07,28.99,5.67,3.08,0.0,0.89

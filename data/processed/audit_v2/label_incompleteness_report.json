@@ -1,0 +1,12 @@
+{
+  "total_forecasting_windows": 319152,
+  "confirmed_noaa_positives": 375,
+  "tier_1_satellite_lightning_supported": 26,
+  "tier_2_strong_physical_convection": 96,
+  "tier_3_moderate_physical_convection": 1323,
+  "total_missed_convection_candidates": 1445,
+  "candidate_ratio_to_noaa_positives": 3.85,
+  "glm_unobserved_percentage": 99.76,
+  "glm_covered_percentage": 0.24,
+  "key_implication": "NOAA Storm Events captures only ~0.12% of cycles (severe reports). Physical convection occurs in ~16.7% of cycles. True severe thunderstorm occurrence lies strictly between NOAA-confirmed reports and broad convective favorability. False positives in ML models frequently correspond to genuine unorganized convection that produced no recorded ground damage."
+}

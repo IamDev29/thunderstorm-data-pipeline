@@ -1,0 +1,8 @@
+category,count,pct
+"Explicit In-Station TS (TS, +TSRA, etc.)",116405,2.5399601042648112
+Vicinity Thunderstorm (VCTS),18695,0.4079253824941424
+"Genuine Lightning Remarks (LTG, TSB, TSE)",300089,6.547949724914935
+Cumulonimbus Cloud (CB in body or RMK),30465,0.6647470862628536
+CB Alone (No TS / No VCTS / No LTG),11850,0.2585673058334093
+Strict Thunderstorm (TS | VCTS | Genuine LTG),400816,8.745815464550532
+Original Indicator (TS | VCTS | Genuine LTG | CB),412638,9.003771809661297

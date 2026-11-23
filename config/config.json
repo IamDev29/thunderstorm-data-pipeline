@@ -1,0 +1,27 @@
+{
+  "input_dir": "c:/Users/KIIT0001/Desktop/Data Collection/NASA LIS DATA",
+  "output_dir": "c:/Users/KIIT0001/Desktop/Data Collection/output",
+  "observation_level": "flash",
+  "year": 2023,
+  "start_date": "2023-01-01",
+  "end_date": "2023-12-31",
+  "timezone": "Asia/Kolkata",
+  "study_region": {
+    "name": "chandipur",
+    "lat_min": 21.25,
+    "lat_max": 21.50,
+    "lon_min": 87.00,
+    "lon_max": 87.25
+  },
+  "regional_box": {
+    "name": "odisha_regional",
+    "lat_min": 17.50,
+    "lat_max": 23.50,
+    "lon_min": 81.00,
+    "lon_max": 89.00
+  },
+  "logging": {
+    "level": "INFO",
+    "log_file": "c:/Users/KIIT0001/Desktop/Data Collection/output/logs/pipeline.log"
+  }
+}

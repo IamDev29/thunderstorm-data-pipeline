@@ -1,0 +1,50 @@
+{
+  "experiment_name": "Florida Thunderstorm 2024 GOES-16 GLM Feature Integration",
+  "timestamp_utc": "2026-10-28T05:11:38Z",
+  "dataset_path": "C:\\Users\\KIIT0001\\Desktop\\Data Collection\\data\\processed\\asos_parser_fixed\\florida_asos_modeling_ready_fixed_2024.parquet",
+  "dataset_sha256": "ebaa442727daf506af3889a4a96f1a411dc68f03d11b2efeb7abbc6851d147e4",
+  "total_terrestrial_rows": 119663,
+  "monitored_rows": 112509,
+  "common_cohort_rows": 320,
+  "common_cohort_positives": 166,
+  "common_cohort_negatives": 154,
+  "random_seed": 42,
+  "n_bootstrap_resamples": 1000,
+  "software_versions": {
+    "python": "3.10.0",
+    "lightgbm": "4.6.0",
+    "pandas": "2.3.3",
+    "numpy": "2.2.6",
+    "joblib": "1.5.3"
+  },
+  "target_definition": "target_asos_strict_crit_c (strict TS/VCTS/LTG in (t, t+6h] under Criterion C)",
+  "glm_granules_evaluated": 12,
+  "glm_observation_date": "2024-05-15",
+  "features": {
+    "model_a_features_count": 26,
+    "model_b_features_count": 25,
+    "model_c_features_count": 26,
+    "model_d_glm_features_count": 10,
+    "glm_feature_names": [
+      "glm_flash_count_25km_1h",
+      "glm_flash_count_50km_1h",
+      "glm_flash_count_25km_3h",
+      "glm_flash_count_50km_3h",
+      "glm_flash_count_25km_6h",
+      "glm_flash_count_50km_6h",
+      "glm_flash_density_50km_6h",
+      "glm_time_since_last_flash_min",
+      "glm_statewide_flash_count_6h",
+      "has_prior_flash_50km_6h"
+    ]
+  },
+  "final_decision": {
+    "data_supports_valid_experiment": false,
+    "supports_valid_pilot_comparison": true,
+    "glm_adds_measurable_predictive_value": false,
+    "improvement_consistent_across_folds": false,
+    "experiment_limited_by_satellite_coverage": true,
+    "proceed_to_prototype_integration": false,
+    "recommendation": "NO-GO for prototype integration without full-year streaming GLM data. Raw NetCDF storage (497 GB) requires direct cloud streaming extraction."
+  }
+}

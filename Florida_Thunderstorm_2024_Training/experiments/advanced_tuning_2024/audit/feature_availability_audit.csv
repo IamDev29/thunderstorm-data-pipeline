@@ -1,0 +1,27 @@
+feature,source,available_at_initialization,leakage_risk,evidence
+cape_J_kg,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+cin_J_kg,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+dewpoint_depression_degC,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+tcwv_kg_m2,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+total_precipitation_mm,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+convective_precipitation_mm,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+cloud_cover_fraction,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+temperature_2m_degC,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+dewpoint_2m_degC,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+surface_pressure_hPa,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+mslp_hPa,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+wind_speed_10m_ms,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+wind_direction_10m_deg,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+temperature_850hPa_degC,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+relative_humidity_850hPa_pct,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+wind_speed_850hPa_ms,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+temperature_500hPa_degC,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+relative_humidity_500hPa_pct,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+bulk_shear_850_300_ms,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+temp_diff_850_500_degC,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+era5_thunderstorm_favorability,ERA5 Reanalysis (Single & Pressure Levels),Yes (valid at forecast initialization time t),Zero,ERA5 valid timestamp matches forecast_init_time_utc exactly (delta = 0.0s)
+latitude,Station Metadata Inventory,Yes (static aerodrome coordinates),Zero,Constant physical geographic coordinates of station
+longitude,Station Metadata Inventory,Yes (static aerodrome coordinates),Zero,Constant physical geographic coordinates of station
+sin_hour,Derived from forecast_init_time_utc,Yes (derived directly from initialization timestamp hour),Zero,"sin(2*pi*hour/24), cos(2*pi*hour/24); no future information"
+cos_hour,Derived from forecast_init_time_utc,Yes (derived directly from initialization timestamp hour),Zero,"sin(2*pi*hour/24), cos(2*pi*hour/24); no future information"
+prior_strict_ts_6h,"Station Observations in preceding cycle [t-6h, t]",Yes (window concludes exactly at initialization time t),Low / Controlled,Verified strict 6.0h cycle difference; reset to 0 across missing or incomplete windows

@@ -1,0 +1,7 @@
+feature,feature_label,units,importance_gain,importance_gain_pct,split_count
+cape_J_kg,Surface CAPE,J/kg,134796.2794189453,45.99,65
+cin_J_kg,Convective Inhibition (CIN),J/kg,100991.89198303223,34.45,51
+cloud_cover_fraction,Total Cloud Cover Fraction,fraction (0-1),36326.21408081055,12.39,44
+bulk_shear_850_300_ms,Bulk Shear 850-300 hPa,m/s,15886.863952636719,5.42,26
+wind_speed_850hPa_ms,850 hPa Wind Speed,m/s,5113.383056640625,1.74,14
+wind_speed_10m_ms,10 m Wind Speed,m/s,0.0,0.0,0

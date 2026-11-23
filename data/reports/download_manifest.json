@@ -1,0 +1,35 @@
+[
+  {
+    "filename": "StormEvents_details-ftp_v1.0_d2024_c20260728.csv.gz",
+    "dataset_type": "details",
+    "year": 2024,
+    "source_url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_details-ftp_v1.0_d2024_c20260728.csv.gz",
+    "local_path": "data\\raw\\details\\StormEvents_details-ftp_v1.0_d2024_c20260728.csv.gz",
+    "file_size_bytes": 12693243,
+    "status": "DOWNLOADED",
+    "timestamp": "2026-10-24T06:01:07.939783+00:00",
+    "error_message": null
+  },
+  {
+    "filename": "StormEvents_fatalities-ftp_v1.0_d2024_c20260728.csv.gz",
+    "dataset_type": "fatalities",
+    "year": 2024,
+    "source_url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_fatalities-ftp_v1.0_d2024_c20260728.csv.gz",
+    "local_path": "data\\raw\\fatalities\\StormEvents_fatalities-ftp_v1.0_d2024_c20260728.csv.gz",
+    "file_size_bytes": 13057,
+    "status": "DOWNLOADED",
+    "timestamp": "2026-10-24T06:01:16.305717+00:00",
+    "error_message": null
+  },
+  {
+    "filename": "StormEvents_locations-ftp_v1.0_d2024_c20260728.csv.gz",
+    "dataset_type": "locations",
+    "year": 2024,
+    "source_url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/StormEvents_locations-ftp_v1.0_d2024_c20260728.csv.gz",
+    "local_path": "data\\raw\\locations\\StormEvents_locations-ftp_v1.0_d2024_c20260728.csv.gz",
+    "file_size_bytes": 983723,
+    "status": "DOWNLOADED",
+    "timestamp": "2026-10-24T06:01:17.473020+00:00",
+    "error_message": null
+  }
+]

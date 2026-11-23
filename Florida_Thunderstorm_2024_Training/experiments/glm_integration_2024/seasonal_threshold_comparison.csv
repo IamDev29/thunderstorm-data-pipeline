@@ -1,0 +1,5 @@
+strategy,threshold_rule,sample_count,positives,true_positives,false_positives,true_negatives,false_negatives_missed,miss_rate_pct,false_alarm_rate_pct,precision,recall,f1_score,brier_score
+Global Optimal Threshold,Fixed threshold = 0.64,84436,20559,17819,4858,59019,2740,13.33,8.23,0.7858,0.8667,0.8243,0.0785
+Predefined Seasonal Thresholds,"Jan-Apr: 0.59, May-Aug: 0.66, Sep: 0.64",84436,20559,17768,4733,59144,2791,13.58,8.0,0.7897,0.8642,0.8253,0.0785
+Platt Calibrated Probabilities,Calibrated prob with fixed threshold = 0.50,84436,20559,8763,441,63436,11796,57.38,0.7,0.9521,0.4262,0.5889,0.1585
+Uncalibrated Baseline Threshold,Fixed threshold = 0.50,84436,20559,19250,8031,55846,1309,6.37,14.38,0.7056,0.9363,0.8048,0.0785

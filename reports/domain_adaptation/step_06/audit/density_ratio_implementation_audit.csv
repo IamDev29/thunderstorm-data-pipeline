@@ -1,0 +1,7 @@
+component,implementation,mathematical_validity,evaluation
+Prior Correction Factor,"N_S / N_T = 66,255 / 23,376 = 2.8343",PASS,Applied exactly once in numerator to convert posterior odds P(z=1|x)/P(z=0|x) to density ratio p_T(x)/p_S(x).
+Domain Label Encoding,"Source (Florida Train) = 0, Target (Chandipur) = 1",PASS,Correctly matches w(x) = (P(z=1|x)/P(z=0|x)) * (P(z=0)/P(z=1)).
+Out-of-Fold Estimation,"5-Fold Stratified K-Fold cross-validation across 89,631 samples",PASS,All source sample probabilities generated strictly from held-out folds. No in-sample training leakage.
+Probability Calibration & Safeguards,"eps_p = 1e-4 probability clipping: [0.0001, 0.9999]",PASS,Prevents infinite weights when P(z=0|x) -> 0.
+Weight Normalization,"w <- w / mean(w), enforcing sum(w) = N_S = 66,255",PASS,Preserves total sample scale for gradient/hessian sums in EBM and P-IRLS in pyGAM.
+StandardScaler Preprocessing in Logistic Regression,StandardScaler fit on combined X_domain (Florida + Chandipur),PASS WITH CAVEATS,"Fit on combined unlabeled features. Safe from target label leakage, but in strict CV, scaler should be fit inside each fold. Effect is negligible."

@@ -1,0 +1,5 @@
+season,sample_count,positive_count,positive_prevalence,orig_gam_pr_auc,sym_b4_gam_pr_auc,pr_auc_difference,pr_auc_diff_ci_95,orig_gam_roc_auc,sym_b4_gam_roc_auc,orig_gam_f1,sym_b4_gam_f1,orig_gam_brier,sym_b4_gam_brier
+DJF (Winter),5776,63,0.0109,0.1546,0.2072,0.0525,"[-0.0024, 0.1338]",0.9193,0.9227,0.1429,0.2115,0.0117,0.0116
+MAM (Pre-monsoon),5888,1216,0.2065,0.382,0.3764,-0.0056,"[-0.0249, 0.0111]",0.7254,0.7119,0.4612,0.4289,0.1538,0.1539
+JJAS (Monsoon),7808,3761,0.4817,0.6065,0.6594,0.053,"[0.0415, 0.0650]",0.6716,0.6898,0.6819,0.6788,0.2277,0.2226
+ON (Post-monsoon),3904,422,0.1081,0.5733,0.6579,0.0846,"[0.0431, 0.1258]",0.9329,0.944,0.5403,0.5461,0.0742,0.0715

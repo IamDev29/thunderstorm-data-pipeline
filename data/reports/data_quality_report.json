@@ -1,0 +1,19 @@
+{
+  "total_downloaded_files": 3,
+  "successfully_processed_files": 3,
+  "failed_downloads": 0,
+  "total_raw_records": 69801,
+  "total_cleaned_records": 6899,
+  "unique_event_ids": 6899,
+  "duplicate_records_detected": 0,
+  "records_with_missing_coordinates": 3684,
+  "records_with_invalid_coordinates": 0,
+  "records_with_insufficient_coordinates": 3684,
+  "records_with_missing_timestamps": 0,
+  "missing_schema_columns": {},
+  "geographic_exclusions": {
+    "excluded_outside_bounding_box": 0,
+    "excluded_unmatched_event_type": 0,
+    "retained_missing_coords": 0
+  }
+}

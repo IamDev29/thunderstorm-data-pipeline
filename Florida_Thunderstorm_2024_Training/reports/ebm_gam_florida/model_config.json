@@ -1,0 +1,42 @@
+{
+  "project": "Florida Thunderstorm 2024 Interpretable Modeling (GAM & EBM)",
+  "timestamp_utc": "2026-10-31T12:32:11Z",
+  "dataset_path": "C:\\Users\\KIIT0001\\Desktop\\Data Collection\\data\\processed\\asos_parser_fixed\\florida_asos_modeling_ready_fixed_2024.parquet",
+  "target_column": "target_asos_strict_crit_c",
+  "features": [
+    "cape_J_kg",
+    "cin_J_kg",
+    "bulk_shear_850_300_ms",
+    "cloud_cover_fraction",
+    "wind_speed_10m_ms",
+    "wind_speed_850hPa_ms"
+  ],
+  "feature_count": 6,
+  "temporal_splits": {
+    "train": "2024-01-01 to 2024-07-31 (Months 1-7)",
+    "validation": "2024-08-01 to 2024-09-30 (Months 8-9)",
+    "test": "2024-10-01 to 2024-12-31 (Months 10-12, locked holdout)"
+  },
+  "gam_configuration": {
+    "architecture": "SplineTransformer(degree=3) + StandardScaler + LogisticRegression(L2)",
+    "n_knots": 10,
+    "C_regularization": 0.01,
+    "optimal_threshold": 0.30999999999999994
+  },
+  "ebm_configuration": {
+    "architecture": "LightGBM Pure Additive Trees (max_depth=1, boosting_type=gbdt)",
+    "learning_rate": 0.03,
+    "n_estimators": 200,
+    "reg_lambda": 5.0,
+    "subsample": 0.8,
+    "optimal_threshold": 0.36999999999999994
+  },
+  "test_metrics_summary": {
+    "gam_pr_auc": 0.337982,
+    "gam_roc_auc": 0.828743,
+    "gam_brier": 0.055455,
+    "ebm_pr_auc": 0.359618,
+    "ebm_roc_auc": 0.828905,
+    "ebm_brier": 0.056381
+  }
+}

@@ -1,0 +1,4 @@
+fat_yearmonth,fat_day,fat_time,fatality_id,event_id,fatality_type,fatality_date,fatality_age,fatality_sex,fatality_location,fatality_age_num,fatality_date_parsed
+202407,30,0,53075,1189115,D,07/30/2024 00:00:00,0.0,M,Vehicle/Towed Trailer,0.0,2024-07-30
+202405,13,0,52985,1185847,D,05/13/2024 00:00:00,31.0,F,Mobile/Trailer Home,31.0,2024-05-13
+202401,16,0,52400,1159005,D,01/16/2024 00:00:00,73.0,F,Permanent Home,73.0,2024-01-16

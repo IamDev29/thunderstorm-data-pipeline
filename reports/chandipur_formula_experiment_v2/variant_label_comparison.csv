@@ -1,0 +1,27 @@
+variant_name,family,positive_count,positive_pct,negative_count,negative_pct,agreement_with_baseline_count,agreement_with_baseline_pct,disagreement_count,disagreement_pct,baseline_pos_purged_to_neg,baseline_neg_promoted_to_pos,cohen_kappa_vs_baseline
+Baseline (Original),Baseline,5462,23.37,17914,76.63,23376,100.0,0,0.0,0,0,1.0
+Variant A (CAPE >= 100),Variant A (CAPE Gating),5345,22.87,18031,77.13,23259,99.5,117,0.5,117,0,0.9859
+Variant A (CAPE >= 250),Variant A (CAPE Gating),5099,21.81,18277,78.19,23013,98.45,363,1.55,363,0,0.9556
+Variant A (CAPE >= 500),Variant A (CAPE Gating),4443,19.01,18933,80.99,22357,95.64,1019,4.36,1019,0,0.8698
+Variant A (CAPE >= 750),Variant A (CAPE Gating),3629,15.52,19747,84.48,21543,92.16,1833,7.84,1833,0,0.7521
+Variant B (CIN Scale 100),Variant B (CIN Barrier),2153,9.21,21223,90.79,20067,85.84,3309,14.16,3309,0,0.4993
+Variant B (CIN Scale 150),Variant B (CIN Barrier),2457,10.51,20919,89.49,20371,87.14,3005,12.86,3005,0,0.5562
+Variant B (CIN Scale 200),Variant B (CIN Barrier),2663,11.39,20713,88.61,20577,88.03,2799,11.97,2799,0,0.5932
+Variant B (CIN Scale 300),Variant B (CIN Barrier),3048,13.04,20328,86.96,20962,89.67,2414,10.33,2414,0,0.6593
+Variant C (RH 850hPa),Variant C (Moisture Replacement),6062,25.93,17314,74.07,21882,93.61,1494,6.39,447,1047,0.8281
+Variant C + CAPE>=250,Variant C (Moisture Replacement),5646,24.15,17730,75.85,21624,92.51,1752,7.49,784,968,0.7931
+"Variant D (CAPE>=100, CIN=100)",Variant D (Combined Grid),2060,8.81,21316,91.19,19974,85.45,3402,14.55,3402,0,0.4813
+"Variant D (CAPE>=100, CIN=150)",Variant D (Combined Grid),2362,10.1,21014,89.9,20276,86.74,3100,13.26,3100,0,0.5387
+"Variant D (CAPE>=100, CIN=200)",Variant D (Combined Grid),2565,10.97,20811,89.03,20479,87.61,2897,12.39,2897,0,0.5757
+"Variant D (CAPE>=100, CIN=300)",Variant D (Combined Grid),2947,12.61,20429,87.39,20861,89.24,2515,10.76,2515,0,0.6423
+"Variant D (CAPE>=250, CIN=100)",Variant D (Combined Grid),1944,8.32,21432,91.68,19858,84.95,3518,15.05,3518,0,0.4586
+"Variant D (CAPE>=250, CIN=150)",Variant D (Combined Grid),2228,9.53,21148,90.47,20142,86.17,3234,13.83,3234,0,0.5136
+"Variant D (CAPE>=250, CIN=200)",Variant D (Combined Grid),2425,10.37,20951,89.63,20339,87.01,3037,12.99,3037,0,0.5503
+"Variant D (CAPE>=250, CIN=300)",Variant D (Combined Grid),2787,11.92,20589,88.08,20701,88.56,2675,11.44,2675,0,0.6149
+"Variant D (CAPE>=500, CIN=100)",Variant D (Combined Grid),1697,7.26,21679,92.74,19611,83.89,3765,16.11,3765,0,0.4086
+"Variant D (CAPE>=500, CIN=150)",Variant D (Combined Grid),1935,8.28,21441,91.72,19849,84.91,3527,15.09,3527,0,0.4568
+"Variant D (CAPE>=500, CIN=200)",Variant D (Combined Grid),2100,8.98,21276,91.02,20014,85.62,3362,14.38,3362,0,0.4891
+"Variant D (CAPE>=500, CIN=300)",Variant D (Combined Grid),2409,10.31,20967,89.69,20323,86.94,3053,13.06,3053,0,0.5474
+"Variant E (Two-Stage, CIN=100)",Variant E (Two-Stage Decoupled),741,3.17,22635,96.83,18651,79.79,4725,20.21,4723,2,0.1932
+"Variant E (Two-Stage, CIN=150)",Variant E (Two-Stage Decoupled),914,3.91,22462,96.09,18812,80.48,4564,19.52,4556,8,0.2328
+"Variant E (Two-Stage, CIN=200)",Variant E (Two-Stage Decoupled),1040,4.45,22336,95.55,18918,80.93,4458,19.07,4440,18,0.259

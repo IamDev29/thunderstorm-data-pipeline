@@ -1,0 +1,6 @@
+scale_factor_k,alpha_cape,alpha_cin,edge_knot_cape_max,knot_scaling_ratio,expected_scaling_ratio,max_abs_pred_diff_vs_k100,mean_abs_pred_diff_vs_k100,pr_auc_chandipur,roc_auc_chandipur,mathematical_invariance_verdict
+0.8,1237.69,176.05,2610.28,0.8,0.8,1.7208e-14,4.2276e-16,0.5999,0.854,VERIFIED (B-spline scale cancellation via de Boor-Cox recurrence)
+0.9,1392.4,198.05,2936.57,0.9,0.9,4.4409e-15,4.5627e-16,0.5999,0.854,VERIFIED (B-spline scale cancellation via de Boor-Cox recurrence)
+1.0,1547.11,220.06,3262.85,1.0,1.0,0.0000e+00,0.0000e+00,0.5999,0.854,VERIFIED (B-spline scale cancellation via de Boor-Cox recurrence)
+1.1,1701.82,242.07,3589.14,1.1,1.1,4.6629e-15,6.1100e-16,0.5999,0.854,VERIFIED (B-spline scale cancellation via de Boor-Cox recurrence)
+1.2,1856.53,264.07,3915.43,1.2,1.2,4.9960e-15,5.1386e-16,0.5999,0.854,VERIFIED (B-spline scale cancellation via de Boor-Cox recurrence)

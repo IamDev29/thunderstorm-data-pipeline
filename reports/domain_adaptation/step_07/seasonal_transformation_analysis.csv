@@ -1,0 +1,41 @@
+experiment_id,experiment_name,model,season,sample_count,positives,prevalence,f1,precision,recall,pr_auc,roc_auc,brier_score
+B1_Identity_Raw,B1: Identity (Raw Control),pyGAM,DJF (Winter),5776,63,0.0109,0.142857,0.285714,0.095238,0.154622,0.919304,0.011711
+B1_Identity_Raw,B1: Identity (Raw Control),pyGAM,MAM (Pre-monsoon),5888,1216,0.2065,0.46122,0.360315,0.640625,0.382026,0.725411,0.153799
+B1_Identity_Raw,B1: Identity (Raw Control),pyGAM,JJAS (Monsoon),7808,3761,0.4817,0.68191,0.548889,0.900027,0.606473,0.671595,0.227719
+B1_Identity_Raw,B1: Identity (Raw Control),pyGAM,ON (Post-monsoon),3904,422,0.1081,0.540284,0.378199,0.945498,0.573258,0.932922,0.074178
+B1_Identity_Raw,B1: Identity (Raw Control),InterpretML EBM,DJF (Winter),5776,63,0.0109,0.371681,0.42,0.333333,0.295531,0.926956,0.011588
+B1_Identity_Raw,B1: Identity (Raw Control),InterpretML EBM,MAM (Pre-monsoon),5888,1216,0.2065,0.383204,0.3356,0.446546,0.361568,0.697049,0.155295
+B1_Identity_Raw,B1: Identity (Raw Control),InterpretML EBM,JJAS (Monsoon),7808,3761,0.4817,0.680267,0.548445,0.895507,0.674214,0.705562,0.219485
+B1_Identity_Raw,B1: Identity (Raw Control),InterpretML EBM,ON (Post-monsoon),3904,422,0.1081,0.551344,0.388727,0.947867,0.697668,0.953264,0.070059
+B2_Robust_Quantile_Scaling,B2: Robust Quantile Scaling (RQS),pyGAM,DJF (Winter),5776,63,0.0109,0.0,0.0,0.0,0.033738,0.644531,0.012263
+B2_Robust_Quantile_Scaling,B2: Robust Quantile Scaling (RQS),pyGAM,MAM (Pre-monsoon),5888,1216,0.2065,0.255634,0.232059,0.284539,0.252647,0.60782,0.172582
+B2_Robust_Quantile_Scaling,B2: Robust Quantile Scaling (RQS),pyGAM,JJAS (Monsoon),7808,3761,0.4817,0.453018,0.458129,0.448019,0.472182,0.465911,0.307566
+B2_Robust_Quantile_Scaling,B2: Robust Quantile Scaling (RQS),pyGAM,ON (Post-monsoon),3904,422,0.1081,0.370495,0.286641,0.523697,0.348375,0.833307,0.089627
+B2_Robust_Quantile_Scaling,B2: Robust Quantile Scaling (RQS),InterpretML EBM,DJF (Winter),5776,63,0.0109,0.0,0.0,0.0,0.029717,0.671329,0.012226
+B2_Robust_Quantile_Scaling,B2: Robust Quantile Scaling (RQS),InterpretML EBM,MAM (Pre-monsoon),5888,1216,0.2065,0.171329,0.182836,0.161184,0.209023,0.531239,0.182604
+B2_Robust_Quantile_Scaling,B2: Robust Quantile Scaling (RQS),InterpretML EBM,JJAS (Monsoon),7808,3761,0.4817,0.455897,0.440208,0.472747,0.465414,0.448665,0.311308
+B2_Robust_Quantile_Scaling,B2: Robust Quantile Scaling (RQS),InterpretML EBM,ON (Post-monsoon),3904,422,0.1081,0.309657,0.233454,0.459716,0.257059,0.790165,0.104427
+B3_Bounded_Monotonic,B3: Bounded Monotonic Transformation (BMT),pyGAM,DJF (Winter),5776,63,0.0109,0.243243,0.818182,0.142857,0.318899,0.909724,0.010281
+B3_Bounded_Monotonic,B3: Bounded Monotonic Transformation (BMT),pyGAM,MAM (Pre-monsoon),5888,1216,0.2065,0.374901,0.362519,0.388158,0.398958,0.725159,0.147639
+B3_Bounded_Monotonic,B3: Bounded Monotonic Transformation (BMT),pyGAM,JJAS (Monsoon),7808,3761,0.4817,0.673225,0.567213,0.827971,0.716095,0.720685,0.216085
+B3_Bounded_Monotonic,B3: Bounded Monotonic Transformation (BMT),pyGAM,ON (Post-monsoon),3904,422,0.1081,0.580645,0.420382,0.938389,0.772131,0.959967,0.059801
+B3_Bounded_Monotonic,B3: Bounded Monotonic Transformation (BMT),InterpretML EBM,DJF (Winter),5776,63,0.0109,0.444444,0.740741,0.31746,0.397107,0.917048,0.010119
+B3_Bounded_Monotonic,B3: Bounded Monotonic Transformation (BMT),InterpretML EBM,MAM (Pre-monsoon),5888,1216,0.2065,0.279181,0.331823,0.240954,0.358147,0.671391,0.155028
+B3_Bounded_Monotonic,B3: Bounded Monotonic Transformation (BMT),InterpretML EBM,JJAS (Monsoon),7808,3761,0.4817,0.671244,0.581967,0.792874,0.725449,0.72039,0.216744
+B3_Bounded_Monotonic,B3: Bounded Monotonic Transformation (BMT),InterpretML EBM,ON (Post-monsoon),3904,422,0.1081,0.60657,0.447576,0.940758,0.800997,0.964245,0.058259
+B4_Selective_CAPE_CIN,B4: Selective Transformation (CAPE & CIN only),pyGAM,DJF (Winter),5776,63,0.0109,0.25,0.588235,0.15873,0.277307,0.92725,0.011159
+B4_Selective_CAPE_CIN,B4: Selective Transformation (CAPE & CIN only),pyGAM,MAM (Pre-monsoon),5888,1216,0.2065,0.428835,0.389523,0.476974,0.445347,0.74484,0.142547
+B4_Selective_CAPE_CIN,B4: Selective Transformation (CAPE & CIN only),pyGAM,JJAS (Monsoon),7808,3761,0.4817,0.688028,0.566323,0.876363,0.72341,0.730419,0.219038
+B4_Selective_CAPE_CIN,B4: Selective Transformation (CAPE & CIN only),pyGAM,ON (Post-monsoon),3904,422,0.1081,0.578192,0.414609,0.954976,0.751994,0.95913,0.063027
+B4_Selective_CAPE_CIN,B4: Selective Transformation (CAPE & CIN only),InterpretML EBM,DJF (Winter),5776,63,0.0109,0.4,0.59375,0.301587,0.382037,0.929487,0.011018
+B4_Selective_CAPE_CIN,B4: Selective Transformation (CAPE & CIN only),InterpretML EBM,MAM (Pre-monsoon),5888,1216,0.2065,0.313618,0.354404,0.28125,0.382844,0.686477,0.151228
+B4_Selective_CAPE_CIN,B4: Selective Transformation (CAPE & CIN only),InterpretML EBM,JJAS (Monsoon),7808,3761,0.4817,0.680772,0.577108,0.829832,0.728183,0.725499,0.21922
+B4_Selective_CAPE_CIN,B4: Selective Transformation (CAPE & CIN only),InterpretML EBM,ON (Post-monsoon),3904,422,0.1081,0.588499,0.429662,0.933649,0.790294,0.963435,0.061564
+B5_CAPE_Clipping_7240,"B5: CAPE Boundary Clipping (7,240 J/kg Reference)",pyGAM,DJF (Winter),5776,63,0.0109,0.142857,0.285714,0.095238,0.154622,0.919304,0.011711
+B5_CAPE_Clipping_7240,"B5: CAPE Boundary Clipping (7,240 J/kg Reference)",pyGAM,MAM (Pre-monsoon),5888,1216,0.2065,0.46122,0.360315,0.640625,0.383227,0.729508,0.153165
+B5_CAPE_Clipping_7240,"B5: CAPE Boundary Clipping (7,240 J/kg Reference)",pyGAM,JJAS (Monsoon),7808,3761,0.4817,0.68191,0.548889,0.900027,0.606448,0.671507,0.227785
+B5_CAPE_Clipping_7240,"B5: CAPE Boundary Clipping (7,240 J/kg Reference)",pyGAM,ON (Post-monsoon),3904,422,0.1081,0.540284,0.378199,0.945498,0.573258,0.932922,0.074178
+B5_CAPE_Clipping_7240,"B5: CAPE Boundary Clipping (7,240 J/kg Reference)",InterpretML EBM,DJF (Winter),5776,63,0.0109,0.371681,0.42,0.333333,0.295531,0.926956,0.011588
+B5_CAPE_Clipping_7240,"B5: CAPE Boundary Clipping (7,240 J/kg Reference)",InterpretML EBM,MAM (Pre-monsoon),5888,1216,0.2065,0.383204,0.3356,0.446546,0.361568,0.697049,0.155295
+B5_CAPE_Clipping_7240,"B5: CAPE Boundary Clipping (7,240 J/kg Reference)",InterpretML EBM,JJAS (Monsoon),7808,3761,0.4817,0.680267,0.548445,0.895507,0.674214,0.705562,0.219485
+B5_CAPE_Clipping_7240,"B5: CAPE Boundary Clipping (7,240 J/kg Reference)",InterpretML EBM,ON (Post-monsoon),3904,422,0.1081,0.551344,0.388727,0.947867,0.697668,0.953264,0.070059

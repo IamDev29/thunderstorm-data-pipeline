@@ -1,0 +1,293 @@
+{
+  "dataset_name": "Florida_Thunderstorm_Training_2024",
+  "num_rows": 53092,
+  "num_columns": 53,
+  "temporal_range": {
+    "start": "2024-01-01 00:00:00",
+    "end": "2024-05-15 18:00:00",
+    "num_unique_timestamps": 244
+  },
+  "spatial_domain": {
+    "latitude_min": 25.25,
+    "latitude_max": 31.0,
+    "longitude_min": -87.25,
+    "longitude_max": -80.25,
+    "num_unique_grid_cells": 218
+  },
+  "features": {
+    "timestamp_utc": {
+      "dtype": "datetime64[ns]",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "latitude": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "longitude": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "grid_cell_id": {
+      "dtype": "object",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "temperature_2m_degC": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "dewpoint_2m_degC": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "relative_humidity_2m_pct": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "surface_pressure_hPa": {
+      "dtype": "float64",
+      "null_count": 772,
+      "null_pct": 1.45
+    },
+    "mslp_hPa": {
+      "dtype": "float64",
+      "null_count": 772,
+      "null_pct": 1.45
+    },
+    "total_precipitation_mm": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "convective_precipitation_mm": {
+      "dtype": "float64",
+      "null_count": 772,
+      "null_pct": 1.45
+    },
+    "cape_J_kg": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "cin_J_kg": {
+      "dtype": "float64",
+      "null_count": 47471,
+      "null_pct": 89.41
+    },
+    "cloud_cover_fraction": {
+      "dtype": "float64",
+      "null_count": 772,
+      "null_pct": 1.45
+    },
+    "u_wind_10m_ms": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "v_wind_10m_ms": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "wind_speed_10m_ms": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "wind_direction_10m_deg": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "tcwv_kg_m2": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "temperature_850hPa_degC": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "temperature_500hPa_degC": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "temperature_300hPa_degC": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "relative_humidity_850hPa_pct": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "relative_humidity_500hPa_pct": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "relative_humidity_300hPa_pct": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "specific_humidity_850hPa_g_kg": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "specific_humidity_500hPa_g_kg": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "specific_humidity_300hPa_g_kg": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "u_wind_850hPa_ms": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "u_wind_500hPa_ms": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "u_wind_300hPa_ms": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "v_wind_850hPa_ms": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "v_wind_500hPa_ms": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "v_wind_300hPa_ms": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "geopotential_850hPa_m2_s2": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "geopotential_500hPa_m2_s2": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "geopotential_300hPa_m2_s2": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "vertical_velocity_850hPa_Pa_s": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "vertical_velocity_500hPa_Pa_s": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "vertical_velocity_300hPa_Pa_s": {
+      "dtype": "float64",
+      "null_count": 27804,
+      "null_pct": 52.37
+    },
+    "storm_label": {
+      "dtype": "int64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "label_source": {
+      "dtype": "object",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "label_confidence": {
+      "dtype": "object",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "uncertainty_reason": {
+      "dtype": "object",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "noaa_event_match": {
+      "dtype": "int64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "glm_lightning_detected": {
+      "dtype": "float64",
+      "null_count": 53066,
+      "null_pct": 99.95
+    },
+    "glm_observation_coverage": {
+      "dtype": "int64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "glm_flash_count": {
+      "dtype": "float64",
+      "null_count": 53066,
+      "null_pct": 99.95
+    },
+    "glm_group_count": {
+      "dtype": "float64",
+      "null_count": 53066,
+      "null_pct": 99.95
+    },
+    "glm_event_count": {
+      "dtype": "float64",
+      "null_count": 53066,
+      "null_pct": 99.95
+    },
+    "glm_granule_count": {
+      "dtype": "int64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "glm_monitored_duration_sec": {
+      "dtype": "float64",
+      "null_count": 0,
+      "null_pct": 0.0
+    },
+    "coverage_status": {
+      "dtype": "object",
+      "null_count": 0,
+      "null_pct": 0.0
+    }
+  },
+  "target_distribution": {
+    "-1": 52977,
+    "1": 115
+  },
+  "label_source_distribution": {
+    "UNKNOWN": 52977,
+    "NOAA_MATCH": 89,
+    "GLM_SATELLITE": 26
+  }
+}

@@ -1,0 +1,548 @@
+{
+  "cape_J_kg": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 1259.389,
+      "median": 871.4,
+      "std": 1082.631,
+      "q25": 386.9,
+      "q75": 2097.3
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 1999.623,
+      "median": 1948.7,
+      "std": 708.444,
+      "q25": 1479.3,
+      "q75": 2509.425
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 1503.917,
+      "median": 1352.8,
+      "std": 1089.283,
+      "q25": 640.65,
+      "q75": 2138.9
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 22.048,
+      "median": 0.0,
+      "std": 49.297,
+      "q25": 0.0,
+      "q75": 13.1
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 579.723,
+      "median": 37.2,
+      "std": 930.319,
+      "q25": 0.0,
+      "q75": 887.8
+    }
+  },
+  "cin_J_kg": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 133.717,
+      "median": 45.1,
+      "std": 189.488,
+      "q25": 4.1,
+      "q75": 166.35
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 101.823,
+      "median": 22.35,
+      "std": 126.242,
+      "q25": 1.375,
+      "q75": 230.15
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 35.926,
+      "median": 22.5,
+      "std": 43.946,
+      "q25": 5.5,
+      "q75": 53.0
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 19.914,
+      "median": 0.0,
+      "std": 98.953,
+      "q25": 0.0,
+      "q75": 0.0
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 77.407,
+      "median": 0.0,
+      "std": 149.962,
+      "q25": 0.0,
+      "q75": 97.5
+    }
+  },
+  "convective_precipitation_mm": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 0.682,
+      "median": 0.045,
+      "std": 1.324,
+      "q25": 0.0,
+      "q75": 0.692
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 1.778,
+      "median": 0.797,
+      "std": 2.171,
+      "q25": 0.0,
+      "q75": 3.226
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 3.501,
+      "median": 3.023,
+      "std": 1.592,
+      "q25": 2.407,
+      "q75": 4.05
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 0.001,
+      "median": 0.0,
+      "std": 0.006,
+      "q25": 0.0,
+      "q75": 0.0
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 0.085,
+      "median": 0.0,
+      "std": 0.426,
+      "q25": 0.0,
+      "q75": 0.003
+    }
+  },
+  "total_precipitation_mm": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 0.996,
+      "median": 0.084,
+      "std": 1.741,
+      "q25": 0.006,
+      "q75": 1.446
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 1.949,
+      "median": 0.924,
+      "std": 2.308,
+      "q25": 0.001,
+      "q75": 3.62
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 4.154,
+      "median": 3.406,
+      "std": 2.57,
+      "q25": 2.668,
+      "q75": 4.681
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 0.016,
+      "median": 0.0,
+      "std": 0.18,
+      "q25": 0.0,
+      "q75": 0.0
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 0.137,
+      "median": 0.0,
+      "std": 0.694,
+      "q25": 0.0,
+      "q75": 0.011
+    }
+  },
+  "tcwv_kg_m2": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 47.232,
+      "median": 46.56,
+      "std": 9.282,
+      "q25": 41.27,
+      "q75": 52.83
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 48.712,
+      "median": 49.335,
+      "std": 2.418,
+      "q25": 47.883,
+      "q75": 50.147
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 53.144,
+      "median": 54.92,
+      "std": 9.313,
+      "q25": 47.335,
+      "q75": 59.715
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 24.359,
+      "median": 24.25,
+      "std": 12.109,
+      "q25": 14.09,
+      "q75": 32.69
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 33.814,
+      "median": 33.75,
+      "std": 15.754,
+      "q25": 21.6,
+      "q75": 47.14
+    }
+  },
+  "temperature_2m_degC": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 24.699,
+      "median": 24.23,
+      "std": 4.765,
+      "q25": 21.7,
+      "q75": 27.53
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 26.365,
+      "median": 25.66,
+      "std": 2.658,
+      "q25": 24.433,
+      "q75": 27.63
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 25.807,
+      "median": 26.51,
+      "std": 4.055,
+      "q25": 23.62,
+      "q75": 28.73
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 19.605,
+      "median": 20.4,
+      "std": 6.859,
+      "q25": 15.24,
+      "q75": 24.26
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 22.456,
+      "median": 23.88,
+      "std": 6.663,
+      "q25": 18.77,
+      "q75": 26.97
+    }
+  },
+  "dewpoint_depression_degC": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 3.524,
+      "median": 2.0,
+      "std": 3.267,
+      "q25": 1.225,
+      "q75": 4.955
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 3.36,
+      "median": 1.65,
+      "std": 3.034,
+      "q25": 1.208,
+      "q75": 4.412
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 3.059,
+      "median": 2.49,
+      "std": 2.13,
+      "q25": 1.27,
+      "q75": 4.58
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 5.789,
+      "median": 4.48,
+      "std": 4.627,
+      "q25": 2.07,
+      "q75": 8.68
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 4.861,
+      "median": 3.53,
+      "std": 4.14,
+      "q25": 1.67,
+      "q75": 7.05
+    }
+  },
+  "mslp_hPa": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 1010.163,
+      "median": 1010.95,
+      "std": 5.173,
+      "q25": 1005.765,
+      "q75": 1013.235
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 1012.37,
+      "median": 1012.695,
+      "std": 0.917,
+      "q25": 1012.483,
+      "q75": 1012.888
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 1013.803,
+      "median": 1014.11,
+      "std": 4.716,
+      "q25": 1011.74,
+      "q75": 1017.715
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 1018.278,
+      "median": 1018.42,
+      "std": 4.672,
+      "q25": 1015.18,
+      "q75": 1021.26
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 1016.882,
+      "median": 1016.91,
+      "std": 4.627,
+      "q25": 1013.8,
+      "q75": 1019.79
+    }
+  },
+  "temperature_850hPa_degC": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 16.278,
+      "median": 17.01,
+      "std": 3.013,
+      "q25": 14.21,
+      "q75": 18.485
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 17.552,
+      "median": 17.54,
+      "std": 0.8,
+      "q25": 16.96,
+      "q75": 18.175
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 17.071,
+      "median": 17.88,
+      "std": 2.191,
+      "q25": 16.34,
+      "q75": 18.45
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 12.636,
+      "median": 13.08,
+      "std": 3.661,
+      "q25": 10.15,
+      "q75": 15.37
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 14.623,
+      "median": 15.3,
+      "std": 3.904,
+      "q25": 12.07,
+      "q75": 17.99
+    }
+  },
+  "relative_humidity_850hPa_pct": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 82.143,
+      "median": 82.48,
+      "std": 12.878,
+      "q25": 73.96,
+      "q75": 92.255
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 82.426,
+      "median": 83.365,
+      "std": 8.558,
+      "q25": 77.945,
+      "q75": 88.155
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 83.377,
+      "median": 83.88,
+      "std": 10.497,
+      "q25": 76.815,
+      "q75": 91.535
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 51.039,
+      "median": 57.64,
+      "std": 30.245,
+      "q25": 20.18,
+      "q75": 77.455
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 61.113,
+      "median": 70.34,
+      "std": 27.235,
+      "q25": 45.07,
+      "q75": 81.0
+    }
+  },
+  "vertical_velocity_500hPa_Pa_s": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": -0.736,
+      "median": -0.23,
+      "std": 1.459,
+      "q25": -1.038,
+      "q75": 0.026
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": -0.725,
+      "median": -0.001,
+      "std": 1.36,
+      "q25": -1.666,
+      "q75": 0.259
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": -0.519,
+      "median": -0.222,
+      "std": 0.924,
+      "q25": -0.855,
+      "q75": 0.039
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 0.037,
+      "median": 0.043,
+      "std": 0.192,
+      "q25": -0.047,
+      "q75": 0.133
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": -0.009,
+      "median": 0.028,
+      "std": 0.317,
+      "q25": -0.075,
+      "q75": 0.124
+    }
+  },
+  "bulk_shear_850_300_ms": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 20.907,
+      "median": 20.4,
+      "std": 10.516,
+      "q25": 12.795,
+      "q75": 29.125
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 19.511,
+      "median": 19.97,
+      "std": 3.014,
+      "q25": 17.445,
+      "q75": 21.86
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 14.71,
+      "median": 12.26,
+      "std": 10.05,
+      "q25": 7.415,
+      "q75": 19.2
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 28.709,
+      "median": 28.67,
+      "std": 13.466,
+      "q25": 17.79,
+      "q75": 38.42
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 22.679,
+      "median": 20.36,
+      "std": 13.957,
+      "q25": 11.28,
+      "q75": 32.89
+    }
+  },
+  "era5_thunderstorm_favorability": {
+    "NOAA_POSITIVE": {
+      "count": 375,
+      "mean": 0.524,
+      "median": 0.544,
+      "std": 0.151,
+      "q25": 0.41,
+      "q75": 0.634
+    },
+    "GLM_LIGHTNING_NOAA_NEG": {
+      "count": 26,
+      "mean": 0.675,
+      "median": 0.772,
+      "std": 0.212,
+      "q25": 0.485,
+      "q75": 0.854
+    },
+    "HIGH_CONVECTION_NOAA_NEG": {
+      "count": 3199,
+      "mean": 0.712,
+      "median": 0.717,
+      "std": 0.093,
+      "q25": 0.654,
+      "q75": 0.778
+    },
+    "QUIESCENT_NEG": {
+      "count": 184871,
+      "mean": 0.36,
+      "median": 0.359,
+      "std": 0.072,
+      "q25": 0.3,
+      "q75": 0.413
+    },
+    "ALL_NOAA_NEGATIVE": {
+      "count": 318559,
+      "mean": 0.4,
+      "median": 0.389,
+      "std": 0.116,
+      "q25": 0.313,
+      "q75": 0.461
+    }
+  }
+}

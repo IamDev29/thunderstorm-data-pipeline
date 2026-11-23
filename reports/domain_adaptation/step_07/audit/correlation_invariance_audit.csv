@@ -1,0 +1,4 @@
+metric,frobenius_norm_diff,max_abs_diff,theoretical_invariance,audit_verdict
+Pearson Correlation (r),0.267398,0.108099,NOT Invariant (Altered by non-linear concave logarithmic curvature),EXPECTED CHANGE (r changes because log compresses large distances)
+Spearman Rank Correlation (rho),0.0,0.0,STRICTLY INVARIANT (Monotonic univariate transformation preserves rank order exactly),VERIFIED EXACT (rho diff is identically 0.0)
+Kendall Tau Correlation (tau),0.0,0.0,STRICTLY INVARIANT (Monotonic transformation preserves concordant/discordant pairs),VERIFIED EXACT (tau diff is identically 0.0)

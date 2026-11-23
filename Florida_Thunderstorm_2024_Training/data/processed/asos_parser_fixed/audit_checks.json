@@ -1,0 +1,50 @@
+{
+  "audit_name": "Florida ASOS 2024 Parser Fix & Downstream Rebuild Audit",
+  "audit_timestamp_utc": "2026-10-27T22:30:00Z",
+  "verdict": "GO",
+  "verdict_scope": "STATION-LEVEL 6-HOUR MACHINE LEARNING FORECASTING (RETAINING DTS & TTS)",
+  "statewide_grid_projection_verdict": "NO-GO (WITHOUT SATELLITE/RADAR DATA ENHANCEMENT)",
+  "checks": {
+    "parser_regression_tests": {
+      "status": "PASS",
+      "test_count": 20,
+      "passed_count": 20,
+      "kdts_clear_sky_evaluated": "PASS",
+      "ktts_clear_sky_evaluated": "PASS",
+      "cb_alone_excluded": "PASS",
+      "unrelated_ts_tokens_excluded": "PASS"
+    },
+    "observations_integrity": {
+      "status": "PASS",
+      "total_rows": 5728432,
+      "unique_calendar_dates": 366,
+      "date_range": "2024-01-01 to 2024-12-31",
+      "duplicate_station_timestamps": 0,
+      "dts_total_obs": 112473,
+      "dts_corrected_ts_obs": 4655,
+      "tts_total_obs": 12110,
+      "tts_corrected_ts_obs": 1003
+    },
+    "forecast_windows_integrity": {
+      "status": "PASS",
+      "boundary_convention": "(t, t+6h]",
+      "earlier_than_t": 0,
+      "later_than_t_plus_6h": 0,
+      "criterion_c_compliance": true
+    },
+    "modeling_dataset_integrity": {
+      "status": "PASS",
+      "terrestrial_rows": 119663,
+      "monitored_rows": 112509,
+      "strict_ts_positive_windows": 22477,
+      "gini_coefficient_concentration": 0.3445
+    },
+    "baseline_benchmark_summary": {
+      "status": "PASS",
+      "corrected_persistence_f1": 0.562304,
+      "corrected_persistence_roc_auc": 0.76415,
+      "corrected_logistic_regression_f1": 0.349955,
+      "corrected_logistic_regression_roc_auc": 0.817822
+    }
+  }
+}

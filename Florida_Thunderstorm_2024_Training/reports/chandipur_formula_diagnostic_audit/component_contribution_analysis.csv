@@ -1,0 +1,9 @@
+component,component_label,assigned_weight,vertical_level,mean_overall,std_overall,mean_proxy_positive,mean_proxy_negative,delta_pos_minus_neg,pearson_r_with_storm_score,decisive_in_positives_count,decisive_in_positives_pct
+contrib_cape,CAPE (Thermodynamic Buoyancy),1.2,Surface,0.4496,0.4487,0.5685,0.4133,0.1552,0.3148,2758,50.49
+contrib_cp,Convective Precipitation (24h Accumulation),1.0,Surface,0.044,0.1065,0.1344,0.0165,0.1179,0.5682,440,8.06
+contrib_rh,Relative Humidity (Upper Troposphere),0.8,300 hPa,0.3188,0.2532,0.5965,0.2341,0.3623,0.7425,3209,58.75
+contrib_lift,Vertical Velocity Lift (-omega),1.0,300 hPa,0.1136,0.2284,0.2975,0.0575,0.24,0.525,1108,20.29
+contrib_shear,Deep-Layer Wind Shear,0.7,850-300 hPa,0.3068,0.1771,0.2345,0.3289,-0.0943,-0.3032,1622,29.7
+contrib_cloud,Total Cloud Cover,0.4,Column,0.199,0.1642,0.343,0.155,0.188,0.6559,2071,37.92
+contrib_wind,Low-Level Wind Speed,0.5,10 m,0.1773,0.0892,0.2299,0.1613,0.0686,0.4223,1539,28.18
+penalty_cin,Convective Inhibition Penalty,-0.8,Boundary Layer,-0.3318,0.341,-0.2662,-0.3518,0.0856,0.0173,0,0.0

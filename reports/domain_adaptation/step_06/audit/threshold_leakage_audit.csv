@@ -1,0 +1,9 @@
+pipeline_stage,chandipur_labels_used,target_data_accessed,isolation_status,notes
+Domain Classifier Training,False,Features Only (X_T),PASS,"Trained with binary domain labels (Florida=0, Chandipur=1). No target proxy labels accessed."
+Density-Ratio Estimation,False,Domain probabilities P(domain=1|x),PASS,Formula w(x) = (p/(1-p))*(N_S/N_T) strictly unsupervised.
+Weight Clipping Selection,False,None,PASS,"Fixed percentiles (p95, p99) and fixed absolute caps (5, 10) chosen a priori without label access."
+KMM Optimization,False,"Target features in kernel space (k(x_s, x_t))",PASS,Minimized MMD between feature distributions. No label information exists in kernel computation.
+Seasonal Weight Estimation,False,Target features grouped by month/season,PASS,Stratified by calendar month only. No target labels used.
+Weighted GAM & EBM Training,False,None (Florida Training Set Only),PASS,Trained solely on Florida ASOS labels (y_train_FL) with source sample weights w_i.
+Hyperparameter Selection,False,None,PASS,Model architectures and hyperparameters strictly matched original Florida native models.
+Evaluation Threshold Selection (tau_opt),False,None (Frozen Florida Thresholds),PASS,"tau_opt values are exactly 0.33 for pyGAM and 0.34 for EBM, frozen from Florida Phase 2B validation. Threshold 0.50 reported separately."

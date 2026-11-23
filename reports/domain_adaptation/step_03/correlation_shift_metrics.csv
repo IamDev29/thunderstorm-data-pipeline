@@ -1,0 +1,16 @@
+feature_1,feature_2,pearson_source_train,pearson_target,delta_pearson,fisher_z_stat,spearman_source_train,spearman_target,delta_spearman
+cape_J_kg,cin_J_kg,0.3221,0.4116,0.0895,13.61,0.7799,0.5853,-0.1945
+cape_J_kg,bulk_shear_850_300_ms,-0.5431,-0.25,0.2931,46.42,-0.6699,-0.3518,0.3181
+cape_J_kg,cloud_cover_fraction,0.1491,0.0785,-0.0706,-9.41,0.2341,0.2617,0.0277
+cape_J_kg,wind_speed_10m_ms,-0.2439,0.2438,0.4877,65.42,-0.23,0.2867,0.5167
+cape_J_kg,wind_speed_850hPa_ms,-0.2135,-0.1456,0.0679,9.22,-0.2068,-0.1338,0.0729
+cin_J_kg,bulk_shear_850_300_ms,-0.3268,-0.0516,0.2752,37.8,-0.5667,-0.2383,0.3284
+cin_J_kg,cloud_cover_fraction,-0.0067,-0.0396,-0.033,-4.34,0.116,0.2363,0.1203
+cin_J_kg,wind_speed_10m_ms,-0.1098,0.1008,0.2105,27.77,-0.228,0.1403,0.3682
+cin_J_kg,wind_speed_850hPa_ms,-0.1045,-0.1472,-0.0427,-5.71,-0.1858,-0.1302,0.0556
+bulk_shear_850_300_ms,cloud_cover_fraction,-0.09,-0.3461,-0.2561,-35.59,-0.0893,-0.3753,-0.286
+bulk_shear_850_300_ms,wind_speed_10m_ms,0.2579,-0.2494,-0.5073,-68.17,0.2916,-0.2376,-0.5292
+bulk_shear_850_300_ms,wind_speed_850hPa_ms,0.2736,-0.0683,-0.3419,-45.89,0.3299,-0.0225,-0.3524
+cloud_cover_fraction,wind_speed_10m_ms,0.0547,0.2553,0.2006,27.12,0.0333,0.2707,0.2374
+cloud_cover_fraction,wind_speed_850hPa_ms,0.1178,0.1875,0.0697,9.38,0.0922,0.142,0.0498
+wind_speed_10m_ms,wind_speed_850hPa_ms,0.5435,0.4049,-0.1387,-23.62,0.4793,0.3102,-0.1691

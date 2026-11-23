@@ -1,0 +1,38 @@
+{
+  "status": "VERIFIED",
+  "resampling_unit": "Entire Calendar Dates (Blocks of 24h containing all reporting stations)",
+  "bootstrap_replicates": 1000,
+  "test_dates_pool": 92,
+  "metrics_evaluated": [
+    {
+      "metric": "PR-AUC Difference (LightGBM - Persistence)",
+      "mean_difference": 0.2689,
+      "ci_95_lower": 0.2235,
+      "ci_95_upper": 0.309,
+      "statistically_significant": true
+    },
+    {
+      "metric": "ROC-AUC Difference (LightGBM - Persistence)",
+      "mean_difference": 0.1831,
+      "ci_95_lower": 0.1621,
+      "ci_95_upper": 0.2062,
+      "statistically_significant": true
+    },
+    {
+      "metric": "F1 Score Difference (LightGBM - Persistence)",
+      "mean_difference": 0.0423,
+      "ci_95_lower": 0.0044,
+      "ci_95_upper": 0.0786,
+      "statistically_significant": true
+    },
+    {
+      "metric": "Brier Score Difference (LightGBM - Persistence)",
+      "mean_difference": -0.0132,
+      "ci_95_lower": -0.0206,
+      "ci_95_upper": -0.0061,
+      "statistically_significant": true
+    }
+  ],
+  "paired_evaluation": "Both LightGBM and Persistence evaluated simultaneously on the identical resampled date blocks",
+  "statistical_significance_confirmed": true
+}

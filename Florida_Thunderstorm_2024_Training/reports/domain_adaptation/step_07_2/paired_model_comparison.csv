@@ -1,0 +1,6 @@
+comparison_metric,metric_description,mean_difference,std_error,ci_lower_95,ci_upper_95,p_value,excludes_zero,statistical_significance
+diff_pr_auc,PR-AUC Difference (Sym B4 GAM - Raw GAM),0.0477,0.0052,0.038,0.0572,0.0,True,STATISTICALLY SIGNIFICANT (p < 0.05)
+diff_roc_auc,ROC-AUC Difference (Sym B4 GAM - Raw GAM),0.0046,0.0015,0.0016,0.0075,0.002,True,STATISTICALLY SIGNIFICANT (p < 0.05)
+diff_brier_score,Brier Score Difference (Sym B4 GAM - Raw GAM),-0.0022,0.0005,-0.003,-0.0013,0.0,True,STATISTICALLY SIGNIFICANT (p < 0.05)
+diff_f1_frozen_thresh,F1 Difference at Frozen Threshold 0.33,-0.0062,0.0027,-0.0115,-0.001,0.014,True,STATISTICALLY SIGNIFICANT (p < 0.05)
+diff_f1_tuned_thresh,F1 Difference at Source Tuned Threshold (0.33 vs 0.33),-0.0062,0.0027,-0.0115,-0.001,0.014,True,STATISTICALLY SIGNIFICANT (p < 0.05)

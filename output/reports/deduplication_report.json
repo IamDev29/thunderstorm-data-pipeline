@@ -1,0 +1,18 @@
+{
+  "chandipur_report": {
+    "dataset_name": "chandipur",
+    "total_input_records": 8,
+    "exact_duplicates_count": 0,
+    "spatial_temporal_overlap_duplicates_count": 0,
+    "deduplicated_records_count": 8,
+    "deduplication_policy": "Preserves unmodified original dataset. Deduplicated dataset removes exact duplicate telemetry and orbit boundary cross-granule duplicate flash detections."
+  },
+  "global_report": {
+    "dataset_name": "all_global",
+    "total_input_records": 911140,
+    "exact_duplicates_count": 0,
+    "spatial_temporal_overlap_duplicates_count": 257,
+    "deduplicated_records_count": 910883,
+    "deduplication_policy": "Preserves unmodified original dataset. Deduplicated dataset removes exact duplicate telemetry and orbit boundary cross-granule duplicate flash detections."
+  }
+}

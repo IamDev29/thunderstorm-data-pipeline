@@ -1,0 +1,5 @@
+criterion,positive_windows,negative_windows,incomplete_windows,effective_prevalence_pct
+Criterion A (Count >= 4 only),24252,88618,5157,21.49
+"Criterion B (Count >= 5, gap <= 90m, span >= 4.5h)",24252,84447,9328,22.31
+"Criterion C [RECOMMENDED] (Count >= 6, gap <= 75m, span >= 5.0h)",24252,83648,10127,22.48
+"Criterion D (Count >= 6, gap <= 65m, span >= 5.2h)",24252,64933,28842,27.19

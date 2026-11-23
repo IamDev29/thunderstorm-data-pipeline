@@ -1,0 +1,4 @@
+scenario,min_cape_J_kg,min_cin_J_kg,total_observations,proxy_positive_count,proxy_negative_count,pct_labeled_positive,storm_score_mean_all,storm_score_mean_positives,ebm_mean_prob_positives,gam_mean_prob_positives,physical_assessment
+Moderate Buoyancy (>1000 J/kg) with Moderate Cap (>200 J/kg),1000,200,4238,395,3843,9.32,1.74,2.76,0.3937,0.4075,Excessive Positive Labels (CIN Failure)
+High Buoyancy (>2000 J/kg) with Heavy Cap (>300 J/kg),2000,300,2335,184,2151,7.88,1.72,2.76,0.39,0.4058,Excessive Positive Labels (CIN Failure)
+Extreme Buoyancy (>3000 J/kg) with Extreme Cap (>500 J/kg),3000,500,1093,82,1011,7.5,1.74,2.73,0.3807,0.396,Excessive Positive Labels (CIN Failure)

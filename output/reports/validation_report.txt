@@ -1,0 +1,34 @@
+======================================================================
+   NASA ISS-LIS DATA PROCESSING PIPELINE: VALIDATION REPORT
+======================================================================
+
+OVERALL VALIDATION STATUS: PASSED [OK]
+
+1. DATASET INTEGRITY & ROW COUNTS:
+   - Global observations (iss_lis_all_observations.csv): 911140
+   - Chandipur observations (chandipur_lightning_observations.csv): 8
+   - Regional observations (regional_lightning_observations.csv): 8854
+   - Daily Chandipur files count: 2 files (Sum rows: 8)
+   - Daily reconciliation with consolidated: MATCHED
+
+2. CHANDIPUR SPATIAL & TEMPORAL CONFORMANCE:
+   - Coordinates valid (-90 to +90, -180 to +180): True
+   - Strictly inside Chandipur box (21.25-21.50N, 87.00-87.25E): True
+   - UTC and IST Timestamps parseable: True
+   - Chronologically sorted (timestamp_utc): True
+   - Full source provenance retained: True
+
+3. PROCESSING MANIFEST RECONCILIATION:
+   - Total granules processed: 4407
+   - Failed granules: 0
+   - Manifest sum equals output row counts: YES
+
+4. SATELLITE COVERAGE RECONCILIATION:
+   - Total verified overpasses over Chandipur: 310
+   - Overpasses with lightning: 2
+   - Overpasses with 0 lightning (True Negative periods): 308
+
+WARNINGS & COVERAGE NOTES:
+   [!] Coverage Note: ISS-LIS operated until November 16, 2023. Missing dates reflect instrument decommissioning and intermittent orbital sampling, NOT continuous absence of lightning.
+
+======================================================================

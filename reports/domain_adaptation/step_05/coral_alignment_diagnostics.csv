@@ -1,0 +1,10 @@
+condition_id,condition_name,frobenius_covariance_distance,mean_abs_correlation_difference,mean_feature_bias_l1,mean_wasserstein_distance,domain_classifier_roc_auc,cape_min,cape_max,negative_cape_count,negative_cin_count,negative_wind10m_count,cloud_cover_out_of_bounds_count
+Cond_A,Original Zero-Shot Baseline,1548553.1,0.1714,133.2685,133.2843,0.8629,0.0,9906.0,0,0,0,0
+Cond_B,"CAPE Boundary Clipping Only (7,240 J/kg)",1523817.35,0.1714,132.9491,132.9649,0.8629,0.0,7240.0,0,0,0,0
+Cond_C,Standard CORAL (Unconstrained),0.0,0.0,0.0,31.481,0.9774,-219.37,5806.19,8798,10751,418,4617
+Cond_D,CORAL + Physical Domain Clamping,94023.22,0.0115,12.5824,18.8978,0.8724,0.0,5806.19,0,0,0,0
+Cond_E,Regularized Covariance CORAL (λ=0.05),1235.6,0.0065,0.0,31.4597,0.9774,-218.26,5805.93,8799,10735,395,4406
+Cond_F_025,Partial CORAL (α=0.25),1090098.23,0.1277,99.9514,105.236,0.9705,-54.84,8881.05,6612,9518,9,3169
+Cond_F_050,Partial CORAL (α=0.50),679188.2,0.0843,66.6342,78.1012,0.9687,-109.68,7856.1,7298,9875,71,3806
+Cond_F_075,Partial CORAL (α=0.75),315822.39,0.0414,33.3171,51.822,0.9705,-164.52,6831.14,7963,10282,180,4247
+Cond_G,Seasonal CORAL (with ON Fallback),126898.6,0.0187,18.3775,41.6956,0.9693,-739.59,8015.13,7947,9884,373,4252

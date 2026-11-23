@@ -1,0 +1,169 @@
+{
+  "title": "Full-Year 3D Classification (NOAA-Centered)",
+  "train_pos": 310,
+  "train_neg": 212458,
+  "test_pos": 59,
+  "test_neg": 106325,
+  "test_days": 122,
+  "test_prevalence_pct": 0.055,
+  "models": {
+    "Majority Class": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "pr_auc": 0.0006,
+      "confusion_matrix": [
+        [
+          106325,
+          0
+        ],
+        [
+          59,
+          0
+        ]
+      ],
+      "false_alarms_per_day": 0.0
+    },
+    "Climatology Baseline": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "pr_auc": 0.0006,
+      "confusion_matrix": [
+        [
+          106325,
+          0
+        ],
+        [
+          59,
+          0
+        ]
+      ],
+      "false_alarms_per_day": 0.0
+    },
+    "Logistic Regression (Balanced)": {
+      "precision": 0.0077,
+      "recall": 0.8644,
+      "f1": 0.0152,
+      "roc_auc": 0.9664,
+      "pr_auc": 0.1437,
+      "confusion_matrix": [
+        [
+          99721,
+          6604
+        ],
+        [
+          8,
+          51
+        ]
+      ],
+      "false_alarms_per_day": 54.13
+    },
+    "Random Forest (Balanced)": {
+      "precision": 0.0192,
+      "recall": 0.0339,
+      "f1": 0.0245,
+      "roc_auc": 0.8948,
+      "pr_auc": 0.004,
+      "confusion_matrix": [
+        [
+          106223,
+          102
+        ],
+        [
+          57,
+          2
+        ]
+      ],
+      "false_alarms_per_day": 0.84,
+      "top_features": [
+        [
+          "total_precipitation_mm",
+          0.1134
+        ],
+        [
+          "convective_precipitation_mm",
+          0.0799
+        ],
+        [
+          "mslp_hPa",
+          0.0785
+        ],
+        [
+          "cape_J_kg",
+          0.0653
+        ],
+        [
+          "surface_pressure_hPa",
+          0.0466
+        ],
+        [
+          "vertical_velocity_500hPa_Pa_s",
+          0.0412
+        ],
+        [
+          "cin_J_kg",
+          0.0411
+        ],
+        [
+          "vertical_velocity_300hPa_Pa_s",
+          0.0389
+        ]
+      ]
+    },
+    "HistGradientBoosting (Balanced)": {
+      "precision": 0.0026,
+      "recall": 0.1186,
+      "f1": 0.0052,
+      "roc_auc": 0.9029,
+      "pr_auc": 0.0052,
+      "confusion_matrix": [
+        [
+          103689,
+          2636
+        ],
+        [
+          52,
+          7
+        ]
+      ],
+      "false_alarms_per_day": 21.61
+    }
+  },
+  "monthly_breakdown": [
+    {
+      "month": 9,
+      "positive_events": 12,
+      "predicted_events": 4489,
+      "true_positives": 7,
+      "false_positives": 4482,
+      "recall": 0.5833
+    },
+    {
+      "month": 10,
+      "positive_events": 36,
+      "predicted_events": 1109,
+      "true_positives": 36,
+      "false_positives": 1073,
+      "recall": 1.0
+    },
+    {
+      "month": 11,
+      "positive_events": 0,
+      "predicted_events": 413,
+      "true_positives": 0,
+      "false_positives": 413,
+      "recall": 0.0
+    },
+    {
+      "month": 12,
+      "positive_events": 11,
+      "predicted_events": 644,
+      "true_positives": 8,
+      "false_positives": 636,
+      "recall": 0.7273
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+season,sample_count,positive_count,positive_prevalence,orig_gam_pr_auc,sym_b4_gam_pr_auc,delta_pr_auc,ci_lower_95,ci_upper_95,excludes_zero,statistical_significance_claim,scientific_interpretation
+DJF (Winter),5776,63,0.0109,0.1546,0.2072,0.0525,-0.0024,0.1338,False,"NOT STATISTICALLY SIGNIFICANT (95% CI [-0.0024, 0.1338] spans zero; only 63 positive events / 1.09% prevalence)",Low statistical power due to extreme class imbalance in winter
+MAM (Pre-monsoon),5888,1216,0.2065,0.382,0.3764,-0.0056,-0.0249,0.0111,False,"NO SIGNIFICANT DIFFERENCE (95% CI [-0.0249, 0.0111] spans zero)",Dryline capping burst dynamics equally captured by raw and symmetric models
+JJAS (Monsoon),7808,3761,0.4817,0.6065,0.6594,0.053,0.0415,0.065,True,"STATISTICALLY SIGNIFICANT IMPROVEMENT (95% CI [+0.0415, +0.0650] strictly excludes zero)",Major convective regime: accounts for 68.9% of all target thunderstorm events
+ON (Post-monsoon),3904,422,0.1081,0.5733,0.6579,0.0846,0.0431,0.1258,True,"STATISTICALLY SIGNIFICANT IMPROVEMENT (95% CI [+0.0431, +0.1258] strictly excludes zero)",Post-monsoon cyclone/withdrawal regime: strong discrimination gain

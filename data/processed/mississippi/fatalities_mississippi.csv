@@ -1,0 +1,8 @@
+fat_yearmonth,fat_day,fat_time,fatality_id,event_id,fatality_type,fatality_date,fatality_age,fatality_sex,fatality_location,fatality_age_num,fatality_date_parsed
+202401,15,0,52462,1159817,I,01/15/2024 00:00:00,,,Vehicle/Towed Trailer,,2024-01-15
+202401,20,0,52458,1159818,I,01/20/2024 00:00:00,32.0,M,Vehicle/Towed Trailer,32.0,2024-01-20
+202401,20,0,52459,1159818,I,01/20/2024 00:00:00,54.0,M,Vehicle/Towed Trailer,54.0,2024-01-20
+202401,15,0,52460,1159851,I,01/15/2024 00:00:00,,,Vehicle/Towed Trailer,,2024-01-15
+202401,14,0,52450,1159853,I,01/14/2024 00:00:00,,M,Outside/Open Areas,,2024-01-14
+202401,16,0,52451,1159861,D,01/16/2024 00:00:00,32.0,M,Outside/Open Areas,32.0,2024-01-16
+202401,14,0,52452,1162673,D,01/14/2024 00:00:00,67.0,F,Vehicle/Towed Trailer,67.0,2024-01-14

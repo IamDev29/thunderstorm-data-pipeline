@@ -1,0 +1,21 @@
+test_id,description,station_id,raw_metar,wxcodes,expected_ts,actual_ts,expected_vcts,actual_vcts,expected_strict,actual_strict,expected_cb_alone,actual_cb_alone,lightning_remarks,status
+TC01,KDTS clear sky report (no weather),DTS,KDTS 010000Z AUTO 00000KT 10SM CLR 10/07 A3019 RMK T01000070 MADISHF,,False,False,False,False,False,False,False,False,,PASS
+TC02,KTTS clear sky report (no weather),TTS,KTTS 010055Z AUTO 00000KT 10SM CLR 10/09 A3020 RMK AO2 SLP231 T01000086 $,,False,False,False,False,False,False,False,False,,PASS
+TC03,Prefixed METAR KDTS clear sky,DTS,METAR KDTS 010000Z AUTO 00000KT 10SM CLR 10/07 A3019 RMK T01000070 MADISHF,,False,False,False,False,False,False,False,False,,PASS
+TC04,Prefixed SPECI KTTS clear sky,TTS,SPECI KTTS 010055Z AUTO 00000KT 10SM CLR 10/09 A3020 RMK AO2,,False,False,False,False,False,False,False,False,,PASS
+TC05,KDTS genuine active thunderstorm (-TSRA BR TSB22),DTS,KDTS 090728Z AUTO 15020G38KT 3SM -TSRA BR OVC004 18/16 A2964 RMK AO2 PK WND 15039/0713 RAB24 TSB22 PRESFR,-TSRA BR,True,True,False,False,True,True,False,False,TSB22,PASS
+TC06,KTTS genuine active thunderstorm (TSRA TSB09),TTS,KTTS 050209Z AUTO 24010G26KT 3SM TSRA SCT030 BKN055 17/13 A2960 RMK AO2 TSB09,TSRA,True,True,False,False,True,True,False,False,TSB09,PASS
+TC07,KDTS vicinity thunderstorm with distant lightning (VCTS LTG DSNT),DTS,KDTS 081953Z 11013G21KT 10SM VCTS OVC075 14/07 A3002 RMK AO2 LTG DSNT N RAB1858E21 SLP166 P0001,VCTS,False,False,True,True,True,True,False,False,LTG DSNT N RAB1858E21 SLP166,PASS
+TC08,Standard explicit TS at KMIA,MIA,KMIA 151853Z 18012KT 5SM TS BKN030 25/20 A2995,TS,True,True,False,False,True,True,False,False,,PASS
+TC09,Heavy thunderstorm with rain (+TSRA),JAX,KJAX 151853Z 18012KT 2SM +TSRA OVC020 24/22 A2992,+TSRA,True,True,False,False,True,True,False,False,,PASS
+TC10,Thunderstorm with snow and rain (TSRASN),PNS,KPNS 151853Z 18012KT 4SM TSRASN OVC015 01/00 A2990,TSRASN,True,True,False,False,True,True,False,False,,PASS
+TC11,Thunderstorm with hail (+TSGR),TLH,KTLH 151853Z 18012KT 3SM +TSGR BKN030 22/18 A2994,+TSGR,True,True,False,False,True,True,False,False,,PASS
+TC12,Vicinity thunderstorm without in-station TS (VCTS),MCO,KMCO 151853Z 18012KT 10SM VCTS SCT035 28/21 A2998 RMK AO2,VCTS,False,False,True,True,True,True,False,False,,PASS
+TC13,Lightning remarks in RMK section without TS in body (LTGICCG OHD),TLH,KTLH 151853Z 18012KT 10SM CLR 25/20 A2992 RMK AO2 LTGICCG OHD,,False,False,False,False,True,True,False,False,LTGICCG OHD,PASS
+TC14,Cumulonimbus (CB) cloud alone in body without TS,ORL,KORL 151853Z 18012KT 10SM FEW040CB 28/20 A2995 RMK AO2,,False,False,False,False,False,False,True,True,,PASS
+TC15,Cumulonimbus remark alone in RMK without TS,ORL,KORL 151853Z 18012KT 10SM SCT040 28/20 A2995 RMK AO2 CB DSNT SE,,False,False,False,False,False,False,True,True,,PASS
+TC16,"Unrelated tokens containing substring 'TS' (TESTS, POSTS, T-group)",MIA,KMIA 151853Z 18012KT 10SM CLR 18/12 A3012 RMK AO2 TESTS RESULTS POSTS T01800120 MADISHF,,False,False,False,False,False,False,False,False,,PASS
+TC17,Mixed present weather (-TSRA BR HZ),JAX,KJAX 151853Z 18012KT 4SM -TSRA BR HZ OVC025 22/20 A2995 RMK AO2,-TSRA BR HZ,True,True,False,False,True,True,False,False,,PASS
+TC18,Null / None METAR string,MIA,,,False,False,False,False,False,False,False,False,,PASS
+TC19,Empty string METAR,MIA,,,False,False,False,False,False,False,False,False,,PASS
+TC20,Malformed whitespace and case,DTS,   metar   kdts   010000z   auto  tsra  10sm   rmk   ao2  ,,True,True,False,False,True,True,False,False,,PASS

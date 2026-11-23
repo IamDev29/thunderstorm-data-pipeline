@@ -1,0 +1,33 @@
+{
+  "input_directory": "c:\\Users\\KIIT0001\\Desktop\\Data Collection\\NASA LIS DATA",
+  "total_files": 8814,
+  "total_nc_files": 4407,
+  "total_hdf_files": 4407,
+  "total_other_files": 0,
+  "total_nc_size_bytes": 13044536442,
+  "total_nc_size_mb": 12440.24,
+  "total_nc_size_gb": 12.15,
+  "total_hdf_size_bytes": 9441770822,
+  "total_hdf_size_mb": 9004.37,
+  "total_hdf_size_gb": 8.79,
+  "total_other_size_bytes": 0,
+  "granule_pairing": {
+    "total_unique_granules": 4407,
+    "paired_granules_count": 4407,
+    "nc_only_count": 0,
+    "hdf_only_count": 0,
+    "duplicate_format_granules": 4407
+  },
+  "date_range": {
+    "earliest_date": "2022-12-31",
+    "latest_date": "2023-11-16",
+    "unique_calendar_dates_count": 318
+  },
+  "integrity_check": {
+    "zero_byte_files_count": 0,
+    "zero_byte_files": [],
+    "sample_tested_count": 40,
+    "corrupt_headers_detected": 0,
+    "corrupt_samples": []
+  }
+}

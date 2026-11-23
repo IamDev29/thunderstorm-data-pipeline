@@ -1,0 +1,7 @@
+feature_index,feature,feature_label,total_bin_cuts,min_bin_cut,p25_bin_cut,median_bin_cut,p75_bin_cut,max_bin_cut,pct_chandipur_raw_above_max_cut,pct_chandipur_b4_above_max_cut,ebm_behavior_above_max_cut
+0,cape_J_kg,Surface CAPE (J/kg),125,0.05,46.95,523.15,1531.1,4113.25,7.13,0.0,Asymptotic Plateau (Constant Leaf Score)
+1,cin_J_kg,Convective Inhibition (J/kg),125,0.05,73.25,149.45,289.05,914.6,0.7,0.0,Asymptotic Plateau (Constant Leaf Score)
+2,bulk_shear_850_300_ms,Bulk Shear 850-300 hPa (m/s),125,1.435,12.495,23.725,36.005,62.315,0.0,0.0,Asymptotic Plateau (Constant Leaf Score)
+3,cloud_cover_fraction,Total Cloud Cover Fraction,125,0.0001,0.2389,0.5892,0.9167,0.9999,15.45,15.45,Asymptotic Plateau (Constant Leaf Score)
+4,wind_speed_10m_ms,10 m Wind Speed (m/s),125,0.385,1.935,2.865,4.045,8.565,3.23,3.23,Asymptotic Plateau (Constant Leaf Score)
+5,wind_speed_850hPa_ms,850 hPa Wind Speed (m/s),125,0.565,3.445,5.835,9.665,24.075,0.07,0.07,Asymptotic Plateau (Constant Leaf Score)

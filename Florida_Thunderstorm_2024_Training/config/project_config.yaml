@@ -1,0 +1,116 @@
+# Florida Thunderstorm Prediction Dataset (2024) Configuration
+# Defines project parameters, paths, geographic domains, variables, and ML target definitions.
+
+project:
+  name: "Florida_Thunderstorm_2024_Training"
+  description: "Multisource Florida Thunderstorm Prediction Training Dataset (2024)"
+  target_year: 2024
+  canonical_timezone: "UTC"
+
+geographic:
+  state_name: "FLORIDA"
+  state_code: "FL"
+  boundary_file: "data/raw/geographic/florida_boundary.geojson"
+  # Retrieval bounding box covering both peninsula and panhandle with buffer
+  bounding_box:
+    lat_min: 24.5
+    lat_max: 31.5
+    lon_min: -88.0
+    lon_max: -79.5
+  era5_grid_resolution: 0.25 # degrees
+
+temporal:
+  year: 2024
+  is_leap_year: true
+  start_date: "2024-01-01 00:00:00"
+  end_date: "2024-12-31 18:00:00"
+  synoptic_hours: ["00:00", "06:00", "12:00", "18:00"]
+  expected_6hourly_timestamps: 1464 # 366 days * 4 synoptic timestamps
+  expected_hourly_timestamps: 8784 # Reference full hourly count
+
+
+noaa:
+  source_archive_url: "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/"
+  event_types_retained:
+    - "Thunderstorm Wind"
+    - "Hail"
+    - "Lightning"
+    - "Heavy Rain"
+    - "Flash Flood"
+    - "Tornado"
+    - "Tropical Storm"
+    - "Hurricane (Typhoon)"
+    - "Flood"
+    - "High Wind"
+    - "Funnel Cloud"
+  matching_tolerance:
+    spatial_degrees: 0.25 # Match within nearest ERA5 grid cell
+    temporal_hours: 1.0   # Match within +-1 hour window
+
+era5:
+  cds_endpoint: "https://cds.climate.copernicus.eu/api"
+  single_levels:
+    dataset: "reanalysis-era5-single-levels"
+    variables:
+      - "2m_temperature"
+      - "2m_dewpoint_temperature"
+      - "surface_pressure"
+      - "mean_sea_level_pressure"
+      - "total_precipitation"
+      - "convective_precipitation"
+      - "convective_available_potential_energy"
+      - "convective_inhibition"
+      - "total_cloud_cover"
+      - "10m_u_component_of_wind"
+      - "10m_v_component_of_wind"
+      - "total_column_water_vapour"
+  pressure_levels:
+    dataset: "reanalysis-era5-pressure-levels"
+    levels:
+      - "850"
+      - "500"
+      - "300"
+    variables:
+      - "temperature"
+      - "relative_humidity"
+      - "specific_humidity"
+      - "u_component_of_wind"
+      - "v_component_of_wind"
+      - "geopotential"
+      - "vertical_velocity"
+  derived_features:
+    - name: "wind_speed_10m"
+      formula: "sqrt(u10^2 + v10^2)"
+      units: "m/s"
+    - name: "wind_direction_10m"
+      formula: "(180/pi * atan2(-u10, -v10)) % 360"
+      units: "degrees"
+    - name: "relative_humidity_2m"
+      formula: "Magnus formula: 100 * exp((17.625 * Td) / (243.04 + Td)) / exp((17.625 * T) / (243.04 + T))"
+      units: "%"
+    - name: "convective_precip_accum_24h"
+      formula: "Rolling 24-hour sum of convective precipitation"
+      units: "mm"
+
+lis:
+  product_name: "ISS_LIS_SC_V3.0"
+  documentation_url: "https://ghrc.nsstc.nasa.gov/uso/ds_docs/isslis/isslis_dataset.pdf"
+  mission_status: "Decommissioned on 2023-11-16; deorbited on 2024-07-12"
+  data_available_2024: false
+  critical_rules:
+    - "Missing satellite overpass must NEVER be imputed as zero lightning."
+    - "Distinguish covered-with-lightning (1), covered-zero-lightning (0), and unobserved (NaN)."
+
+training_target:
+  labels:
+    storm_label:
+      description: "Ternary classification label for thunderstorm activity"
+      values:
+        1: "Confirmed Severe Convective Storm (NOAA storm event match or verified LIS lightning)"
+        0: "High-Confidence Non-Storm (Sustained quiescent thermodynamic environment, CAPE < 100 J/kg, no precipitation, no convective activity)"
+        -1: "Unlabeled / Uncertain (Moderate CAPE or missing sensor coverage without NOAA impact confirmation)"
+    label_confidence:
+      values: ["HIGH", "MEDIUM", "UNLABELED"]
+  target_leakage_policy:
+    - "Predictor columns must only contain ERA5 atmospheric state features and spatiotemporal coordinates."
+    - "NOAA event descriptions, event IDs, and future time indicators are strictly prohibited from predictor feature sets."

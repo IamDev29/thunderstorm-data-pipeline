@@ -1,0 +1,11 @@
+metric,value,notes
+total_raw_granules_available,12,"12 NetCDF files for 2024-05-15 (Day 136) at 00Z, 06Z, 12Z, 18Z (3 granules each)"
+total_raw_flashes_global_full_disk,2658,Raw flash records inside the 12 NetCDF files
+total_flashes_in_florida_bbox,688,"Flashes located within [24.5-31.5 N, -88.0 to -79.5 W]"
+total_flashes_in_florida_polygon,181,Flashes within Florida state polygon boundary (interim CSV count = 181)
+flashes_mapped_to_active_218_grid,173,Flashes whose 0.25 deg rounded center is within 218 active Florida cells (166)
+flashes_outside_active_218_grid,8,Flashes in Florida polygon near coasts/borders whose 0.25 deg center fell outside 218 active cells (15)
+total_positive_lightning_grid_time_cells,26,"Unique (timestamp_utc, latitude, longitude) cells with flash_count >= 1 on 2024-05-15"
+total_verified_zero_lightning_cells,0,Adequate monitoring threshold (10 granules / 200s) was never met (only 3 granules / 60s per cycle)
+total_incomplete_coverage_cells,746,Grid cells monitored for 60s (3 granules) on 2024-05-15 with 0 flashes detected
+total_unobserved_cells_full_year,318380,"Grid cells with 0 granules present across the entire 1,464 synoptic cycle year"

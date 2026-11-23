@@ -1,0 +1,67 @@
+# ==========================================================
+# Python & Virtual Environments
+# ==========================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# ==========================================================
+# Operating System & IDE
+# ==========================================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ==========================================================
+# Credentials & Environment Variables
+# ==========================================================
+.env
+.env.*
+*.pem
+*.key
+*.token
+.cdsapirc
+
+# ==========================================================
+# Logs & Scratch
+# ==========================================================
+*.log
+logs/
+data/logs/
+scratch/
+
+# ==========================================================
+# Backup Directories (Multi-gigabyte historical snapshots)
+# ==========================================================
+**/backups/
+data/backups/
+Florida_Thunderstorm_2024_Training/data/backups/
+
+# ==========================================================
+# Raw Satellite / Gridded Format Archives
+# ==========================================================
+*.nc
+*.hdf
+*.h5
+
+# ==========================================================
+# Datasets Exceeding GitHub's 100MB File Size Limit
+# ==========================================================
+output/combined/iss_lis_all_observations.csv
+*florida_thunderstorm_2024_master*.csv
+*florida_thunderstorm_2024_forecasting_6h*.csv
+*florida_thunderstorm_2024_training_noaa_centered*.csv
+*florida_asos_observations_2024.parquet
+*florida_asos_observations_fixed_2024.parquet
+*florida_asos_observations_repaired_2024.parquet

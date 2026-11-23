@@ -1,0 +1,1106 @@
+{
+  "Exp1_Chronological": {
+    "experiment_name": "Exp1_Chronological",
+    "split_column": "split_exp1_chronological",
+    "sample_counts": {
+      "train_rows": 212768,
+      "train_positives": 316,
+      "train_prevalence": 0.001485,
+      "test_rows": 106166,
+      "test_positives": 59,
+      "test_prevalence": 0.000556,
+      "test_days": 122
+    },
+    "models": {
+      "Majority_Class_Baseline": {
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.5,
+          "pr_auc": 0.000556,
+          "confusion_matrix": [
+            [
+              106107,
+              0
+            ],
+            [
+              59,
+              0
+            ]
+          ],
+          "false_alarms_per_day": 0.0
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_day": 0.0
+        }
+      },
+      "Logistic_Regression": {
+        "roc_auc": 0.9674,
+        "pr_auc": 0.0731,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0086,
+          "recall": 0.8644,
+          "f1": 0.0171,
+          "false_alarms_per_day": 47.95,
+          "confusion_matrix": [
+            [
+              100257,
+              5850
+            ],
+            [
+              8,
+              51
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.99,
+          "precision": 0.0354,
+          "recall": 0.2712,
+          "f1": 0.0626,
+          "false_alarms_per_day": 3.57,
+          "confusion_matrix": [
+            [
+              105671,
+              436
+            ],
+            [
+              43,
+              16
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.931,
+          "pr_auc_ex_milton": 0.0041,
+          "f1_ex_milton": 0.0087,
+          "recall_ex_milton": 0.087,
+          "precision_ex_milton": 0.0046
+        }
+      },
+      "HistGradientBoosting": {
+        "roc_auc": 0.9637,
+        "pr_auc": 0.0152,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0206,
+          "recall": 0.1864,
+          "f1": 0.037,
+          "false_alarms_per_day": 4.3,
+          "confusion_matrix": [
+            [
+              105583,
+              524
+            ],
+            [
+              48,
+              11
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.678,
+          "precision": 0.0385,
+          "recall": 0.1017,
+          "f1": 0.0558,
+          "false_alarms_per_day": 1.23,
+          "confusion_matrix": [
+            [
+              105957,
+              150
+            ],
+            [
+              53,
+              6
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.9383,
+          "pr_auc_ex_milton": 0.0027,
+          "f1_ex_milton": 0.0115,
+          "recall_ex_milton": 0.0435,
+          "precision_ex_milton": 0.0066
+        }
+      },
+      "Random_Forest": {
+        "roc_auc": 0.9246,
+        "pr_auc": 0.0083,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_day": 0.72,
+          "confusion_matrix": [
+            [
+              106019,
+              88
+            ],
+            [
+              59,
+              0
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.0942,
+          "precision": 0.0074,
+          "recall": 0.5424,
+          "f1": 0.0146,
+          "false_alarms_per_day": 35.23,
+          "confusion_matrix": [
+            [
+              101809,
+              4298
+            ],
+            [
+              27,
+              32
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.9416,
+          "pr_auc_ex_milton": 0.0061,
+          "f1_ex_milton": 0.006,
+          "recall_ex_milton": 0.5652,
+          "precision_ex_milton": 0.003
+        }
+      }
+    }
+  },
+  "Exp2A_Alternating_Pure": {
+    "experiment_name": "Exp2A_Alternating_Pure",
+    "split_column": "split_exp2a_alternating_pure",
+    "sample_counts": {
+      "train_rows": 159576,
+      "train_positives": 238,
+      "train_prevalence": 0.001491,
+      "test_rows": 159358,
+      "test_positives": 137,
+      "test_prevalence": 0.00086,
+      "test_days": 183
+    },
+    "models": {
+      "Majority_Class_Baseline": {
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.5,
+          "pr_auc": 0.00086,
+          "confusion_matrix": [
+            [
+              159221,
+              0
+            ],
+            [
+              137,
+              0
+            ]
+          ],
+          "false_alarms_per_day": 0.0
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_day": 0.0
+        }
+      },
+      "Logistic_Regression": {
+        "roc_auc": 0.9201,
+        "pr_auc": 0.0112,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0066,
+          "recall": 0.7664,
+          "f1": 0.0131,
+          "false_alarms_per_day": 86.54,
+          "confusion_matrix": [
+            [
+              143384,
+              15837
+            ],
+            [
+              32,
+              105
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.01,
+          "precision": 0.0019,
+          "recall": 1.0,
+          "f1": 0.0038,
+          "false_alarms_per_day": 397.59,
+          "confusion_matrix": [
+            [
+              86462,
+              72759
+            ],
+            [
+              0,
+              137
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 0,
+          "milton_positives": 0,
+          "roc_auc_ex_milton": 0.9201,
+          "pr_auc_ex_milton": 0.0112,
+          "f1_ex_milton": 0.0038,
+          "recall_ex_milton": 1.0,
+          "precision_ex_milton": 0.0019
+        }
+      },
+      "HistGradientBoosting": {
+        "roc_auc": 0.8984,
+        "pr_auc": 0.009,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0116,
+          "recall": 0.1971,
+          "f1": 0.0219,
+          "false_alarms_per_day": 12.58,
+          "confusion_matrix": [
+            [
+              156919,
+              2302
+            ],
+            [
+              110,
+              27
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.0174,
+          "precision": 0.0029,
+          "recall": 0.9051,
+          "f1": 0.0058,
+          "false_alarms_per_day": 231.64,
+          "confusion_matrix": [
+            [
+              116831,
+              42390
+            ],
+            [
+              13,
+              124
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 0,
+          "milton_positives": 0,
+          "roc_auc_ex_milton": 0.8984,
+          "pr_auc_ex_milton": 0.009,
+          "f1_ex_milton": 0.0058,
+          "recall_ex_milton": 0.9051,
+          "precision_ex_milton": 0.0029
+        }
+      },
+      "Random_Forest": {
+        "roc_auc": 0.8701,
+        "pr_auc": 0.0226,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0221,
+          "recall": 0.2555,
+          "f1": 0.0407,
+          "false_alarms_per_day": 8.45,
+          "confusion_matrix": [
+            [
+              157675,
+              1546
+            ],
+            [
+              102,
+              35
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.01,
+          "precision": 0.003,
+          "recall": 0.854,
+          "f1": 0.0061,
+          "false_alarms_per_day": 209.87,
+          "confusion_matrix": [
+            [
+              120814,
+              38407
+            ],
+            [
+              20,
+              117
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 0,
+          "milton_positives": 0,
+          "roc_auc_ex_milton": 0.8701,
+          "pr_auc_ex_milton": 0.0226,
+          "f1_ex_milton": 0.0061,
+          "recall_ex_milton": 0.854,
+          "precision_ex_milton": 0.003
+        }
+      }
+    }
+  },
+  "Exp2B_Alternating_Purged": {
+    "experiment_name": "Exp2B_Alternating_Purged",
+    "split_column": "split_exp2b_alternating_purged",
+    "sample_counts": {
+      "train_rows": 127966,
+      "train_positives": 129,
+      "train_prevalence": 0.001008,
+      "test_rows": 63656,
+      "test_positives": 58,
+      "test_prevalence": 0.000911,
+      "test_days": 73
+    },
+    "models": {
+      "Majority_Class_Baseline": {
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.5,
+          "pr_auc": 0.000911,
+          "confusion_matrix": [
+            [
+              63598,
+              0
+            ],
+            [
+              58,
+              0
+            ]
+          ],
+          "false_alarms_per_day": 0.0
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_day": 0.0
+        }
+      },
+      "Logistic_Regression": {
+        "roc_auc": 0.9418,
+        "pr_auc": 0.1069,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.007,
+          "recall": 0.8276,
+          "f1": 0.0138,
+          "false_alarms_per_day": 93.9,
+          "confusion_matrix": [
+            [
+              56743,
+              6855
+            ],
+            [
+              10,
+              48
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.99,
+          "precision": 0.0414,
+          "recall": 0.3276,
+          "f1": 0.0735,
+          "false_alarms_per_day": 6.03,
+          "confusion_matrix": [
+            [
+              63158,
+              440
+            ],
+            [
+              39,
+              19
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.8931,
+          "pr_auc_ex_milton": 0.0033,
+          "f1_ex_milton": 0.0,
+          "recall_ex_milton": 0.0,
+          "precision_ex_milton": 0.0
+        }
+      },
+      "HistGradientBoosting": {
+        "roc_auc": 0.6926,
+        "pr_auc": 0.0028,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_day": 10.47,
+          "confusion_matrix": [
+            [
+              62834,
+              764
+            ],
+            [
+              58,
+              0
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.1701,
+          "precision": 0.0037,
+          "recall": 0.2931,
+          "f1": 0.0073,
+          "false_alarms_per_day": 62.37,
+          "confusion_matrix": [
+            [
+              59045,
+              4553
+            ],
+            [
+              41,
+              17
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.6793,
+          "pr_auc_ex_milton": 0.0009,
+          "f1_ex_milton": 0.0013,
+          "recall_ex_milton": 0.1364,
+          "precision_ex_milton": 0.0007
+        }
+      },
+      "Random_Forest": {
+        "roc_auc": 0.7106,
+        "pr_auc": 0.0022,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_day": 2.89,
+          "confusion_matrix": [
+            [
+              63387,
+              211
+            ],
+            [
+              58,
+              0
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.4432,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_day": 4.79,
+          "confusion_matrix": [
+            [
+              63248,
+              350
+            ],
+            [
+              58,
+              0
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.7376,
+          "pr_auc_ex_milton": 0.0011,
+          "f1_ex_milton": 0.0,
+          "recall_ex_milton": 0.0,
+          "precision_ex_milton": 0.0
+        }
+      }
+    }
+  },
+  "Exp3_Seasonally_Stratified": {
+    "experiment_name": "Exp3_Seasonally_Stratified",
+    "split_column": "split_exp3_seasonal",
+    "sample_counts": {
+      "train_rows": 224758,
+      "train_positives": 264,
+      "train_prevalence": 0.001175,
+      "test_rows": 94176,
+      "test_positives": 111,
+      "test_prevalence": 0.001179,
+      "test_days": 108
+    },
+    "models": {
+      "Majority_Class_Baseline": {
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.5,
+          "pr_auc": 0.001179,
+          "confusion_matrix": [
+            [
+              94065,
+              0
+            ],
+            [
+              111,
+              0
+            ]
+          ],
+          "false_alarms_per_day": 0.0
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_day": 0.0
+        }
+      },
+      "Logistic_Regression": {
+        "roc_auc": 0.9637,
+        "pr_auc": 0.1056,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0101,
+          "recall": 0.9009,
+          "f1": 0.02,
+          "false_alarms_per_day": 90.75,
+          "confusion_matrix": [
+            [
+              84264,
+              9801
+            ],
+            [
+              11,
+              100
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.9698,
+          "precision": 0.0635,
+          "recall": 0.5586,
+          "f1": 0.1141,
+          "false_alarms_per_day": 8.46,
+          "confusion_matrix": [
+            [
+              93151,
+              914
+            ],
+            [
+              49,
+              62
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 0,
+          "milton_positives": 0,
+          "roc_auc_ex_milton": 0.9637,
+          "pr_auc_ex_milton": 0.1056,
+          "f1_ex_milton": 0.1141,
+          "recall_ex_milton": 0.5586,
+          "precision_ex_milton": 0.0635
+        }
+      },
+      "HistGradientBoosting": {
+        "roc_auc": 0.9284,
+        "pr_auc": 0.0606,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0284,
+          "recall": 0.5856,
+          "f1": 0.0542,
+          "false_alarms_per_day": 20.58,
+          "confusion_matrix": [
+            [
+              91842,
+              2223
+            ],
+            [
+              46,
+              65
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.8207,
+          "precision": 0.0781,
+          "recall": 0.3604,
+          "f1": 0.1284,
+          "false_alarms_per_day": 4.37,
+          "confusion_matrix": [
+            [
+              93593,
+              472
+            ],
+            [
+              71,
+              40
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 0,
+          "milton_positives": 0,
+          "roc_auc_ex_milton": 0.9284,
+          "pr_auc_ex_milton": 0.0606,
+          "f1_ex_milton": 0.1284,
+          "recall_ex_milton": 0.3604,
+          "precision_ex_milton": 0.0781
+        }
+      },
+      "Random_Forest": {
+        "roc_auc": 0.9447,
+        "pr_auc": 0.0563,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.1157,
+          "recall": 0.3514,
+          "f1": 0.1741,
+          "false_alarms_per_day": 2.76,
+          "confusion_matrix": [
+            [
+              93767,
+              298
+            ],
+            [
+              72,
+              39
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.3124,
+          "precision": 0.053,
+          "recall": 0.5315,
+          "f1": 0.0964,
+          "false_alarms_per_day": 9.76,
+          "confusion_matrix": [
+            [
+              93011,
+              1054
+            ],
+            [
+              52,
+              59
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 0,
+          "milton_positives": 0,
+          "roc_auc_ex_milton": 0.9447,
+          "pr_auc_ex_milton": 0.0563,
+          "f1_ex_milton": 0.0964,
+          "recall_ex_milton": 0.5315,
+          "precision_ex_milton": 0.053
+        }
+      }
+    }
+  },
+  "Exp4_Episode_Grouped": {
+    "experiment_name": "Exp4_Episode_Grouped",
+    "split_column": "split_exp4_episode",
+    "sample_counts": {
+      "train_rows": 213422,
+      "train_positives": 206,
+      "train_prevalence": 0.000965,
+      "test_rows": 105512,
+      "test_positives": 169,
+      "test_prevalence": 0.001602,
+      "test_days": 121
+    },
+    "models": {
+      "Majority_Class_Baseline": {
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.5,
+          "pr_auc": 0.001602,
+          "confusion_matrix": [
+            [
+              105343,
+              0
+            ],
+            [
+              169,
+              0
+            ]
+          ],
+          "false_alarms_per_day": 0.0
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_day": 0.0
+        }
+      },
+      "Logistic_Regression": {
+        "roc_auc": 0.9136,
+        "pr_auc": 0.0308,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0094,
+          "recall": 0.7515,
+          "f1": 0.0186,
+          "false_alarms_per_day": 110.45,
+          "confusion_matrix": [
+            [
+              91978,
+              13365
+            ],
+            [
+              42,
+              127
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.9892,
+          "precision": 0.0413,
+          "recall": 0.1598,
+          "f1": 0.0656,
+          "false_alarms_per_day": 5.18,
+          "confusion_matrix": [
+            [
+              104716,
+              627
+            ],
+            [
+              142,
+              27
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.9133,
+          "pr_auc_ex_milton": 0.0183,
+          "f1_ex_milton": 0.0538,
+          "recall_ex_milton": 0.1579,
+          "precision_ex_milton": 0.0324
+        }
+      },
+      "HistGradientBoosting": {
+        "roc_auc": 0.7764,
+        "pr_auc": 0.0159,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0237,
+          "recall": 0.2426,
+          "f1": 0.0432,
+          "false_alarms_per_day": 13.95,
+          "confusion_matrix": [
+            [
+              103655,
+              1688
+            ],
+            [
+              128,
+              41
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.3593,
+          "precision": 0.017,
+          "recall": 0.2604,
+          "f1": 0.0318,
+          "false_alarms_per_day": 21.08,
+          "confusion_matrix": [
+            [
+              102792,
+              2551
+            ],
+            [
+              125,
+              44
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.8211,
+          "pr_auc_ex_milton": 0.0178,
+          "f1_ex_milton": 0.0315,
+          "recall_ex_milton": 0.3233,
+          "precision_ex_milton": 0.0166
+        }
+      },
+      "Random_Forest": {
+        "roc_auc": 0.8039,
+        "pr_auc": 0.0191,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0358,
+          "recall": 0.1538,
+          "f1": 0.0581,
+          "false_alarms_per_day": 5.79,
+          "confusion_matrix": [
+            [
+              104643,
+              700
+            ],
+            [
+              143,
+              26
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.4482,
+          "precision": 0.0328,
+          "recall": 0.1716,
+          "f1": 0.055,
+          "false_alarms_per_day": 7.07,
+          "confusion_matrix": [
+            [
+              104487,
+              856
+            ],
+            [
+              140,
+              29
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.8516,
+          "pr_auc_ex_milton": 0.0222,
+          "f1_ex_milton": 0.057,
+          "recall_ex_milton": 0.218,
+          "precision_ex_milton": 0.0328
+        }
+      }
+    }
+  },
+  "Exp5_Strict_Embargo": {
+    "experiment_name": "Exp5_Strict_Embargo",
+    "split_column": "split_exp5_strict_embargo",
+    "sample_counts": {
+      "train_rows": 185736,
+      "train_positives": 287,
+      "train_prevalence": 0.001545,
+      "test_rows": 106166,
+      "test_positives": 59,
+      "test_prevalence": 0.000556,
+      "test_days": 122
+    },
+    "models": {
+      "Majority_Class_Baseline": {
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "roc_auc": 0.5,
+          "pr_auc": 0.000556,
+          "confusion_matrix": [
+            [
+              106107,
+              0
+            ],
+            [
+              59,
+              0
+            ]
+          ],
+          "false_alarms_per_day": 0.0
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_alarms_per_day": 0.0
+        }
+      },
+      "Logistic_Regression": {
+        "roc_auc": 0.9683,
+        "pr_auc": 0.0838,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.008,
+          "recall": 0.8983,
+          "f1": 0.0159,
+          "false_alarms_per_day": 53.7,
+          "confusion_matrix": [
+            [
+              99556,
+              6551
+            ],
+            [
+              6,
+              53
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.958,
+          "precision": 0.0346,
+          "recall": 0.6271,
+          "f1": 0.0656,
+          "false_alarms_per_day": 8.46,
+          "confusion_matrix": [
+            [
+              105075,
+              1032
+            ],
+            [
+              22,
+              37
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.9267,
+          "pr_auc_ex_milton": 0.0036,
+          "f1_ex_milton": 0.0094,
+          "recall_ex_milton": 0.2174,
+          "precision_ex_milton": 0.0048
+        }
+      },
+      "HistGradientBoosting": {
+        "roc_auc": 0.9419,
+        "pr_auc": 0.0226,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0201,
+          "recall": 0.3898,
+          "f1": 0.0382,
+          "false_alarms_per_day": 9.19,
+          "confusion_matrix": [
+            [
+              104986,
+              1121
+            ],
+            [
+              36,
+              23
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.6742,
+          "precision": 0.0321,
+          "recall": 0.2881,
+          "f1": 0.0577,
+          "false_alarms_per_day": 4.2,
+          "confusion_matrix": [
+            [
+              105594,
+              513
+            ],
+            [
+              42,
+              17
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.8745,
+          "pr_auc_ex_milton": 0.0015,
+          "f1_ex_milton": 0.0037,
+          "recall_ex_milton": 0.0435,
+          "precision_ex_milton": 0.0019
+        }
+      },
+      "Random_Forest": {
+        "roc_auc": 0.9542,
+        "pr_auc": 0.024,
+        "default_threshold": {
+          "threshold": 0.5,
+          "precision": 0.0089,
+          "recall": 0.0169,
+          "f1": 0.0117,
+          "false_alarms_per_day": 0.91,
+          "confusion_matrix": [
+            [
+              105996,
+              111
+            ],
+            [
+              58,
+              1
+            ]
+          ]
+        },
+        "val_tuned_threshold": {
+          "threshold": 0.0773,
+          "precision": 0.0089,
+          "recall": 0.8305,
+          "f1": 0.0177,
+          "false_alarms_per_day": 44.57,
+          "confusion_matrix": [
+            [
+              100669,
+              5438
+            ],
+            [
+              10,
+              49
+            ]
+          ]
+        },
+        "milton_sensitivity": {
+          "milton_rows": 36,
+          "milton_positives": 36,
+          "roc_auc_ex_milton": 0.8992,
+          "pr_auc_ex_milton": 0.0033,
+          "f1_ex_milton": 0.0051,
+          "recall_ex_milton": 0.6087,
+          "precision_ex_milton": 0.0026
+        }
+      }
+    }
+  }
+}

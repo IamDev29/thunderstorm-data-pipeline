@@ -1,0 +1,247 @@
+{
+  "training_timestamp_utc": "2026-10-27T22:45:00Z",
+  "random_seed": 42,
+  "splits": {
+    "train": {
+      "period": "2024-01-01 to 2024-07-31",
+      "samples": 66255,
+      "positives": 13228,
+      "prevalence": 0.19965285638819713
+    },
+    "validation": {
+      "period": "2024-08-01 to 2024-09-30",
+      "samples": 18181,
+      "positives": 7331,
+      "prevalence": 0.40322314504152684
+    },
+    "test": {
+      "period": "2024-10-01 to 2024-12-31",
+      "samples": 28073,
+      "positives": 1918,
+      "prevalence": 0.06832187511131692
+    }
+  },
+  "features": {
+    "count": 26,
+    "feature_list": [
+      "cape_J_kg",
+      "cin_J_kg",
+      "dewpoint_depression_degC",
+      "tcwv_kg_m2",
+      "total_precipitation_mm",
+      "convective_precipitation_mm",
+      "cloud_cover_fraction",
+      "temperature_2m_degC",
+      "dewpoint_2m_degC",
+      "surface_pressure_hPa",
+      "mslp_hPa",
+      "wind_speed_10m_ms",
+      "wind_direction_10m_deg",
+      "temperature_850hPa_degC",
+      "relative_humidity_850hPa_pct",
+      "wind_speed_850hPa_ms",
+      "temperature_500hPa_degC",
+      "relative_humidity_500hPa_pct",
+      "bulk_shear_850_300_ms",
+      "temp_diff_850_500_degC",
+      "era5_thunderstorm_favorability",
+      "latitude",
+      "longitude",
+      "sin_hour",
+      "cos_hour",
+      "prior_strict_ts_6h"
+    ],
+    "preprocessing": "StandardScaler for Logistic Regression fit strictly on train; tree models fit on unscaled continuous + lag features"
+  },
+  "model_parameters": {
+    "logistic_regression": {
+      "C": 0.1,
+      "max_iter": 1000,
+      "solver": "lbfgs",
+      "random_state": 42,
+      "optimal_val_threshold": 0.3
+    },
+    "lightgbm": {
+      "objective": "binary",
+      "metric": "binary_logloss",
+      "boosting_type": "gbdt",
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "max_depth": 6,
+      "min_child_samples": 50,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "random_state": 42,
+      "n_estimators": 1000,
+      "verbose": -1,
+      "best_iteration": 241,
+      "optimal_val_threshold": 0.33999999999999997
+    },
+    "xgboost": {
+      "objective": "binary:logistic",
+      "eval_metric": "logloss",
+      "learning_rate": 0.05,
+      "max_depth": 5,
+      "min_child_weight": 10,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "random_state": 42,
+      "n_estimators": 1000,
+      "early_stopping_rounds": 50,
+      "best_iteration": 210,
+      "optimal_val_threshold": 0.3499999999999999
+    }
+  },
+  "feature_importances_top10": [
+    {
+      "feature": "prior_strict_ts_6h",
+      "importance_gain": 127011.91605893709,
+      "importance_split": 168
+    },
+    {
+      "feature": "tcwv_kg_m2",
+      "importance_gain": 75373.29809989741,
+      "importance_split": 369
+    },
+    {
+      "feature": "longitude",
+      "importance_gain": 19989.193975299597,
+      "importance_split": 632
+    },
+    {
+      "feature": "latitude",
+      "importance_gain": 17228.35449670907,
+      "importance_split": 605
+    },
+    {
+      "feature": "cin_J_kg",
+      "importance_gain": 15517.600496530533,
+      "importance_split": 139
+    },
+    {
+      "feature": "cape_J_kg",
+      "importance_gain": 14810.094068269245,
+      "importance_split": 231
+    },
+    {
+      "feature": "cos_hour",
+      "importance_gain": 11672.17062240839,
+      "importance_split": 174
+    },
+    {
+      "feature": "temperature_2m_degC",
+      "importance_gain": 10892.317813739268,
+      "importance_split": 342
+    },
+    {
+      "feature": "mslp_hPa",
+      "importance_gain": 9507.055090636015,
+      "importance_split": 363
+    },
+    {
+      "feature": "temp_diff_850_500_degC",
+      "importance_gain": 8291.822673769668,
+      "importance_split": 310
+    }
+  ],
+  "test_benchmark_results": [
+    {
+      "model": "Prior 6h Persistence",
+      "threshold_rule": "Prior cycle TS == 1",
+      "tp": 1074,
+      "fp": 828,
+      "tn": 25327,
+      "fn": 844,
+      "precision": 0.5647,
+      "recall": 0.56,
+      "f1": 0.5623,
+      "pr_auc": 0.3463,
+      "roc_auc": 0.7642,
+      "brier_score": 0.0596
+    },
+    {
+      "model": "Logistic Regression (tau=0.50)",
+      "threshold_rule": "Prob >= 0.50",
+      "tp": 718,
+      "fp": 515,
+      "tn": 25640,
+      "fn": 1200,
+      "precision": 0.5823,
+      "recall": 0.3743,
+      "f1": 0.4557,
+      "pr_auc": 0.4783,
+      "roc_auc": 0.8899,
+      "brier_score": 0.0472
+    },
+    {
+      "model": "Logistic Regression (tau=0.30)",
+      "threshold_rule": "Prob >= 0.30",
+      "tp": 1088,
+      "fp": 1296,
+      "tn": 24859,
+      "fn": 830,
+      "precision": 0.4564,
+      "recall": 0.5673,
+      "f1": 0.5058,
+      "pr_auc": 0.4783,
+      "roc_auc": 0.8899,
+      "brier_score": 0.0472
+    },
+    {
+      "model": "LightGBM (tau=0.50)",
+      "threshold_rule": "Prob >= 0.50",
+      "tp": 970,
+      "fp": 655,
+      "tn": 25500,
+      "fn": 948,
+      "precision": 0.5969,
+      "recall": 0.5057,
+      "f1": 0.5476,
+      "pr_auc": 0.5684,
+      "roc_auc": 0.9339,
+      "brier_score": 0.0418
+    },
+    {
+      "model": "LightGBM (tau=0.34)",
+      "threshold_rule": "Prob >= 0.34",
+      "tp": 1246,
+      "fp": 1172,
+      "tn": 24983,
+      "fn": 672,
+      "precision": 0.5153,
+      "recall": 0.6496,
+      "f1": 0.5747,
+      "pr_auc": 0.5684,
+      "roc_auc": 0.9339,
+      "brier_score": 0.0418
+    },
+    {
+      "model": "XGBoost (tau=0.50)",
+      "threshold_rule": "Prob >= 0.50",
+      "tp": 889,
+      "fp": 557,
+      "tn": 25598,
+      "fn": 1029,
+      "precision": 0.6148,
+      "recall": 0.4635,
+      "f1": 0.5285,
+      "pr_auc": 0.5687,
+      "roc_auc": 0.9319,
+      "brier_score": 0.0417
+    },
+    {
+      "model": "XGBoost (tau=0.35)",
+      "threshold_rule": "Prob >= 0.35",
+      "tp": 1201,
+      "fp": 1095,
+      "tn": 25060,
+      "fn": 717,
+      "precision": 0.5231,
+      "recall": 0.6262,
+      "f1": 0.57,
+      "pr_auc": 0.5687,
+      "roc_auc": 0.9319,
+      "brier_score": 0.0417
+    }
+  ]
+}

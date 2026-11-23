@@ -1,0 +1,9 @@
+comparison,metric,mean_difference,ci_95_lower,ci_95_upper,p_value,statistically_significant,scientific_conclusion
+Model D (GLM) - Model C (Baseline C),delta_pr_auc,-0.106304,-0.172481,-0.049008,0.001,YES,NO IMPROVEMENT (Degradation or Inconclusive)
+Model D (GLM) - Model C (Baseline C),delta_roc_auc,-0.069608,-0.10627,-0.039126,0.001,YES,NO IMPROVEMENT (Degradation or Inconclusive)
+Model D (GLM) - Model C (Baseline C),delta_brier_score,0.034692,0.018238,0.052804,0.001,YES,NO IMPROVEMENT (Degradation or Inconclusive)
+Model D (GLM) - Model C (Baseline C),delta_f1,-0.05367,-0.087609,-0.021598,0.001,YES,NO IMPROVEMENT (Degradation or Inconclusive)
+Model D (GLM) - Model A (Reference A),delta_pr_auc,-0.155123,-0.22941,-0.090085,0.001,YES,NO IMPROVEMENT (Degradation or Inconclusive)
+Model D (GLM) - Model A (Reference A),delta_roc_auc,-0.118245,-0.160054,-0.081229,0.001,YES,NO IMPROVEMENT (Degradation or Inconclusive)
+Model D (GLM) - Model A (Reference A),delta_brier_score,0.073672,0.051557,0.096172,0.001,YES,NO IMPROVEMENT (Degradation or Inconclusive)
+Model D (GLM) - Model A (Reference A),delta_f1,-0.095028,-0.139686,-0.054647,0.001,YES,NO IMPROVEMENT (Degradation or Inconclusive)

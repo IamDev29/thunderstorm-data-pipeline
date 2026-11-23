@@ -1,0 +1,54 @@
+{
+  "project": "Florida Thunderstorm 2024 Native Interpretable Modeling (pyGAM & InterpretML EBM)",
+  "timestamp_utc": "2026-10-31T12:59:56Z",
+  "dataset_path": "C:\\Users\\KIIT0001\\Desktop\\Data Collection\\data\\processed\\asos_parser_fixed\\florida_asos_modeling_ready_fixed_2024.parquet",
+  "target_column": "target_asos_strict_crit_c",
+  "features": [
+    "cape_J_kg",
+    "cin_J_kg",
+    "bulk_shear_850_300_ms",
+    "cloud_cover_fraction",
+    "wind_speed_10m_ms",
+    "wind_speed_850hPa_ms"
+  ],
+  "feature_count": 6,
+  "environment": {
+    "python_executable": "C:\\Users\\KIIT0001\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+    "python_version": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+    "pygam_version": "0.12.0",
+    "interpret_version": "0.7.8",
+    "scikit_learn_version": "pandas.core.series",
+    "lightgbm_version": "4.6.0",
+    "timestamp_utc": "2026-10-31T12:52:08Z"
+  },
+  "temporal_splits": {
+    "train": "2024-01-01 to 2024-07-31 (Months 1-7)",
+    "validation": "2024-08-01 to 2024-09-30 (Months 8-9)",
+    "test": "2024-10-01 to 2024-12-31 (Months 10-12, locked holdout)"
+  },
+  "native_gam_configuration": {
+    "library": "pyGAM",
+    "model_class": "LogisticGAM",
+    "terms": "s(0) + s(1) + s(2) + s(3) + s(4) + s(5)",
+    "n_splines": 15,
+    "lam": 1.0,
+    "optimal_threshold": 0.32999999999999996
+  },
+  "native_ebm_configuration": {
+    "library": "InterpretML",
+    "model_class": "ExplainableBoostingClassifier",
+    "learning_rate": 0.01,
+    "max_bins": 128,
+    "outer_bags": 16,
+    "interactions": 0,
+    "optimal_threshold": 0.33999999999999997
+  },
+  "test_metrics_summary": {
+    "native_gam_pr_auc": 0.336215,
+    "native_gam_roc_auc": 0.828762,
+    "native_gam_brier": 0.055595,
+    "native_ebm_pr_auc": 0.351314,
+    "native_ebm_roc_auc": 0.830433,
+    "native_ebm_brier": 0.056448
+  }
+}

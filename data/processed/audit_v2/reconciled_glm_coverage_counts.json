@@ -1,0 +1,37 @@
+{
+  "source_file": "Florida_Thunderstorm_2024_Training/data/processed/glm_florida_2024.csv",
+  "target_file": "data/processed/florida_thunderstorm_2024_forecasting_6h.csv",
+  "minimum_granules_for_adequate_monitoring": 10,
+  "monitoring_duration_seconds_per_granule": 20.0,
+  "minimum_monitored_seconds_for_adequate_monitoring": 200.0,
+  "pilot_period_granules_ingested_per_cycle": 3,
+  "pilot_period_monitored_duration_seconds": 60.0,
+  "scientific_findings": {
+    "verified_zero_lightning_samples_exist": false,
+    "reason_verified_zero_lightning_is_zero": "In the pilot GLM download, each non-zero cycle ingested only 3 granules (60 seconds of monitoring). Because 3 < 10 granules (60s < 200s), all non-lightning cycles were classified as INCOMPLETE_COVERAGE. No observation interval achieved the 10-granule (200s) threshold required to prove the absence of lightning.",
+    "lightning_supported_samples_count": 26,
+    "reason_lightning_supported_count_is_26": "A single detected flash confirms lightning occurrence regardless of monitoring duration. 26 cycles detected between 1 and 38 flashes during the 60s monitoring interval on 2024-05-15."
+  },
+  "source_table_counts_53092_rows": {
+    "adequate_coverage_with_detected_lightning": 26,
+    "adequate_coverage_with_zero_detected_lightning": 0,
+    "partial_or_incomplete_coverage": 746,
+    "no_usable_observation_coverage": 52320,
+    "invalid_or_ambiguous_metadata": 0,
+    "total_source_rows": 53092
+  },
+  "forecasting_table_counts_319152_rows": {
+    "adequate_coverage_with_detected_lightning": 26,
+    "adequate_coverage_with_zero_detected_lightning": 0,
+    "partial_or_incomplete_coverage": 746,
+    "no_usable_observation_coverage": 318380,
+    "invalid_or_ambiguous_metadata": 0,
+    "total_forecasting_rows": 319152,
+    "percentages": {
+      "adequate_coverage_with_detected_lightning_pct": 0.0081,
+      "adequate_coverage_with_zero_detected_lightning_pct": 0.0,
+      "partial_or_incomplete_coverage_pct": 0.2337,
+      "no_usable_observation_coverage_pct": 99.7581
+    }
+  }
+}

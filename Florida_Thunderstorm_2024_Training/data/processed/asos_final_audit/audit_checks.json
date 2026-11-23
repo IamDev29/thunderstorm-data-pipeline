@@ -1,0 +1,526 @@
+{
+  "audit_name": "Florida ASOS 2024 Final Independent Validation Audit",
+  "audit_date_utc": "2026-10-27T21:30:00Z",
+  "final_decision": "CONDITIONAL GO",
+  "decision_scope": "STATION-LEVEL 6-HOUR MACHINE LEARNING FORECASTING (85 STATIONS)",
+  "decision_rationale": "PASSED all 366 calendar dates, 73 backfilled dates, zero duplicates, Criterion C window snapping, and zero target-window feature leakage. However, an independent code audit identified that METAR parsing matched 'TS' inside callsigns KDTS and KTTS, creating 2,909 false positive labels across Florida (including 732 in the test set). Therefore, final training is approved under CONDITIONAL GO provided stations DTS and TTS are excluded or re-parsed.",
+  "conditions": [
+    "CONDITION 1 (LABEL INTEGRITY): Stations DTS and TTS must be filtered out or their METARs re-parsed without callsign collision before ML training.",
+    "CONDITION 2 (SPATIAL SCOPE): Valid exclusively for station-level aerodrome forecasting (5-10 statute miles); NO-GO for statewide gridded training without satellite/radar."
+  ],
+  "statewide_grid_projection_decision": "NO-GO (WITHOUT SATELLITE/RADAR DATA ENHANCEMENT)",
+  "checks": {
+    "window_boundary_snapping": {
+      "status": "PASS",
+      "description": "All observation timestamps fall strictly within [t, t+6h]",
+      "earlier_than_init": 0,
+      "later_than_window_end": 0
+    },
+    "criterion_c_logic": {
+      "status": "PASS",
+      "description": "Criterion C (N>=6, max_gap<=75m, span>=5.0h) strictly adhered to",
+      "covered_thunderstorm_count": 29322,
+      "covered_no_thunderstorm_count": 104933,
+      "incomplete_monitoring_count": 9432
+    },
+    "cb_alone_exclusion": {
+      "status": "PASS",
+      "description": "Cumulonimbus remarks without TS/VCTS/LTG are strictly excluded from positive labels",
+      "cb_alone_window_count": 645,
+      "cb_alone_false_positives": 0
+    },
+    "target_disaggregation": {
+      "status": "PASS",
+      "details": {
+        "target_asos_strict_crit_c": {
+          "positives": 24975,
+          "negatives": 87702,
+          "nans": 6986,
+          "prevalence_pct": 22.165
+        },
+        "target_asos_aerodrome_ts_vcts": {
+          "positives": 12265,
+          "negatives": 87702,
+          "nans": 19696,
+          "prevalence_pct": 12.269
+        },
+        "target_asos_explicit_ts": {
+          "positives": 8663,
+          "negatives": 87702,
+          "nans": 23298,
+          "prevalence_pct": 8.99
+        },
+        "target_noaa_severe_6h": {
+          "positives": 235,
+          "negatives": 119344,
+          "nans": 84,
+          "prevalence_pct": 0.197
+        }
+      }
+    },
+    "feature_leakage_audit": {
+      "status": "PASS",
+      "features_evaluated": 29,
+      "target_window_leakage_detected": false,
+      "persistence_gap_bridging_prevented": true
+    },
+    "baseline_benchmarks": {
+      "status": "PASS",
+      "baselines_evaluated": [
+        {
+          "evaluation_cohort": "As-Delivered Repaired Dataset (87 Stations, with DTS/TTS artifact)",
+          "baseline_name": "As-Delivered 87-Stn: Majority Class (Always Predict 0)",
+          "sample_count": 28159,
+          "positive_count": 2633,
+          "prevalence": 0.093505,
+          "threshold_or_rule": "P=0.0 / Class=0",
+          "tp": 0,
+          "fp": 0,
+          "tn": 25526,
+          "fn": 2633,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "pr_auc": 0.093505,
+          "roc_auc": 0.5,
+          "brier_score": 0.093505,
+          "notes": "Always predicts absence of thunderstorm"
+        },
+        {
+          "evaluation_cohort": "As-Delivered Repaired Dataset (87 Stations, with DTS/TTS artifact)",
+          "baseline_name": "As-Delivered 87-Stn: Climatology (Constant Training Prevalence)",
+          "sample_count": 28159,
+          "positive_count": 2633,
+          "prevalence": 0.093505,
+          "threshold_or_rule": "Prob=0.2213",
+          "tp": 2633,
+          "fp": 25526,
+          "tn": 0,
+          "fn": 0,
+          "precision": 0.093505,
+          "recall": 1.0,
+          "f1": 0.171018,
+          "pr_auc": 0.093505,
+          "roc_auc": 0.5,
+          "brier_score": 0.101084,
+          "notes": "Predicted probability = 0.2213 (training set prevalence)"
+        },
+        {
+          "evaluation_cohort": "As-Delivered Repaired Dataset (87 Stations, with DTS/TTS artifact)",
+          "baseline_name": "As-Delivered 87-Stn: Prior 6-Hour Station Persistence",
+          "sample_count": 28159,
+          "positive_count": 2633,
+          "prevalence": 0.093505,
+          "threshold_or_rule": "Thunderstorm at t-6h == 1",
+          "tp": 1800,
+          "fp": 815,
+          "tn": 24711,
+          "fn": 833,
+          "precision": 0.688337,
+          "recall": 0.683631,
+          "f1": 0.685976,
+          "pr_auc": 0.470568,
+          "roc_auc": 0.825851,
+          "brier_score": 0.058525,
+          "notes": "Predicts positive if same station observed TS in prior [t-6h, t]"
+        },
+        {
+          "evaluation_cohort": "As-Delivered Repaired Dataset (87 Stations, with DTS/TTS artifact)",
+          "baseline_name": "As-Delivered 87-Stn: CAPE Threshold (CAPE >= 1000 J/kg)",
+          "sample_count": 28159,
+          "positive_count": 2633,
+          "prevalence": 0.093505,
+          "threshold_or_rule": "CAPE >= 1000 J/kg",
+          "tp": 455,
+          "fp": 451,
+          "tn": 25075,
+          "fn": 2178,
+          "precision": 0.502208,
+          "recall": 0.172807,
+          "f1": 0.257135,
+          "pr_auc": 0.294333,
+          "roc_auc": 0.728003,
+          "brier_score": 0.093363,
+          "notes": "Standard operational thermodynamic threshold"
+        },
+        {
+          "evaluation_cohort": "As-Delivered Repaired Dataset (87 Stations, with DTS/TTS artifact)",
+          "baseline_name": "As-Delivered 87-Stn: Simple Logistic Regression (7 ERA5 Predictors)",
+          "sample_count": 28159,
+          "positive_count": 2633,
+          "prevalence": 0.093505,
+          "threshold_or_rule": "Prob >= 0.50",
+          "tp": 587,
+          "fp": 748,
+          "tn": 24778,
+          "fn": 2046,
+          "precision": 0.4397,
+          "recall": 0.22294,
+          "f1": 0.295867,
+          "pr_auc": 0.273794,
+          "roc_auc": 0.728014,
+          "brier_score": 0.082475,
+          "notes": "Multivariate linear baseline with standard convective features"
+        },
+        {
+          "evaluation_cohort": "Clean Uncorrupted Benchmark (85 Stations, Excl DTS/TTS)",
+          "baseline_name": "Clean 85-Stn: Majority Class (Always Predict 0)",
+          "sample_count": 27427,
+          "positive_count": 1901,
+          "prevalence": 0.069311,
+          "threshold_or_rule": "P=0.0 / Class=0",
+          "tp": 0,
+          "fp": 0,
+          "tn": 25526,
+          "fn": 1901,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "pr_auc": 0.069311,
+          "roc_auc": 0.5,
+          "brier_score": 0.069311,
+          "notes": "Always predicts absence of thunderstorm"
+        },
+        {
+          "evaluation_cohort": "Clean Uncorrupted Benchmark (85 Stations, Excl DTS/TTS)",
+          "baseline_name": "Clean 85-Stn: Climatology (Constant Training Prevalence)",
+          "sample_count": 27427,
+          "positive_count": 1901,
+          "prevalence": 0.069311,
+          "threshold_or_rule": "Prob=0.2009",
+          "tp": 1901,
+          "fp": 25526,
+          "tn": 0,
+          "fn": 0,
+          "precision": 0.069311,
+          "recall": 1.0,
+          "f1": 0.129637,
+          "pr_auc": 0.069311,
+          "roc_auc": 0.5,
+          "brier_score": 0.081813,
+          "notes": "Predicted probability = 0.2009 (training set prevalence)"
+        },
+        {
+          "evaluation_cohort": "Clean Uncorrupted Benchmark (85 Stations, Excl DTS/TTS)",
+          "baseline_name": "Clean 85-Stn: Prior 6-Hour Station Persistence",
+          "sample_count": 27427,
+          "positive_count": 1901,
+          "prevalence": 0.069311,
+          "threshold_or_rule": "Thunderstorm at t-6h == 1",
+          "tp": 1071,
+          "fp": 815,
+          "tn": 24711,
+          "fn": 830,
+          "precision": 0.567869,
+          "recall": 0.563388,
+          "f1": 0.565619,
+          "pr_auc": 0.31993,
+          "roc_auc": 0.76573,
+          "brier_score": 0.059977,
+          "notes": "Predicts positive if same station observed TS in prior [t-6h, t]"
+        },
+        {
+          "evaluation_cohort": "Clean Uncorrupted Benchmark (85 Stations, Excl DTS/TTS)",
+          "baseline_name": "Clean 85-Stn: CAPE Threshold (CAPE >= 1000 J/kg)",
+          "sample_count": 27427,
+          "positive_count": 1901,
+          "prevalence": 0.069311,
+          "threshold_or_rule": "CAPE >= 1000 J/kg",
+          "tp": 440,
+          "fp": 451,
+          "tn": 25075,
+          "fn": 1461,
+          "precision": 0.493827,
+          "recall": 0.231457,
+          "f1": 0.315186,
+          "pr_auc": 0.324243,
+          "roc_auc": 0.806054,
+          "brier_score": 0.069712,
+          "notes": "Standard operational thermodynamic threshold"
+        },
+        {
+          "evaluation_cohort": "Clean Uncorrupted Benchmark (85 Stations, Excl DTS/TTS)",
+          "baseline_name": "Clean 85-Stn: Simple Logistic Regression (7 ERA5 Predictors)",
+          "sample_count": 27427,
+          "positive_count": 1901,
+          "prevalence": 0.069311,
+          "threshold_or_rule": "Prob >= 0.50",
+          "tp": 576,
+          "fp": 803,
+          "tn": 24723,
+          "fn": 1325,
+          "precision": 0.417694,
+          "recall": 0.302998,
+          "f1": 0.35122,
+          "pr_auc": 0.292021,
+          "roc_auc": 0.817202,
+          "brier_score": 0.062865,
+          "notes": "Multivariate linear baseline with standard convective features"
+        }
+      ]
+    },
+    "climatology_and_concentration": {
+      "status": "PASS",
+      "monthly_diagnostics": [
+        {
+          "month": 1,
+          "n_windows": 9758,
+          "n_pos": 1190,
+          "prevalence_pct": 12.2,
+          "cape_mean_J_kg": 86.2,
+          "cin_mean_J_kg": 29.1,
+          "t2m_mean_degC": 15.22,
+          "d2m_mean_degC": 10.63,
+          "dewpoint_depression_degC": 4.59,
+          "tcwv_mean_kg_m2": 22.5,
+          "convective_precip_mean_mm": 0.071,
+          "bulk_shear_mean_ms": 36.6
+        },
+        {
+          "month": 2,
+          "n_windows": 8939,
+          "n_pos": 664,
+          "prevalence_pct": 7.43,
+          "cape_mean_J_kg": 27.4,
+          "cin_mean_J_kg": 4.7,
+          "t2m_mean_degC": 15.82,
+          "d2m_mean_degC": 10.29,
+          "dewpoint_depression_degC": 5.52,
+          "tcwv_mean_kg_m2": 18.1,
+          "convective_precip_mean_mm": 0.04,
+          "bulk_shear_mean_ms": 38.2
+        },
+        {
+          "month": 3,
+          "n_windows": 9573,
+          "n_pos": 1566,
+          "prevalence_pct": 16.36,
+          "cape_mean_J_kg": 198.7,
+          "cin_mean_J_kg": 56.4,
+          "t2m_mean_degC": 19.92,
+          "d2m_mean_degC": 14.91,
+          "dewpoint_depression_degC": 5.01,
+          "tcwv_mean_kg_m2": 26.2,
+          "convective_precip_mean_mm": 0.089,
+          "bulk_shear_mean_ms": 34.2
+        },
+        {
+          "month": 4,
+          "n_windows": 9294,
+          "n_pos": 824,
+          "prevalence_pct": 8.87,
+          "cape_mean_J_kg": 57.3,
+          "cin_mean_J_kg": 28.1,
+          "t2m_mean_degC": 21.28,
+          "d2m_mean_degC": 14.73,
+          "dewpoint_depression_degC": 6.55,
+          "tcwv_mean_kg_m2": 23.1,
+          "convective_precip_mean_mm": 0.035,
+          "bulk_shear_mean_ms": 27.9
+        },
+        {
+          "month": 5,
+          "n_windows": 9566,
+          "n_pos": 2012,
+          "prevalence_pct": 21.03,
+          "cape_mean_J_kg": 783.8,
+          "cin_mean_J_kg": 196.7,
+          "t2m_mean_degC": 26.16,
+          "d2m_mean_degC": 20.61,
+          "dewpoint_depression_degC": 5.55,
+          "tcwv_mean_kg_m2": 35.2,
+          "convective_precip_mean_mm": 0.062,
+          "bulk_shear_mean_ms": 18.8
+        },
+        {
+          "month": 6,
+          "n_windows": 9378,
+          "n_pos": 3454,
+          "prevalence_pct": 36.83,
+          "cape_mean_J_kg": 1123.4,
+          "cin_mean_J_kg": 134.4,
+          "t2m_mean_degC": 27.55,
+          "d2m_mean_degC": 22.52,
+          "dewpoint_depression_degC": 5.04,
+          "tcwv_mean_kg_m2": 45.1,
+          "convective_precip_mean_mm": 0.148,
+          "bulk_shear_mean_ms": 12.0
+        },
+        {
+          "month": 7,
+          "n_windows": 9806,
+          "n_pos": 4963,
+          "prevalence_pct": 50.61,
+          "cape_mean_J_kg": 1882.9,
+          "cin_mean_J_kg": 155.2,
+          "t2m_mean_degC": 28.12,
+          "d2m_mean_degC": 24.27,
+          "dewpoint_depression_degC": 3.86,
+          "tcwv_mean_kg_m2": 52.6,
+          "convective_precip_mean_mm": 0.176,
+          "bulk_shear_mean_ms": 7.5
+        },
+        {
+          "month": 8,
+          "n_windows": 9349,
+          "n_pos": 4187,
+          "prevalence_pct": 44.79,
+          "cape_mean_J_kg": 1635.3,
+          "cin_mean_J_kg": 133.6,
+          "t2m_mean_degC": 27.94,
+          "d2m_mean_degC": 23.93,
+          "dewpoint_depression_degC": 4.02,
+          "tcwv_mean_kg_m2": 49.1,
+          "convective_precip_mean_mm": 0.147,
+          "bulk_shear_mean_ms": 9.2
+        },
+        {
+          "month": 9,
+          "n_windows": 8855,
+          "n_pos": 3482,
+          "prevalence_pct": 39.32,
+          "cape_mean_J_kg": 1089.8,
+          "cin_mean_J_kg": 106.6,
+          "t2m_mean_degC": 26.73,
+          "d2m_mean_degC": 23.48,
+          "dewpoint_depression_degC": 3.24,
+          "tcwv_mean_kg_m2": 49.7,
+          "convective_precip_mean_mm": 0.171,
+          "bulk_shear_mean_ms": 12.8
+        },
+        {
+          "month": 10,
+          "n_windows": 9365,
+          "n_pos": 1094,
+          "prevalence_pct": 11.68,
+          "cape_mean_J_kg": 208.5,
+          "cin_mean_J_kg": 36.5,
+          "t2m_mean_degC": 23.24,
+          "d2m_mean_degC": 18.51,
+          "dewpoint_depression_degC": 4.73,
+          "tcwv_mean_kg_m2": 33.5,
+          "convective_precip_mean_mm": 0.064,
+          "bulk_shear_mean_ms": 26.5
+        },
+        {
+          "month": 11,
+          "n_windows": 9154,
+          "n_pos": 602,
+          "prevalence_pct": 6.58,
+          "cape_mean_J_kg": 68.6,
+          "cin_mean_J_kg": 18.8,
+          "t2m_mean_degC": 20.91,
+          "d2m_mean_degC": 16.33,
+          "dewpoint_depression_degC": 4.58,
+          "tcwv_mean_kg_m2": 27.7,
+          "convective_precip_mean_mm": 0.034,
+          "bulk_shear_mean_ms": 19.7
+        },
+        {
+          "month": 12,
+          "n_windows": 9640,
+          "n_pos": 937,
+          "prevalence_pct": 9.72,
+          "cape_mean_J_kg": 99.7,
+          "cin_mean_J_kg": 24.2,
+          "t2m_mean_degC": 16.11,
+          "d2m_mean_degC": 11.72,
+          "dewpoint_depression_degC": 4.39,
+          "tcwv_mean_kg_m2": 22.1,
+          "convective_precip_mean_mm": 0.029,
+          "bulk_shear_mean_ms": 30.2
+        }
+      ],
+      "station_concentration": {
+        "monitored_stations": 87,
+        "top_5_share_pct": 19.36,
+        "top_10_share_pct": 30.71,
+        "gini_coefficient": 0.3932,
+        "top_active_stations": [
+          {
+            "station_id": "DTS",
+            "monitored_windows": 1458,
+            "positive_windows": 1458
+          },
+          {
+            "station_id": "TTS",
+            "monitored_windows": 1451,
+            "positive_windows": 1451
+          },
+          {
+            "station_id": "OBE",
+            "monitored_windows": 1453,
+            "positive_windows": 654
+          },
+          {
+            "station_id": "SEF",
+            "monitored_windows": 1453,
+            "positive_windows": 638
+          },
+          {
+            "station_id": "X26",
+            "monitored_windows": 1455,
+            "positive_windows": 633
+          },
+          {
+            "station_id": "2IS",
+            "monitored_windows": 1055,
+            "positive_windows": 597
+          },
+          {
+            "station_id": "X60",
+            "monitored_windows": 1370,
+            "positive_windows": 597
+          },
+          {
+            "station_id": "FPY",
+            "monitored_windows": 1435,
+            "positive_windows": 550
+          },
+          {
+            "station_id": "CGC",
+            "monitored_windows": 1447,
+            "positive_windows": 548
+          },
+          {
+            "station_id": "ZPH",
+            "monitored_windows": 1430,
+            "positive_windows": 543
+          }
+        ]
+      }
+    },
+    "dataset_integrity": {
+      "status": "PASS",
+      "calendar_dates_present": 366,
+      "calendar_dates_expected": 366,
+      "backfill_dates_verified": 73,
+      "total_raw_observations": 5728432,
+      "duplicate_records": 0,
+      "timestamp_timezone": "UTC",
+      "earliest_timestamp": "2024-01-01 00:00:00+00:00",
+      "latest_timestamp": "2024-12-31 23:58:00+00:00",
+      "inventory_station_count": 105,
+      "active_reporting_stations": 104,
+      "inactive_outage_stations": 1,
+      "inactive_station_ids": [
+        "AGR"
+      ],
+      "total_forecast_windows": 143687,
+      "terrestrial_modeling_windows": 119663,
+      "monitored_eval_windows": 112677
+    },
+    "station_callsign_parsing_flaw": {
+      "status": "FAIL",
+      "description": "METAR parsing in acquire_asos_data.py matches substring 'TS' against the 4-letter station callsign KDTS and KTTS, causing 100% false positive labels for Destin (DTS) and Shuttle Landing Facility (TTS).",
+      "affected_stations": [
+        "DTS",
+        "TTS"
+      ],
+      "total_false_positive_windows": 2909,
+      "test_set_false_positive_windows": 732,
+      "prevalence_inflation_pct": 2.42,
+      "remedy": "Filter out stations DTS and TTS from modeling datasets, or strip station callsign before checking present weather tokens."
+    }
+  }
+}

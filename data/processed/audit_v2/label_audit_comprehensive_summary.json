@@ -1,0 +1,169 @@
+{
+  "generated_at": "2026-10-27T12:21:45.654817",
+  "reconciliation": [
+    {
+      "step": "1. Raw NOAA Storm Events Details (US Total)",
+      "count": 69801.0,
+      "notes": "National StormEvents details CSV gz archive"
+    },
+    {
+      "step": "2. Raw NOAA Florida Records (All Event Types)",
+      "count": 1441.0,
+      "notes": "Filtered to STATE == 'FLORIDA'"
+    },
+    {
+      "step": "3. Raw NOAA Florida Convective Records (T-Wind, Hail, Tornado, Lightning)",
+      "count": 705.0,
+      "notes": "Filtered to Thunderstorm Wind, Hail, Tornado, Lightning"
+    },
+    {
+      "step": "4. Unique Convective EVENT_IDs in Raw",
+      "count": 705.0,
+      "notes": "Zero duplicate EVENT_IDs in raw convective data"
+    },
+    {
+      "step": "5. Unique Convective EPISODE_IDs in Raw",
+      "count": 136.0,
+      "notes": "136 distinct synoptic storm episodes in 2024"
+    },
+    {
+      "step": "6. Convective Events with Geographic Coordinates in Raw",
+      "count": 705.0,
+      "notes": "All 705 raw convective events possess valid BEGIN_LAT/BEGIN_LON"
+    },
+    {
+      "step": "7. Convective Events Excluded by Florida Land Polygon Boundary Filter",
+      "count": 28.0,
+      "notes": "28 events were located offshore or outside the land polygon boundary"
+    },
+    {
+      "step": "8. Processed Florida NOAA Convective Events (noaa_florida_2024.csv)",
+      "count": 677.0,
+      "notes": "677 standardized convective events retained in processed NOAA table"
+    },
+    {
+      "step": "9. Convective Events Excluded by Spatial Grid Tolerance (> 28 km)",
+      "count": 1.0,
+      "notes": "1 event (ID 1184976) was 32.4 km from nearest terrestrial cell (> 28 km limit)"
+    },
+    {
+      "step": "10. Convective Events Successfully Matched to Master 0.25 deg Grid",
+      "count": 676.0,
+      "notes": "676 convective events successfully mapped to 0.25 deg grid cells"
+    },
+    {
+      "step": "11. Master Dataset Total Rows (218 cells x 1,464 times)",
+      "count": 319152.0,
+      "notes": "Exact full-year product: 218 terrestrial cells x 1,464 six-hourly timestamps"
+    },
+    {
+      "step": "12. Master Dataset Target Positive Grid-Time Cells (target_noaa_event == 1)",
+      "count": 369.0,
+      "notes": "369 grid-time cells contain at least one convective event in [t-3h, t+3h]"
+    },
+    {
+      "step": "13. Master Dataset Negative Grid-Time Cells (target_noaa_event == 0)",
+      "count": 318783.0,
+      "notes": "318,783 grid-time cells without matched NOAA convective event"
+    },
+    {
+      "step": "14. Forecasting Dataset Total Rows (florida_thunderstorm_2024_forecasting_6h.csv)",
+      "count": 319152.0,
+      "notes": "Exact full-year product: 218 cells x 1,464 synoptic initialization cycles"
+    },
+    {
+      "step": "15. Forecasting Dataset Positive Target Windows (future_noaa_event_6h == 1)",
+      "count": 375.0,
+      "notes": "Forward forecast window (t, t+6h] contains at least one convective event"
+    },
+    {
+      "step": "16. Forecasting Dataset Negative Target Windows (future_noaa_event_6h == 0)",
+      "count": 318559.0,
+      "notes": "Forward forecast window (t, t+6h] contains zero NOAA convective events"
+    },
+    {
+      "step": "17. Forecasting Dataset Truncated Year-End Windows (future_noaa_event_6h == NaN)",
+      "count": 218.0,
+      "notes": "Final synoptic cycle 2024-12-31 18:00 UTC target window extends into 2025"
+    },
+    {
+      "step": "18. Leak-Free Historical Indicator Positives (true_prior_event_6h == 1)",
+      "count": 375.0,
+      "notes": "Strictly backward-looking historical interval (t-6h, t] -- ZERO lookahead"
+    },
+    {
+      "step": "19. Leaked Historical Indicator Positives (prior_event_at_init == 1)",
+      "count": 369.0,
+      "notes": "Symmetric [t-3h, t+3h] window -- CONTAINS 3-HOUR FUTURE LOOKAHEAD LEAKAGE"
+    },
+    {
+      "step": "20. Chronological Train Positives (Months 01-08)",
+      "count": 316.0,
+      "notes": "Operational training partition: 213,004 complete windows, 316 positives (0.148%)"
+    },
+    {
+      "step": "21. Chronological Test Positives (Months 09-12)",
+      "count": 59.0,
+      "notes": "Operational test partition: 106,148 complete windows, 59 positives (0.056%)"
+    },
+    {
+      "step": "22. Hurricane Milton Positives in Test Set (Episodes 197213 + 196745)",
+      "count": 44.0,
+      "notes": "Outer convective tornado and wind bands on 2024-10-09"
+    },
+    {
+      "step": "23. Percentage of Test Positives from Hurricane Milton",
+      "count": 74.58,
+      "notes": "74.58% of all test events belong to a single tropical cyclone episode"
+    }
+  ],
+  "evidence_categories": [
+    {
+      "category": "INSUFFICIENT_OBSERVATION",
+      "row_count": 265248,
+      "percentage": 83.11
+    },
+    {
+      "category": "POTENTIAL_CONVECTION_UNCONFIRMED",
+      "row_count": 53285,
+      "percentage": 16.696
+    },
+    {
+      "category": "NOAA_REPORTED_POSITIVE",
+      "row_count": 375,
+      "percentage": 0.117
+    },
+    {
+      "category": "TRUNCATED_WINDOW",
+      "row_count": 218,
+      "percentage": 0.068
+    },
+    {
+      "category": "LIGHTNING_SUPPORTED_NOAA_NEGATIVE",
+      "row_count": 26,
+      "percentage": 0.008
+    }
+  ],
+  "glm_coverage_status": {
+    "UNOBSERVED": 318380,
+    "INCOMPLETE_COVERAGE": 746,
+    "COVERED_LIGHTNING": 26
+  },
+  "test_set_episodes": {
+    "196745": 13,
+    "197213": 12,
+    "197468": 11,
+    "198317": 10,
+    "196757": 2,
+    "196371": 2,
+    "196471": 1,
+    "196470": 1,
+    "196481": 1,
+    "197269": 1,
+    "196220": 1,
+    "197270": 1,
+    "198314": 1,
+    "195637": 1,
+    "194627": 1
+  }
+}

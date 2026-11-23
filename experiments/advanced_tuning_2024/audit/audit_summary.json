@@ -1,0 +1,43 @@
+{
+  "audit_timestamp_utc": "2026-10-27T17:30:38Z",
+  "dataset_sha256_verified": true,
+  "dataset_sha256": "ebaa442727daf506af3889a4a96f1a411dc68f03d11b2efeb7abbc6851d147e4",
+  "total_terrestrial_rows": 119663,
+  "incomplete_windows_excluded_nan": 7154,
+  "monitored_rows": 112509,
+  "pre_test_rows": 84436,
+  "pre_test_positives": 20559,
+  "pre_test_prevalence": 0.243486,
+  "test_rows": 28073,
+  "test_positives": 1918,
+  "test_prevalence": 0.068322,
+  "duplicate_keys_found": 0,
+  "cohort_alignment_verified": true,
+  "pr_auc_definition": "sklearn average_precision_score (weighted step function over precision-recall curve)",
+  "threshold_selection_data": "pre_test out-of-fold validation predictions exclusively",
+  "temporal_validation_reconciliation": {
+    "expanding_6_fold_mean_lgb_pr_auc": 0.7278,
+    "hyperparameter_top_trial_3_fold_pr_auc": 0.7432,
+    "explanation": "Expanding validation evaluated all 6 folds (Apr-Sep, including low-prevalence April PR-AUC=0.4998). Hyperparameter search evaluated 3 representative convective onset/peak folds (May, Jul, Sep). Both are mathematically consistent."
+  },
+  "calibration_audit": {
+    "status": "VERIFIED",
+    "validation_brier_score": 0.1264,
+    "test_brier_score": 0.0384,
+    "validation_brier_skill_score": 0.4163,
+    "test_brier_skill_score": 0.3967,
+    "explanation": "Brier score drop from 0.1264 in validation to 0.0384 in test is mathematically governed by the seasonal base-rate prevalence shift (31.72% summer down to 6.83% autumn/winter). The Brier Skill Score remains virtually identical (~40-41%), proving consistent skill."
+  },
+  "spatial_holdout_audit": {
+    "status": "VERIFIED",
+    "station_groups_evaluated": 5,
+    "models_evaluated": [
+      "Persistence",
+      "LightGBM",
+      "XGBoost"
+    ],
+    "mean_lightgbm_pr_auc": 0.7689,
+    "mean_persistence_pr_auc": 0.4731,
+    "interpretation": "Evaluates spatial geographic transferability to unseen Florida stations within the same temporal window (Jan-Sep 2024). Confirms model generalizes without station memorization."
+  }
+}

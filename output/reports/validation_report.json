@@ -1,0 +1,47 @@
+{
+  "overall_validation_passed": true,
+  "chandipur_observations": {
+    "file": "c:\\Users\\KIIT0001\\Desktop\\Data Collection\\output\\chandipur\\chandipur_lightning_observations.csv",
+    "total_rows": 8,
+    "timestamps_valid": true,
+    "chronologically_sorted": true,
+    "coords_valid": true,
+    "inside_bounding_box": true,
+    "provenance_retained": true
+  },
+  "daily_reconciliation": {
+    "total_daily_files": 2,
+    "sum_daily_rows": 8,
+    "consolidated_chandipur_rows": 8,
+    "daily_reconciliation_passed": true,
+    "active_dates": [
+      "2023-03-21",
+      "2023-09-29"
+    ]
+  },
+  "manifest_reconciliation": {
+    "total_granules_in_manifest": 4407,
+    "failed_granules_count": 0,
+    "manifest_chandipur_flashes_sum": 8,
+    "manifest_global_flashes_sum": 911140,
+    "manifest_reconciliation_passed": true
+  },
+  "satellite_coverage_summary": {
+    "total_overpasses_over_chandipur": 310,
+    "overpasses_with_detected_lightning": 2,
+    "overpasses_with_zero_lightning": 308
+  },
+  "global_dataset": {
+    "file": "c:\\Users\\KIIT0001\\Desktop\\Data Collection\\output\\combined\\iss_lis_all_observations.csv",
+    "total_rows": 911140,
+    "chronologically_sorted": true
+  },
+  "regional_dataset": {
+    "file": "c:\\Users\\KIIT0001\\Desktop\\Data Collection\\output\\regional\\regional_lightning_observations.csv",
+    "total_rows": 8854
+  },
+  "warnings": [
+    "Coverage Note: ISS-LIS operated until November 16, 2023. Missing dates reflect instrument decommissioning and intermittent orbital sampling, NOT continuous absence of lightning."
+  ],
+  "errors": []
+}

@@ -1,0 +1,7 @@
+condition,mean,std,median,iqr,min,max,p95,p99,zero_pct,gt_7240_count
+Reference: Florida Training (Months 1-7),603.23,945.63,35.2,980.0,0.0,7240.0,2668.5,3744.28,34.9,0
+Exp_A: Original Zero-Shot Baseline,1324.85,1561.0,763.38,2088.38,0.0,9906.0,4611.56,6386.81,20.86,81
+"Exp_B: CAPE Boundary Clipping (7,240 J/kg)",1322.93,1553.03,763.38,2088.38,0.0,7240.0,4611.56,6386.81,20.86,0
+Exp_C: Empirical Quantile Mapping (Global),603.19,945.51,35.2,980.05,0.0,7105.06,2667.99,3742.46,34.89,0
+Exp_D: Monotonic CAPE Saturation (Tanh),2073.85,2089.47,1455.96,3658.45,0.0,7167.45,6103.69,6777.54,20.86,0
+Exp_E: Seasonal Quantile Mapping (with ON fallback),707.83,1010.2,79.91,1254.57,0.0,7166.6,2824.53,3884.52,32.13,0

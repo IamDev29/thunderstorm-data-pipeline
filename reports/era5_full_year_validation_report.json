@@ -1,0 +1,491 @@
+{
+  "validation_time_utc": "2026-10-27 04:46:55 UTC",
+  "single_level": {
+    "file_name": "era5_florida_2024_single_levels.nc",
+    "file_size_bytes": 27583700,
+    "file_size_mb": 26.31,
+    "timestamp_count": 1464,
+    "timestamps_unique": true,
+    "time_min": "2024-01-01T00:00:00",
+    "time_max": "2024-12-31T18:00:00",
+    "uniform_6h": true,
+    "feb29_complete": true,
+    "latitude_bounds": [
+      24.5,
+      31.5
+    ],
+    "latitude_points": 29,
+    "latitude_step": 0.25,
+    "latitude_ordering": "descending",
+    "longitude_bounds": [
+      -88.0,
+      -79.5
+    ],
+    "longitude_points": 35,
+    "longitude_step": 0.25,
+    "longitude_ordering": "ascending",
+    "pressure_levels": [],
+    "total_elements": 17831520,
+    "total_non_finite": 779593,
+    "variables": {
+      "tp": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 0.0,
+        "max": 0.041194915771484375,
+        "mean": 0.0001475520257372409,
+        "units": "m",
+        "long_name": "Total precipitation"
+      },
+      "cp": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 0.0,
+        "max": 0.020515918731689453,
+        "mean": 9.182086796499789e-05,
+        "units": "m",
+        "long_name": "Convective precipitation"
+      },
+      "t2m": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 264.96044921875,
+        "max": 311.303466796875,
+        "mean": 296.7188720703125,
+        "units": "K",
+        "long_name": "2 metre temperature"
+      },
+      "d2m": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 255.24325561523438,
+        "max": 301.31298828125,
+        "mean": 292.0125732421875,
+        "units": "K",
+        "long_name": "2 metre dewpoint temperature"
+      },
+      "sp": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 96145.6875,
+        "max": 103561.8125,
+        "mean": 101527.2265625,
+        "units": "Pa",
+        "long_name": "Surface pressure"
+      },
+      "msl": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 96418.9375,
+        "max": 103576.4375,
+        "mean": 101653.1640625,
+        "units": "Pa",
+        "long_name": "Mean sea level pressure"
+      },
+      "cape": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 0.0,
+        "max": 9276.5,
+        "mean": 667.4163208007812,
+        "units": "J kg**-1",
+        "long_name": "Convective available potential energy"
+      },
+      "cin": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 779593,
+        "inf_count": 0,
+        "min": 1.9587541828514077e-06,
+        "max": 999.953369140625,
+        "mean": 186.15248107910156,
+        "units": "J kg**-1",
+        "long_name": "Convective inhibition"
+      },
+      "tcc": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.5127504467964172,
+        "units": "(0 - 1)",
+        "long_name": "Total cloud cover"
+      },
+      "u10": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": -26.564483642578125,
+        "max": 26.0753173828125,
+        "mean": -1.6135514974594116,
+        "units": "m s**-1",
+        "long_name": "10 metre U wind component"
+      },
+      "v10": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": -27.949752807617188,
+        "max": 30.112396240234375,
+        "mean": 0.09240218997001648,
+        "units": "m s**-1",
+        "long_name": "10 metre V wind component"
+      },
+      "tcwv": {
+        "dims": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 1485960,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 2.2097654342651367,
+        "max": 88.47480773925781,
+        "mean": 34.019126892089844,
+        "units": "kg m**-2",
+        "long_name": "Total column vertically-integrated water vapour"
+      }
+    }
+  },
+  "pressure_level": {
+    "file_name": "era5_florida_2024_pressure_levels.nc",
+    "file_size_bytes": 66427306,
+    "file_size_mb": 63.35,
+    "timestamp_count": 1464,
+    "timestamps_unique": true,
+    "time_min": "2024-01-01T00:00:00",
+    "time_max": "2024-12-31T18:00:00",
+    "uniform_6h": true,
+    "feb29_complete": true,
+    "latitude_bounds": [
+      24.5,
+      31.5
+    ],
+    "latitude_points": 29,
+    "latitude_step": 0.25,
+    "latitude_ordering": "descending",
+    "longitude_bounds": [
+      -88.0,
+      -79.5
+    ],
+    "longitude_points": 35,
+    "longitude_step": 0.25,
+    "longitude_ordering": "ascending",
+    "pressure_levels": [
+      850.0,
+      500.0,
+      300.0
+    ],
+    "total_elements": 31205160,
+    "total_non_finite": 0,
+    "variables": {
+      "t": {
+        "dims": [
+          "time",
+          "pressure_level",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 4457880,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 224.26773071289062,
+        "max": 300.39501953125,
+        "mean": 264.1717529296875,
+        "units": "K",
+        "long_name": "Temperature"
+      },
+      "r": {
+        "dims": [
+          "time",
+          "pressure_level",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 4457880,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": -9.586746215820312,
+        "max": 159.7501220703125,
+        "mean": 47.30018615722656,
+        "units": "%",
+        "long_name": "Relative humidity"
+      },
+      "q": {
+        "dims": [
+          "time",
+          "pressure_level",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 4457880,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 2.5963693417452305e-08,
+        "max": 0.020095203071832657,
+        "mean": 0.003147442126646638,
+        "units": "kg kg**-1",
+        "long_name": "Specific humidity"
+      },
+      "u": {
+        "dims": [
+          "time",
+          "pressure_level",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 4457880,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": -41.90296936035156,
+        "max": 76.99444580078125,
+        "mean": 10.04233455657959,
+        "units": "m s**-1",
+        "long_name": "U component of wind"
+      },
+      "v": {
+        "dims": [
+          "time",
+          "pressure_level",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 4457880,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": -66.45930480957031,
+        "max": 58.36341857910156,
+        "mean": 0.2805284261703491,
+        "units": "m s**-1",
+        "long_name": "V component of wind"
+      },
+      "z": {
+        "dims": [
+          "time",
+          "pressure_level",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 4457880,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": 10945.37890625,
+        "max": 96354.8125,
+        "mean": 55658.51953125,
+        "units": "m**2 s**-2",
+        "long_name": "Geopotential"
+      },
+      "w": {
+        "dims": [
+          "time",
+          "pressure_level",
+          "latitude",
+          "longitude"
+        ],
+        "dtype": "float32",
+        "size": 4457880,
+        "nan_count": 0,
+        "inf_count": 0,
+        "min": -16.909149169921875,
+        "max": 5.161249160766602,
+        "mean": -0.0036898639518767595,
+        "units": "Pa s**-1",
+        "long_name": "Vertical velocity"
+      }
+    }
+  },
+  "monthly_batch_consistency": {
+    "all_batches_consistent": true,
+    "batches": [
+      {
+        "month": 1,
+        "file": "era5_pressure_2024_01.nc",
+        "timestamps": 124,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 2,
+        "file": "era5_pressure_2024_02.nc",
+        "timestamps": 116,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 3,
+        "file": "era5_pressure_2024_03.nc",
+        "timestamps": 124,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 4,
+        "file": "era5_pressure_2024_04.nc",
+        "timestamps": 120,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 5,
+        "file": "era5_pressure_2024_05.nc",
+        "timestamps": 124,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 6,
+        "file": "era5_pressure_2024_06.nc",
+        "timestamps": 120,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 7,
+        "file": "era5_pressure_2024_07.nc",
+        "timestamps": 124,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 8,
+        "file": "era5_pressure_2024_08.nc",
+        "timestamps": 124,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 9,
+        "file": "era5_pressure_2024_09.nc",
+        "timestamps": 120,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 10,
+        "file": "era5_pressure_2024_10.nc",
+        "timestamps": 124,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 11,
+        "file": "era5_pressure_2024_11.nc",
+        "timestamps": 120,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      },
+      {
+        "month": 12,
+        "file": "era5_pressure_2024_12.nc",
+        "timestamps": 124,
+        "max_diff_t": 0.0,
+        "max_diff_u": 0.0,
+        "max_diff_z": 0.0,
+        "identical": true
+      }
+    ]
+  }
+}

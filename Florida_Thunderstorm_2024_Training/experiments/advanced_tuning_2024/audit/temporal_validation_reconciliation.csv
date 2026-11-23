@@ -1,0 +1,7 @@
+fold_idx,fold_name,val_samples,val_positives,val_prevalence,persistence_pr_auc,lightgbm_pr_auc,xgboost_pr_auc,persistence_brier,lightgbm_brier,xgboost_brier
+1,"Train Jan-Mar, Val Apr",9287,596,0.0642,0.266618,0.624963,0.650097,0.063099,0.03633,0.034993
+2,"Train Jan-Apr, Val May",9558,1800,0.1883,0.368756,0.538017,0.552283,0.177234,0.122137,0.119137
+3,"Train Jan-May, Val Jun",9368,3273,0.3494,0.520673,0.746624,0.748223,0.261529,0.153365,0.150841
+4,"Train Jan-Jun, Val Jul",9792,4824,0.4926,0.601046,0.831865,0.829182,0.338031,0.171326,0.172433
+5,"Train Jan-Jul, Val Aug",9343,4019,0.4302,0.587914,0.822734,0.822832,0.286632,0.153639,0.15347
+6,"Train Jan-Aug, Val Sep",8838,3312,0.3747,0.576512,0.80233,0.804589,0.243833,0.140233,0.139922

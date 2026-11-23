@@ -1,0 +1,290 @@
+{
+  "valid_time_utc": {
+    "source": "ERA5/NOAA",
+    "level": "surface",
+    "units": "UTC timestamp string (YYYY-MM-DD HH:MM:SS)",
+    "description": "Synoptic observation valid time"
+  },
+  "latitude": {
+    "source": "ERA5",
+    "level": "surface",
+    "units": "degrees_north",
+    "description": "Grid latitude"
+  },
+  "longitude": {
+    "source": "ERA5",
+    "level": "surface",
+    "units": "degrees_east",
+    "description": "Grid longitude"
+  },
+  "grid_cell_id": {
+    "source": "Project",
+    "level": "surface",
+    "units": "identifier",
+    "description": "Unique Florida grid cell identifier"
+  },
+  "temperature_2m_degC": {
+    "source": "ERA5 single-level (t2m)",
+    "level": "surface (2m)",
+    "units": "\u00b0C",
+    "description": "2-metre ambient temperature"
+  },
+  "dewpoint_2m_degC": {
+    "source": "ERA5 single-level (d2m)",
+    "level": "surface (2m)",
+    "units": "\u00b0C",
+    "description": "2-metre dewpoint temperature"
+  },
+  "dewpoint_depression_degC": {
+    "source": "Derived (t2m - d2m)",
+    "level": "surface (2m)",
+    "units": "\u00b0C",
+    "description": "Dewpoint depression"
+  },
+  "surface_pressure_hPa": {
+    "source": "ERA5 single-level (sp)",
+    "level": "surface",
+    "units": "hPa",
+    "description": "Surface barometric pressure"
+  },
+  "mslp_hPa": {
+    "source": "ERA5 single-level (msl)",
+    "level": "surface",
+    "units": "hPa",
+    "description": "Mean sea level pressure"
+  },
+  "u10": {
+    "source": "ERA5 single-level (u10)",
+    "level": "surface (10m)",
+    "units": "m/s",
+    "description": "10-metre zonal wind component"
+  },
+  "v10": {
+    "source": "ERA5 single-level (v10)",
+    "level": "surface (10m)",
+    "units": "m/s",
+    "description": "10-metre meridional wind component"
+  },
+  "wind_speed_10m_ms": {
+    "source": "Derived",
+    "level": "surface (10m)",
+    "units": "m/s",
+    "description": "10-metre wind speed magnitude"
+  },
+  "wind_direction_10m_deg": {
+    "source": "Derived",
+    "level": "surface (10m)",
+    "units": "degrees",
+    "description": "10-metre meteorological wind direction"
+  },
+  "total_precipitation_mm": {
+    "source": "ERA5 single-level (tp)",
+    "level": "surface",
+    "units": "mm",
+    "description": "6-hourly accumulated total precipitation"
+  },
+  "convective_precipitation_mm": {
+    "source": "ERA5 single-level (cp)",
+    "level": "surface",
+    "units": "mm",
+    "description": "6-hourly accumulated convective precipitation"
+  },
+  "cape_J_kg": {
+    "source": "ERA5 single-level (cape)",
+    "level": "column",
+    "units": "J/kg",
+    "description": "Convective available potential energy"
+  },
+  "cin_J_kg": {
+    "source": "ERA5 single-level (cin)",
+    "level": "column",
+    "units": "J/kg",
+    "description": "Convective inhibition"
+  },
+  "cloud_cover_fraction": {
+    "source": "ERA5 single-level (tcc)",
+    "level": "column",
+    "units": "fraction [0, 1]",
+    "description": "Total cloud cover fraction"
+  },
+  "tcwv_kg_m2": {
+    "source": "ERA5 single-level (tcwv)",
+    "level": "column",
+    "units": "kg/m\u00b2",
+    "description": "Total column vertically-integrated water vapour"
+  },
+  "temperature_850hPa_degC": {
+    "source": "ERA5 pressure-level (t)",
+    "level": "850 hPa",
+    "units": "\u00b0C",
+    "description": "850 hPa ambient temperature"
+  },
+  "relative_humidity_850hPa_pct": {
+    "source": "ERA5 pressure-level (r)",
+    "level": "850 hPa",
+    "units": "%",
+    "description": "850 hPa relative humidity"
+  },
+  "specific_humidity_850hPa_g_kg": {
+    "source": "ERA5 pressure-level (q)",
+    "level": "850 hPa",
+    "units": "g/kg",
+    "description": "850 hPa specific humidity"
+  },
+  "u_wind_850hPa_ms": {
+    "source": "ERA5 pressure-level (u)",
+    "level": "850 hPa",
+    "units": "m/s",
+    "description": "850 hPa zonal wind component"
+  },
+  "v_wind_850hPa_ms": {
+    "source": "ERA5 pressure-level (v)",
+    "level": "850 hPa",
+    "units": "m/s",
+    "description": "850 hPa meridional wind component"
+  },
+  "wind_speed_850hPa_ms": {
+    "source": "Derived",
+    "level": "850 hPa",
+    "units": "m/s",
+    "description": "850 hPa wind speed magnitude"
+  },
+  "geopotential_850hPa_m2_s2": {
+    "source": "ERA5 pressure-level (z)",
+    "level": "850 hPa",
+    "units": "m\u00b2/s\u00b2",
+    "description": "850 hPa geopotential"
+  },
+  "vertical_velocity_850hPa_Pa_s": {
+    "source": "ERA5 pressure-level (w)",
+    "level": "850 hPa",
+    "units": "Pa/s",
+    "description": "850 hPa vertical velocity"
+  },
+  "temperature_500hPa_degC": {
+    "source": "ERA5 pressure-level (t)",
+    "level": "500 hPa",
+    "units": "\u00b0C",
+    "description": "500 hPa ambient temperature"
+  },
+  "relative_humidity_500hPa_pct": {
+    "source": "ERA5 pressure-level (r)",
+    "level": "500 hPa",
+    "units": "%",
+    "description": "500 hPa relative humidity"
+  },
+  "specific_humidity_500hPa_g_kg": {
+    "source": "ERA5 pressure-level (q)",
+    "level": "500 hPa",
+    "units": "g/kg",
+    "description": "500 hPa specific humidity"
+  },
+  "u_wind_500hPa_ms": {
+    "source": "ERA5 pressure-level (u)",
+    "level": "500 hPa",
+    "units": "m/s",
+    "description": "500 hPa zonal wind component"
+  },
+  "v_wind_500hPa_ms": {
+    "source": "ERA5 pressure-level (v)",
+    "level": "500 hPa",
+    "units": "m/s",
+    "description": "500 hPa meridional wind component"
+  },
+  "wind_speed_500hPa_ms": {
+    "source": "Derived",
+    "level": "500 hPa",
+    "units": "m/s",
+    "description": "500 hPa wind speed magnitude"
+  },
+  "geopotential_500hPa_m2_s2": {
+    "source": "ERA5 pressure-level (z)",
+    "level": "500 hPa",
+    "units": "m\u00b2/s\u00b2",
+    "description": "500 hPa geopotential"
+  },
+  "vertical_velocity_500hPa_Pa_s": {
+    "source": "ERA5 pressure-level (w)",
+    "level": "500 hPa",
+    "units": "Pa/s",
+    "description": "500 hPa vertical velocity"
+  },
+  "temperature_300hPa_degC": {
+    "source": "ERA5 pressure-level (t)",
+    "level": "300 hPa",
+    "units": "\u00b0C",
+    "description": "300 hPa ambient temperature"
+  },
+  "relative_humidity_300hPa_pct": {
+    "source": "ERA5 pressure-level (r)",
+    "level": "300 hPa",
+    "units": "%",
+    "description": "300 hPa relative humidity"
+  },
+  "specific_humidity_300hPa_g_kg": {
+    "source": "ERA5 pressure-level (q)",
+    "level": "300 hPa",
+    "units": "g/kg",
+    "description": "300 hPa specific humidity"
+  },
+  "u_wind_300hPa_ms": {
+    "source": "ERA5 pressure-level (u)",
+    "level": "300 hPa",
+    "units": "m/s",
+    "description": "300 hPa zonal wind component"
+  },
+  "v_wind_300hPa_ms": {
+    "source": "ERA5 pressure-level (v)",
+    "level": "300 hPa",
+    "units": "m/s",
+    "description": "300 hPa meridional wind component"
+  },
+  "wind_speed_300hPa_ms": {
+    "source": "Derived",
+    "level": "300 hPa",
+    "units": "m/s",
+    "description": "300 hPa wind speed magnitude"
+  },
+  "geopotential_300hPa_m2_s2": {
+    "source": "ERA5 pressure-level (z)",
+    "level": "300 hPa",
+    "units": "m\u00b2/s\u00b2",
+    "description": "300 hPa geopotential"
+  },
+  "vertical_velocity_300hPa_Pa_s": {
+    "source": "ERA5 pressure-level (w)",
+    "level": "300 hPa",
+    "units": "Pa/s",
+    "description": "300 hPa vertical velocity"
+  },
+  "bulk_shear_850_300_ms": {
+    "source": "Derived (300hPa - 850hPa)",
+    "level": "deep-layer (850-300 hPa)",
+    "units": "m/s",
+    "description": "Deep-layer bulk wind shear"
+  },
+  "temp_diff_850_500_degC": {
+    "source": "Derived (850hPa - 500hPa)",
+    "level": "mid-troposphere",
+    "units": "\u00b0C",
+    "description": "Mid-tropospheric lapse rate proxy"
+  },
+  "era5_thunderstorm_favorability": {
+    "source": "Derived index",
+    "level": "column",
+    "units": "score [0, 1]",
+    "description": "Physical thunderstorm favorability index"
+  },
+  "target_noaa_event": {
+    "source": "NOAA Storm Events",
+    "level": "target",
+    "units": "binary {0, 1}",
+    "description": "Confirmed NOAA severe convective storm event"
+  },
+  "thunderstorm_event": {
+    "source": "NOAA + Heuristic",
+    "level": "diagnostic target",
+    "units": "ternary {0, 1, NaN}",
+    "description": "Diagnostic target (1=pos, 0=heuristic neg, NaN=unknown)"
+  }
+}

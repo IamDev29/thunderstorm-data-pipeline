@@ -1,0 +1,226 @@
+{
+  "Baseline (Original)": {
+    "family": "Baseline",
+    "description": "Original Heuristic Formula: Storm Score >= 2.50",
+    "parameters": {
+      "threshold": 2.5
+    }
+  },
+  "Variant A (CAPE >= 100)": {
+    "family": "Variant A (CAPE Gating)",
+    "description": "Multiplicative CAPE Gate: I(CAPE >= 100) * Score_orig",
+    "parameters": {
+      "tau": 100.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant A (CAPE >= 250)": {
+    "family": "Variant A (CAPE Gating)",
+    "description": "Multiplicative CAPE Gate: I(CAPE >= 250) * Score_orig",
+    "parameters": {
+      "tau": 250.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant A (CAPE >= 500)": {
+    "family": "Variant A (CAPE Gating)",
+    "description": "Multiplicative CAPE Gate: I(CAPE >= 500) * Score_orig",
+    "parameters": {
+      "tau": 500.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant A (CAPE >= 750)": {
+    "family": "Variant A (CAPE Gating)",
+    "description": "Multiplicative CAPE Gate: I(CAPE >= 750) * Score_orig",
+    "parameters": {
+      "tau": 750.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant B (CIN Scale 100)": {
+    "family": "Variant B (CIN Barrier)",
+    "description": "Exponential Capping Barrier: exp(-CIN / 100) * Score_orig",
+    "parameters": {
+      "lambda": 100.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant B (CIN Scale 150)": {
+    "family": "Variant B (CIN Barrier)",
+    "description": "Exponential Capping Barrier: exp(-CIN / 150) * Score_orig",
+    "parameters": {
+      "lambda": 150.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant B (CIN Scale 200)": {
+    "family": "Variant B (CIN Barrier)",
+    "description": "Exponential Capping Barrier: exp(-CIN / 200) * Score_orig",
+    "parameters": {
+      "lambda": 200.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant B (CIN Scale 300)": {
+    "family": "Variant B (CIN Barrier)",
+    "description": "Exponential Capping Barrier: exp(-CIN / 300) * Score_orig",
+    "parameters": {
+      "lambda": 300.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant C (RH 850hPa)": {
+    "family": "Variant C (Moisture Replacement)",
+    "description": "Replace RH 300hPa with RH 850hPa: Score_orig - 0.8*RH300 + 0.8*RH850",
+    "parameters": {
+      "rh_feature": "relative_humidity_850hPa",
+      "weight": 0.8,
+      "threshold": 2.5
+    }
+  },
+  "Variant C + CAPE>=250": {
+    "family": "Variant C (Moisture Replacement)",
+    "description": "RH 850hPa Replacement + Thermodynamic Floor (CAPE >= 250 J/kg)",
+    "parameters": {
+      "rh_feature": "relative_humidity_850hPa",
+      "tau": 250.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=100, CIN=100)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 100) * exp(-CIN / 100) * Score_orig",
+    "parameters": {
+      "tau": 100.0,
+      "lambda": 100.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=100, CIN=150)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 100) * exp(-CIN / 150) * Score_orig",
+    "parameters": {
+      "tau": 100.0,
+      "lambda": 150.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=100, CIN=200)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 100) * exp(-CIN / 200) * Score_orig",
+    "parameters": {
+      "tau": 100.0,
+      "lambda": 200.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=100, CIN=300)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 100) * exp(-CIN / 300) * Score_orig",
+    "parameters": {
+      "tau": 100.0,
+      "lambda": 300.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=250, CIN=100)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 250) * exp(-CIN / 100) * Score_orig",
+    "parameters": {
+      "tau": 250.0,
+      "lambda": 100.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=250, CIN=150)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 250) * exp(-CIN / 150) * Score_orig",
+    "parameters": {
+      "tau": 250.0,
+      "lambda": 150.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=250, CIN=200)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 250) * exp(-CIN / 200) * Score_orig",
+    "parameters": {
+      "tau": 250.0,
+      "lambda": 200.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=250, CIN=300)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 250) * exp(-CIN / 300) * Score_orig",
+    "parameters": {
+      "tau": 250.0,
+      "lambda": 300.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=500, CIN=100)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 500) * exp(-CIN / 100) * Score_orig",
+    "parameters": {
+      "tau": 500.0,
+      "lambda": 100.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=500, CIN=150)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 500) * exp(-CIN / 150) * Score_orig",
+    "parameters": {
+      "tau": 500.0,
+      "lambda": 150.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=500, CIN=200)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 500) * exp(-CIN / 200) * Score_orig",
+    "parameters": {
+      "tau": 500.0,
+      "lambda": 200.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant D (CAPE>=500, CIN=300)": {
+    "family": "Variant D (Combined Grid)",
+    "description": "Combined Gate & Barrier: I(CAPE >= 500) * exp(-CIN / 300) * Score_orig",
+    "parameters": {
+      "tau": 500.0,
+      "lambda": 300.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant E (Two-Stage, CIN=100)": {
+    "family": "Variant E (Two-Stage Decoupled)",
+    "description": "Two-Stage Decoupled Index: 5.60 * sqrt(F * T) with CIN scale=100",
+    "parameters": {
+      "lambda": 100.0,
+      "tau_min": 250.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant E (Two-Stage, CIN=150)": {
+    "family": "Variant E (Two-Stage Decoupled)",
+    "description": "Two-Stage Decoupled Index: 5.60 * sqrt(F * T) with CIN scale=150",
+    "parameters": {
+      "lambda": 150.0,
+      "tau_min": 250.0,
+      "threshold": 2.5
+    }
+  },
+  "Variant E (Two-Stage, CIN=200)": {
+    "family": "Variant E (Two-Stage Decoupled)",
+    "description": "Two-Stage Decoupled Index: 5.60 * sqrt(F * T) with CIN scale=200",
+    "parameters": {
+      "lambda": 200.0,
+      "tau_min": 250.0,
+      "threshold": 2.5
+    }
+  }
+}

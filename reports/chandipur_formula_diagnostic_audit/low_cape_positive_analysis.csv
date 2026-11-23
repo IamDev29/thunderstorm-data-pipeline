@@ -1,0 +1,5 @@
+cape_threshold_J_kg,observation_count,pct_of_all_proxy_positives,pct_of_all_observations,storm_score_mean,storm_score_min,storm_score_max,mean_cape_J_kg,mean_cin_J_kg,mean_rh_300hPa_pct,mean_cloud_cover_fraction,mean_shear_850_300_ms,native_gam_mean_prob,native_ebm_mean_prob,pct_native_ebm_predicts_zero,winter_djf_count,pre_monsoon_mam_count,monsoon_jjas_count,post_monsoon_on_count,year_2022_count,year_2023_count,year_2024_count,year_2025_count
+50,54,0.99,0.23,2.88,2.5,3.63,17.85,7.78,84.82,0.986,20.72,0.1567,0.1856,83.33,11,7,26,10,13,15,16,10
+100,117,2.14,0.5,2.9,2.5,3.75,49.96,22.75,82.97,0.984,17.47,0.1934,0.2744,65.81,21,8,73,15,25,30,29,33
+250,363,6.65,1.55,3.03,2.5,4.46,140.83,44.95,82.27,0.978,13.89,0.3059,0.3915,40.22,30,38,253,42,77,68,94,124
+500,1019,18.66,4.36,3.17,2.5,4.97,299.82,60.69,81.85,0.964,12.47,0.4119,0.4702,22.28,31,82,813,93,232,178,291,318

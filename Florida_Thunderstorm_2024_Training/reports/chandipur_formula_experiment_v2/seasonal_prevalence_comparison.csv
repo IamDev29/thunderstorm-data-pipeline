@@ -1,0 +1,27 @@
+variant_name,family,winter_positive_count,winter_positive_pct,pre-monsoon_positive_count,pre-monsoon_positive_pct,monsoon_positive_count,monsoon_positive_pct,post-monsoon_positive_count,post-monsoon_positive_pct
+Baseline (Original),Baseline,63,1.09,1216,20.65,3761,48.17,422,10.81
+Variant A (CAPE >= 100),Variant A (CAPE Gating),42,0.73,1208,20.52,3688,47.23,407,10.43
+Variant A (CAPE >= 250),Variant A (CAPE Gating),33,0.57,1178,20.01,3508,44.93,380,9.73
+Variant A (CAPE >= 500),Variant A (CAPE Gating),32,0.55,1134,19.26,2948,37.76,329,8.43
+Variant A (CAPE >= 750),Variant A (CAPE Gating),8,0.14,1074,18.24,2281,29.21,266,6.81
+Variant B (CIN Scale 100),Variant B (CIN Barrier),42,0.73,906,15.39,1003,12.85,202,5.17
+Variant B (CIN Scale 150),Variant B (CIN Barrier),45,0.78,922,15.66,1254,16.06,236,6.05
+Variant B (CIN Scale 200),Variant B (CIN Barrier),46,0.8,929,15.78,1428,18.29,260,6.66
+Variant B (CIN Scale 300),Variant B (CIN Barrier),48,0.83,949,16.12,1759,22.53,292,7.48
+Variant C (RH 850hPa),Variant C (Moisture Replacement),107,1.85,1358,23.06,4107,52.6,490,12.55
+Variant C + CAPE>=250,Variant C (Moisture Replacement),63,1.09,1324,22.49,3817,48.89,442,11.32
+"Variant D (CAPE>=100, CIN=100)",Variant D (Combined Grid),22,0.38,899,15.27,949,12.15,190,4.87
+"Variant D (CAPE>=100, CIN=150)",Variant D (Combined Grid),25,0.43,915,15.54,1198,15.34,224,5.74
+"Variant D (CAPE>=100, CIN=200)",Variant D (Combined Grid),25,0.43,922,15.66,1372,17.57,246,6.3
+"Variant D (CAPE>=100, CIN=300)",Variant D (Combined Grid),27,0.47,942,16.0,1701,21.79,277,7.1
+"Variant D (CAPE>=250, CIN=100)",Variant D (Combined Grid),15,0.26,883,15.0,869,11.13,177,4.53
+"Variant D (CAPE>=250, CIN=150)",Variant D (Combined Grid),17,0.29,897,15.23,1103,14.13,211,5.4
+"Variant D (CAPE>=250, CIN=200)",Variant D (Combined Grid),17,0.29,904,15.35,1272,16.29,232,5.94
+"Variant D (CAPE>=250, CIN=300)",Variant D (Combined Grid),19,0.33,921,15.64,1589,20.35,258,6.61
+"Variant D (CAPE>=500, CIN=100)",Variant D (Combined Grid),15,0.26,852,14.47,682,8.73,148,3.79
+"Variant D (CAPE>=500, CIN=150)",Variant D (Combined Grid),17,0.29,864,14.67,878,11.24,176,4.51
+"Variant D (CAPE>=500, CIN=200)",Variant D (Combined Grid),17,0.29,870,14.78,1020,13.06,193,4.94
+"Variant D (CAPE>=500, CIN=300)",Variant D (Combined Grid),19,0.33,885,15.03,1286,16.47,219,5.61
+"Variant E (Two-Stage, CIN=100)",Variant E (Two-Stage Decoupled),4,0.07,78,1.32,534,6.84,125,3.2
+"Variant E (Two-Stage, CIN=150)",Variant E (Two-Stage Decoupled),5,0.09,88,1.49,679,8.7,142,3.64
+"Variant E (Two-Stage, CIN=200)",Variant E (Two-Stage Decoupled),8,0.14,92,1.56,785,10.05,155,3.97

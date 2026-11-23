@@ -1,0 +1,11 @@
+term,importance_score,is_interaction
+cape_J_kg,0.7229085557798353,False
+cloud_cover_fraction,0.511451069972884,False
+bulk_shear_850_300_ms,0.44395012165973946,False
+cin_J_kg,0.29952686001082107,False
+wind_speed_850hPa_ms,0.23132148418497,False
+bulk_shear_850_300_ms & cloud_cover_fraction,0.17950612963676538,False
+cin_J_kg & bulk_shear_850_300_ms,0.08078861766508476,False
+cape_J_kg & bulk_shear_850_300_ms,0.07770508648355537,False
+wind_speed_10m_ms,0.06735024666391648,False
+cape_J_kg & cin_J_kg,0.047731117515739,False
